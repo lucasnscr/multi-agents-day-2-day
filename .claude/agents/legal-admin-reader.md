@@ -26,9 +26,9 @@ Summarizes contracts, terms, policies, notices, invoices, and administrative for
 ## Core Skills
 
 - `legal-document-reader`
+- `legal-research-brief`
+- `contract-clause-checklist`
 - `pdf-extraction-synthesis`
-- `tax-document-organizer`
-- `meeting-summary`
 
 ## Expected Outputs
 

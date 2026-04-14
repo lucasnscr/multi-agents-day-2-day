@@ -68,6 +68,12 @@
 - [pet-care-routine](pet-care-routine/SKILL.md) - Organize pet routines, supplies, enrichment, vet questions, travel prep, and household checklists.
 - [home-decluttering-plan](home-decluttering-plan/SKILL.md) - Plan decluttering, room resets, storage, donation, selling, and maintenance routines.
 - [beauty-self-care-routine](beauty-self-care-routine/SKILL.md) - Create simple grooming, skincare organization, salon prep, and self-care routines.
+- [diversity-inclusion-review](diversity-inclusion-review/SKILL.md) - Review materials, processes, events, and products for diversity, equity, inclusion, accessibility, and bias risks.
+- [inclusive-language-review](inclusive-language-review/SKILL.md) - Improve copy, job posts, presentations, policies, and product text for inclusive, respectful, plain language.
+- [legal-research-brief](legal-research-brief/SKILL.md) - Create non-advisory legal research briefs with jurisdiction, source table, law links, jurisprudence notes, and counsel questions.
+- [contract-clause-checklist](contract-clause-checklist/SKILL.md) - Review contracts and terms for clause inventory, obligations, deadlines, risks, missing exhibits, and lawyer questions.
+- [spotify-style-playlist](spotify-style-playlist/SKILL.md) - Suggest Spotify-ready songs, artists, playlist sequencing, and search prompts by musical style, genre, decade, or scene.
+- [music-mood-playlist](music-mood-playlist/SKILL.md) - Create music suggestions for mood, activity, party flow, focus, workouts, road trips, dinners, and family events.
 - [legal-document-reader](legal-document-reader/SKILL.md) - Read legal/admin documents for dates, obligations, risks, definitions, and questions for counsel.
 - [procurement-vendor-comparison](procurement-vendor-comparison/SKILL.md) - Compare vendors, tools, SaaS plans, proposals, pricing, risks, and implementation effort.
 - [language-translation-localization](language-translation-localization/SKILL.md) - Translate, localize, simplify, and adapt copy between Portuguese, English, Spanish, and other languages.

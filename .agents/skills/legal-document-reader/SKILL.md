@@ -4,7 +4,7 @@ description: Read legal/admin documents for dates, obligations, risks, definitio
 license: MIT
 metadata:
   version: "1.0.0"
-  domain: office
+  domain: legal
   triggers: contract, terms, policy, notice, legal document, admin form
   output-format: structured artifact
 ---
@@ -41,7 +41,7 @@ Use this skill when the user asks about: contract, terms, policy, notice, legal 
 
 ## Nota Em Portugues
 
-Use esta skill para juridico documentos leitura em tarefas de escritorio e produtividade. Entregue: plain-language summary, obligation table, questions for lawyer or admin. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+Use esta skill para juridico documentos leitura em tarefas de juridico e compliance. Entregue: plain-language summary, obligation table, questions for lawyer or admin. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
 
 ## References
 

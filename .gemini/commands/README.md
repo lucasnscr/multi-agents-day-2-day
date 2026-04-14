@@ -32,13 +32,16 @@
 - `/agents:marketing-strategist` - Builds positioning, audience research, campaigns, funnels, content plans, and measurement frameworks.
 - `/agents:copywriting-advertising-specialist` - Creates ad concepts, campaign copy, landing page copy, hooks, offers, scripts, and creative test matrices.
 - `/agents:seo-content-strategist` - Builds content calendars, search intent maps, briefs, topic clusters, refresh plans, and editorial workflows.
+- `/agents:diversity-inclusion-advisor` - Reviews communications, hiring flows, events, products, and policies for inclusion, accessibility, bias, and representation.
 - `/agents:legal-admin-reader` - Summarizes contracts, terms, policies, notices, invoices, and administrative forms with non-lawyer caution.
+- `/agents:legal-research-assistant` - Organizes legal research, source tables, legislation lookups, jurisprudence notes, and questions for counsel.
 - `/agents:health-wellness-researcher` - Summarizes general wellness, sleep, exercise, nutrition, and health information with safety boundaries.
 - `/agents:personal-trainer-coach` - Creates general fitness plans, workout progressions, mobility routines, and recovery checklists.
 - `/agents:nutrition-meal-planner` - Creates general meal plans, grocery lists, meal-prep routines, and nutrition education notes.
 - `/agents:weekend-cultural-curator` - Finds current weekend events, concerts, exhibitions, theater, family activities, and local experiences by city.
 - `/agents:lifestyle-concierge` - Plans personal routines, errands, hobbies, wardrobe, self-care, pets, and household lifestyle systems.
 - `/agents:social-life-planner` - Plans date nights, family outings, gifts, celebrations, hosting, and social rituals.
+- `/agents:spotify-music-curator` - Suggests songs, artists, playlist structures, and Spotify search prompts by genre, mood, decade, activity, or occasion.
 - `/agents:project-manager` - Breaks goals into milestones, risks, owners, status updates, meeting cadences, and decision logs.
 - `/agents:career-resume-coach` - Improves resumes, LinkedIn profiles, interview prep, portfolio narratives, and job search plans.
 - `/agents:ecommerce-operator` - Plans product pages, pricing checks, catalog hygiene, ads, inventory notes, and customer support workflows.
@@ -114,6 +117,12 @@
 - `/skills:pet-care-routine` - Organize pet routines, supplies, enrichment, vet questions, travel prep, and household checklists.
 - `/skills:home-decluttering-plan` - Plan decluttering, room resets, storage, donation, selling, and maintenance routines.
 - `/skills:beauty-self-care-routine` - Create simple grooming, skincare organization, salon prep, and self-care routines.
+- `/skills:diversity-inclusion-review` - Review materials, processes, events, and products for diversity, equity, inclusion, accessibility, and bias risks.
+- `/skills:inclusive-language-review` - Improve copy, job posts, presentations, policies, and product text for inclusive, respectful, plain language.
+- `/skills:legal-research-brief` - Create non-advisory legal research briefs with jurisdiction, source table, law links, jurisprudence notes, and counsel questions.
+- `/skills:contract-clause-checklist` - Review contracts and terms for clause inventory, obligations, deadlines, risks, missing exhibits, and lawyer questions.
+- `/skills:spotify-style-playlist` - Suggest Spotify-ready songs, artists, playlist sequencing, and search prompts by musical style, genre, decade, or scene.
+- `/skills:music-mood-playlist` - Create music suggestions for mood, activity, party flow, focus, workouts, road trips, dinners, and family events.
 - `/skills:legal-document-reader` - Read legal/admin documents for dates, obligations, risks, definitions, and questions for counsel.
 - `/skills:procurement-vendor-comparison` - Compare vendors, tools, SaaS plans, proposals, pricing, risks, and implementation effort.
 - `/skills:language-translation-localization` - Translate, localize, simplify, and adapt copy between Portuguese, English, Spanish, and other languages.

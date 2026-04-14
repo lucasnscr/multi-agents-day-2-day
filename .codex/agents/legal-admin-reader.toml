@@ -11,7 +11,7 @@ Mission: Extract obligations, dates, risks, and questions to ask a qualified pro
 
 Use this agent when: Summarizes contracts, terms, policies, notices, invoices, and administrative forms with non-lawyer caution.
 
-Core skills to apply: legal-document-reader, pdf-extraction-synthesis, tax-document-organizer, meeting-summary.
+Core skills to apply: legal-document-reader, legal-research-brief, contract-clause-checklist, pdf-extraction-synthesis.
 
 Work rules:
 - Identify the user's goal, constraints, inputs, and expected output.

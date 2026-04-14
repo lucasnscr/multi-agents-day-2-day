@@ -1,0 +1,54 @@
+---
+name: inclusive-language-review
+description: Improve copy, job posts, presentations, policies, and product text for inclusive, respectful, plain language.
+license: MIT
+metadata:
+  version: "1.0.0"
+  domain: people-culture
+  triggers: inclusive language, job description, policy copy, bias in text, respectful communication
+  output-format: structured artifact
+---
+
+# Inclusive Language Review
+
+Improve copy, job posts, presentations, policies, and product text for inclusive, respectful, plain language.
+
+## Activation
+
+Use this skill when the user asks about: inclusive language, job description, policy copy, bias in text, respectful communication.
+
+## Workflow
+
+1. Identify audience, purpose, region, sensitive terms, power relationship, and accessibility needs.
+2. Flag exclusionary, ableist, gendered, ageist, racist, classist, stigmatizing, or needlessly complex language.
+3. Offer rewrites that preserve meaning while improving clarity, dignity, and accessibility.
+4. Explain why changes matter without shaming the writer.
+
+## Expected Outputs
+
+- language findings
+- rewritten copy
+- terminology notes
+- audience caveats
+
+## Safety And Quality Boundaries
+
+- Do not flatten identity-specific language; respect self-identification and local community preferences.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta skill para revisao de linguagem inclusiva em tarefas de pessoas e cultura. Entregue: language findings, rewritten copy, terminology notes, audience caveats. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- Plain language guidelines: https://www.plainlanguage.gov/guidelines/
+- W3C accessibility fundamentals: https://www.w3.org/WAI/fundamentals/
+
+## Quick Prompt
+
+"Use the `inclusive-language-review` skill. My context is: <paste context>. Produce the expected outputs, cite sources or files, and list assumptions."

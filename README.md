@@ -6,8 +6,8 @@ This repository expands the Claude-only pattern into a multi-assistant operating
 
 ## What Is Included
 
-- 41 specialized agents across technology, data, finance, psychology, marketing, creative work, education, lifestyle, and personal operations.
-- 71 reusable skills with workflows, outputs, safeguards, and references.
+- 44 specialized agents across technology, data, finance, psychology, marketing, creative work, education, lifestyle, legal, people and culture, and personal operations.
+- 77 reusable skills with workflows, outputs, safeguards, and references.
 - Claude Code implementation in `.claude/agents`, `.claude/skills`, and `CLAUDE.md`.
 - Codex implementation in `AGENTS.md`, `.codex/agents`, `.codex/config.toml`, and `.agents/skills`.
 - Gemini CLI implementation in `GEMINI.md`, `.gemini/commands`, and `.gemini/extensions/day2day-agent-encyclopedia`.

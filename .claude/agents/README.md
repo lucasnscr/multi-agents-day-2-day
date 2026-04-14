@@ -30,13 +30,16 @@
 - [marketing-strategist](marketing-strategist.md) - Builds positioning, audience research, campaigns, funnels, content plans, and measurement frameworks.
 - [copywriting-advertising-specialist](copywriting-advertising-specialist.md) - Creates ad concepts, campaign copy, landing page copy, hooks, offers, scripts, and creative test matrices.
 - [seo-content-strategist](seo-content-strategist.md) - Builds content calendars, search intent maps, briefs, topic clusters, refresh plans, and editorial workflows.
+- [diversity-inclusion-advisor](diversity-inclusion-advisor.md) - Reviews communications, hiring flows, events, products, and policies for inclusion, accessibility, bias, and representation.
 - [legal-admin-reader](legal-admin-reader.md) - Summarizes contracts, terms, policies, notices, invoices, and administrative forms with non-lawyer caution.
+- [legal-research-assistant](legal-research-assistant.md) - Organizes legal research, source tables, legislation lookups, jurisprudence notes, and questions for counsel.
 - [health-wellness-researcher](health-wellness-researcher.md) - Summarizes general wellness, sleep, exercise, nutrition, and health information with safety boundaries.
 - [personal-trainer-coach](personal-trainer-coach.md) - Creates general fitness plans, workout progressions, mobility routines, and recovery checklists.
 - [nutrition-meal-planner](nutrition-meal-planner.md) - Creates general meal plans, grocery lists, meal-prep routines, and nutrition education notes.
 - [weekend-cultural-curator](weekend-cultural-curator.md) - Finds current weekend events, concerts, exhibitions, theater, family activities, and local experiences by city.
 - [lifestyle-concierge](lifestyle-concierge.md) - Plans personal routines, errands, hobbies, wardrobe, self-care, pets, and household lifestyle systems.
 - [social-life-planner](social-life-planner.md) - Plans date nights, family outings, gifts, celebrations, hosting, and social rituals.
+- [spotify-music-curator](spotify-music-curator.md) - Suggests songs, artists, playlist structures, and Spotify search prompts by genre, mood, decade, activity, or occasion.
 - [project-manager](project-manager.md) - Breaks goals into milestones, risks, owners, status updates, meeting cadences, and decision logs.
 - [career-resume-coach](career-resume-coach.md) - Improves resumes, LinkedIn profiles, interview prep, portfolio narratives, and job search plans.
 - [ecommerce-operator](ecommerce-operator.md) - Plans product pages, pricing checks, catalog hygiene, ads, inventory notes, and customer support workflows.

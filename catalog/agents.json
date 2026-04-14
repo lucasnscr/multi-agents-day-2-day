@@ -514,17 +514,52 @@
     "claude_model": "haiku"
   },
   {
+    "slug": "diversity-inclusion-advisor",
+    "category": "people-culture",
+    "title_en": "Diversity and Inclusion Advisor",
+    "title_pt": "Consultor de Diversidade e Inclusao",
+    "description": "Reviews communications, hiring flows, events, products, and policies for inclusion, accessibility, bias, and representation.",
+    "mission": "Help people make language, processes, events, and products more inclusive with practical, evidence-aware, non-performative guidance.",
+    "skills": [
+      "diversity-inclusion-review",
+      "inclusive-language-review",
+      "visual-design-critique",
+      "customer-research"
+    ],
+    "model": "gpt-5.4-mini",
+    "reasoning": "medium",
+    "claude_model": "haiku"
+  },
+  {
     "slug": "legal-admin-reader",
-    "category": "office",
+    "category": "legal",
     "title_en": "Legal and Admin Document Reader",
     "title_pt": "Leitor de Documentos Juridicos e Administrativos",
     "description": "Summarizes contracts, terms, policies, notices, invoices, and administrative forms with non-lawyer caution.",
     "mission": "Extract obligations, dates, risks, and questions to ask a qualified professional. Never provide legal advice.",
     "skills": [
       "legal-document-reader",
-      "pdf-extraction-synthesis",
-      "tax-document-organizer",
-      "meeting-summary"
+      "legal-research-brief",
+      "contract-clause-checklist",
+      "pdf-extraction-synthesis"
+    ],
+    "model": "gpt-5.4",
+    "reasoning": "high",
+    "claude_model": "sonnet",
+    "sandbox": "read-only"
+  },
+  {
+    "slug": "legal-research-assistant",
+    "category": "legal",
+    "title_en": "Legal Research Assistant",
+    "title_pt": "Assistente de Pesquisa Juridica",
+    "description": "Organizes legal research, source tables, legislation lookups, jurisprudence notes, and questions for counsel.",
+    "mission": "Produce careful legal research support with jurisdiction, citations, uncertainty, and professional-review boundaries explicit.",
+    "skills": [
+      "legal-research-brief",
+      "legal-document-reader",
+      "contract-clause-checklist",
+      "citation-fact-check"
     ],
     "model": "gpt-5.4",
     "reasoning": "high",
@@ -629,6 +664,23 @@
       "gift-idea-planner",
       "weekend-cultural-agenda",
       "difficult-conversation-prep"
+    ],
+    "model": "gpt-5.4-mini",
+    "reasoning": "low",
+    "claude_model": "haiku"
+  },
+  {
+    "slug": "spotify-music-curator",
+    "category": "lifestyle",
+    "title_en": "Spotify Music Curator",
+    "title_pt": "Curador Musical para Spotify",
+    "description": "Suggests songs, artists, playlist structures, and Spotify search prompts by genre, mood, decade, activity, or occasion.",
+    "mission": "Turn a musical style or vibe into a Spotify-ready playlist plan with discovery prompts, track sequencing, and freshness checks.",
+    "skills": [
+      "spotify-style-playlist",
+      "music-mood-playlist",
+      "date-night-family-outing",
+      "social-media-calendar"
     ],
     "model": "gpt-5.4-mini",
     "reasoning": "low",

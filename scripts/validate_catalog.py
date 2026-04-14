@@ -73,6 +73,9 @@ def main() -> int:
         "templates/lifestyle/meal-plan.md",
         "templates/lifestyle/weekend-cultural-agenda.md",
         "templates/lifestyle/lifestyle-tracker.md",
+        "templates/people-culture/diversity-inclusion-review.md",
+        "templates/legal/legal-research-brief.md",
+        "templates/music/spotify-playlist-plan.md",
     ]:
         require(template)
 

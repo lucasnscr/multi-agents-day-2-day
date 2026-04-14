@@ -383,13 +383,38 @@ AGENTS = [
         "claude_model": "haiku",
     },
     {
+        "slug": "diversity-inclusion-advisor",
+        "category": "people-culture",
+        "title_en": "Diversity and Inclusion Advisor",
+        "title_pt": "Consultor de Diversidade e Inclusao",
+        "description": "Reviews communications, hiring flows, events, products, and policies for inclusion, accessibility, bias, and representation.",
+        "mission": "Help people make language, processes, events, and products more inclusive with practical, evidence-aware, non-performative guidance.",
+        "skills": ["diversity-inclusion-review", "inclusive-language-review", "visual-design-critique", "customer-research"],
+        "model": "gpt-5.4-mini",
+        "reasoning": "medium",
+        "claude_model": "haiku",
+    },
+    {
         "slug": "legal-admin-reader",
-        "category": "office",
+        "category": "legal",
         "title_en": "Legal and Admin Document Reader",
         "title_pt": "Leitor de Documentos Juridicos e Administrativos",
         "description": "Summarizes contracts, terms, policies, notices, invoices, and administrative forms with non-lawyer caution.",
         "mission": "Extract obligations, dates, risks, and questions to ask a qualified professional. Never provide legal advice.",
-        "skills": ["legal-document-reader", "pdf-extraction-synthesis", "tax-document-organizer", "meeting-summary"],
+        "skills": ["legal-document-reader", "legal-research-brief", "contract-clause-checklist", "pdf-extraction-synthesis"],
+        "model": "gpt-5.4",
+        "reasoning": "high",
+        "claude_model": "sonnet",
+        "sandbox": "read-only",
+    },
+    {
+        "slug": "legal-research-assistant",
+        "category": "legal",
+        "title_en": "Legal Research Assistant",
+        "title_pt": "Assistente de Pesquisa Juridica",
+        "description": "Organizes legal research, source tables, legislation lookups, jurisprudence notes, and questions for counsel.",
+        "mission": "Produce careful legal research support with jurisdiction, citations, uncertainty, and professional-review boundaries explicit.",
+        "skills": ["legal-research-brief", "legal-document-reader", "contract-clause-checklist", "citation-fact-check"],
         "model": "gpt-5.4",
         "reasoning": "high",
         "claude_model": "sonnet",
@@ -464,6 +489,18 @@ AGENTS = [
         "description": "Plans date nights, family outings, gifts, celebrations, hosting, and social rituals.",
         "mission": "Create thoughtful social plans that match people, budgets, timing, accessibility, and relationship context.",
         "skills": ["date-night-family-outing", "gift-idea-planner", "weekend-cultural-agenda", "difficult-conversation-prep"],
+        "model": "gpt-5.4-mini",
+        "reasoning": "low",
+        "claude_model": "haiku",
+    },
+    {
+        "slug": "spotify-music-curator",
+        "category": "lifestyle",
+        "title_en": "Spotify Music Curator",
+        "title_pt": "Curador Musical para Spotify",
+        "description": "Suggests songs, artists, playlist structures, and Spotify search prompts by genre, mood, decade, activity, or occasion.",
+        "mission": "Turn a musical style or vibe into a Spotify-ready playlist plan with discovery prompts, track sequencing, and freshness checks.",
+        "skills": ["spotify-style-playlist", "music-mood-playlist", "date-night-family-outing", "social-media-calendar"],
         "model": "gpt-5.4-mini",
         "reasoning": "low",
         "claude_model": "haiku",
@@ -1541,8 +1578,98 @@ SKILLS = [
         "refs": ["American Academy of Dermatology public resources: https://www.aad.org/public"],
     },
     {
+        "slug": "diversity-inclusion-review",
+        "category": "people-culture",
+        "description": "Review materials, processes, events, and products for diversity, equity, inclusion, accessibility, and bias risks.",
+        "triggers": "diversity, inclusion, DEI, equity, bias, accessibility, representation, inclusive workplace",
+        "workflow": [
+            "Identify audience, context, region, protected or marginalized groups, power dynamics, and decision impact.",
+            "Review language, imagery, eligibility criteria, accessibility, representation, stereotypes, and unintended exclusion.",
+            "Separate legal/compliance issues, ethical risks, usability barriers, and tone improvements.",
+            "Return prioritized recommendations with inclusive alternatives and questions for affected communities or qualified advisors.",
+        ],
+        "outputs": ["DEI findings", "inclusive alternatives", "risk and accessibility checklist", "review questions"],
+        "safeguards": ["Do not present DEI review as legal compliance certification; recommend local legal or HR review for employment, discrimination, or regulatory matters."],
+        "refs": ["EEOC: https://www.eeoc.gov/", "ILO equality and discrimination: https://www.ilo.org/topics/equality-and-discrimination", "UN Disability Inclusion Strategy: https://www.un.org/en/content/disabilitystrategy/"],
+    },
+    {
+        "slug": "inclusive-language-review",
+        "category": "people-culture",
+        "description": "Improve copy, job posts, presentations, policies, and product text for inclusive, respectful, plain language.",
+        "triggers": "inclusive language, job description, policy copy, bias in text, respectful communication",
+        "workflow": [
+            "Identify audience, purpose, region, sensitive terms, power relationship, and accessibility needs.",
+            "Flag exclusionary, ableist, gendered, ageist, racist, classist, stigmatizing, or needlessly complex language.",
+            "Offer rewrites that preserve meaning while improving clarity, dignity, and accessibility.",
+            "Explain why changes matter without shaming the writer.",
+        ],
+        "outputs": ["language findings", "rewritten copy", "terminology notes", "audience caveats"],
+        "safeguards": ["Do not flatten identity-specific language; respect self-identification and local community preferences."],
+        "refs": ["Plain language guidelines: https://www.plainlanguage.gov/guidelines/", "W3C accessibility fundamentals: https://www.w3.org/WAI/fundamentals/"],
+    },
+    {
+        "slug": "legal-research-brief",
+        "category": "legal",
+        "description": "Create non-advisory legal research briefs with jurisdiction, source table, law links, jurisprudence notes, and counsel questions.",
+        "triggers": "juridico, legal research, legislation, jurisprudence, law lookup, legal question, rights",
+        "workflow": [
+            "Clarify jurisdiction, date, parties, legal area, source language, and whether the user needs education, document organization, or lawyer-prep.",
+            "Search official or authoritative sources first, including legislation portals, courts, regulators, and government agencies.",
+            "Separate black-letter source text, case interpretation, secondary commentary, and your own uncertainty.",
+            "Return a research brief with citations, timeline, open questions, and recommended questions for a qualified lawyer.",
+        ],
+        "outputs": ["legal research brief", "source table", "timeline", "questions for counsel"],
+        "safeguards": ["Do not give legal advice, predict outcomes, draft filings as a lawyer, or tell the user what legal action to take; recommend qualified counsel for decisions."],
+        "refs": ["Planalto Legislacao: https://www4.planalto.gov.br/legislacao", "STF Jurisprudencia: https://portal.stf.jus.br/jurisprudencia/", "Legal Information Institute: https://www.law.cornell.edu/"],
+    },
+    {
+        "slug": "contract-clause-checklist",
+        "category": "legal",
+        "description": "Review contracts and terms for clause inventory, obligations, deadlines, risks, missing exhibits, and lawyer questions.",
+        "triggers": "contract, clause, terms, NDA, service agreement, aluguel, contrato, legal checklist",
+        "workflow": [
+            "Identify contract type, parties, jurisdiction, dates, money, deliverables, termination, renewal, liability, confidentiality, and dispute clauses.",
+            "Build a clause table with plain-language summary, obligations, deadlines, owner, risk level, and page/section reference.",
+            "List missing attachments, ambiguous terms, unusual obligations, and operational tasks.",
+            "Prepare negotiation or lawyer-review questions without giving legal conclusions.",
+        ],
+        "outputs": ["clause table", "obligation tracker", "risk checklist", "questions for counsel"],
+        "safeguards": ["This is document analysis, not legal advice; do not sign, terminate, or rely on a contract without qualified review."],
+        "refs": ["Legal Information Institute contracts overview: https://www.law.cornell.edu/wex/contract", "CNJ: https://www.cnj.jus.br/"],
+    },
+    {
+        "slug": "spotify-style-playlist",
+        "category": "lifestyle",
+        "description": "Suggest Spotify-ready songs, artists, playlist sequencing, and search prompts by musical style, genre, decade, or scene.",
+        "triggers": "Spotify, playlist, music style, genre, songs, artists, samba, rock, funk, jazz, electronic",
+        "workflow": [
+            "Collect style or genre, country/language, decade, mood, occasion, explicit-content preference, familiarity level, and desired playlist length.",
+            "Create a sequenced playlist plan with anchor tracks, discovery tracks, artists to explore, and Spotify search prompts.",
+            "Include alternates by subgenre and energy level, plus a short explanation of why each cluster fits.",
+            "For current releases or availability, search Spotify or current music sources before finalizing.",
+        ],
+        "outputs": ["Spotify playlist plan", "track and artist shortlist", "search prompts", "sequencing notes"],
+        "safeguards": ["Do not claim a track is available on Spotify without current verification; respect explicit-content, age, and cultural-context preferences."],
+        "refs": ["Spotify Web API: https://developer.spotify.com/documentation/web-api", "Spotify recommendations endpoint: https://developer.spotify.com/documentation/web-api/reference/get-recommendations"],
+    },
+    {
+        "slug": "music-mood-playlist",
+        "category": "lifestyle",
+        "description": "Create music suggestions for mood, activity, party flow, focus, workouts, road trips, dinners, and family events.",
+        "triggers": "music by mood, party playlist, workout music, focus playlist, dinner playlist, road trip songs",
+        "workflow": [
+            "Collect activity, setting, audience, mood arc, start/end energy, languages, explicit-content preference, and songs to include or avoid.",
+            "Design the playlist as phases such as warmup, peak, cooldown, or conversation-friendly background.",
+            "Suggest tracks, artists, and Spotify queries, balancing familiar songs with discovery.",
+            "Add collaboration prompts so friends or family can contribute without derailing the vibe.",
+        ],
+        "outputs": ["mood playlist", "energy arc", "collaboration prompts", "alternates"],
+        "safeguards": ["Avoid offensive or age-inappropriate suggestions when the user specifies family, workplace, or public settings."],
+        "refs": ["Spotify create playlist endpoint: https://developer.spotify.com/documentation/web-api/reference/create-playlist"],
+    },
+    {
         "slug": "legal-document-reader",
-        "category": "office",
+        "category": "legal",
         "description": "Read legal/admin documents for dates, obligations, risks, definitions, and questions for counsel.",
         "triggers": "contract, terms, policy, notice, legal document, admin form",
         "workflow": [
@@ -1637,6 +1764,14 @@ REFERENCES = [
     ("CDC Sleep", "https://www.cdc.gov/sleep/"),
     ("Ministerio do Turismo", "https://www.gov.br/turismo/pt-br"),
     ("Visit Brasil", "https://visitbrasil.com/"),
+    ("EEOC", "https://www.eeoc.gov/"),
+    ("ILO Equality and Discrimination", "https://www.ilo.org/topics/equality-and-discrimination"),
+    ("UN Disability Inclusion Strategy", "https://www.un.org/en/content/disabilitystrategy/"),
+    ("Planalto Legislacao", "https://www4.planalto.gov.br/legislacao"),
+    ("STF Jurisprudencia", "https://portal.stf.jus.br/jurisprudencia/"),
+    ("CNJ", "https://www.cnj.jus.br/"),
+    ("Spotify Web API", "https://developer.spotify.com/documentation/web-api"),
+    ("Spotify Create Playlist API", "https://developer.spotify.com/documentation/web-api/reference/create-playlist"),
 ]
 
 CATEGORY_PT = {
@@ -1654,6 +1789,8 @@ CATEGORY_PT = {
     "business": "negocios",
     "languages": "linguagens e stacks",
     "lifestyle": "lifestyle",
+    "people-culture": "pessoas e cultura",
+    "legal": "juridico e compliance",
 }
 
 WORD_PT = {
@@ -1823,6 +1960,22 @@ WORD_PT = {
     "decluttering": "desapego e organizacao",
     "beauty": "beleza",
     "self": "autocuidado",
+    "diversity": "diversidade",
+    "inclusion": "inclusao",
+    "inclusive": "inclusivo",
+    "equity": "equidade",
+    "bias": "vies",
+    "clause": "clausula",
+    "rights": "direitos",
+    "compliance": "compliance",
+    "spotify": "Spotify",
+    "music": "musica",
+    "playlist": "playlist",
+    "song": "musica",
+    "songs": "musicas",
+    "genre": "genero",
+    "mood": "clima",
+    "curator": "curadoria",
 }
 
 HUMAN_PT_OVERRIDES = {
@@ -1842,6 +1995,12 @@ HUMAN_PT_OVERRIDES = {
     "pet-care-routine": "Rotina de cuidado com pets",
     "home-decluttering-plan": "Plano de organizacao da casa",
     "beauty-self-care-routine": "Rotina de autocuidado e beleza",
+    "diversity-inclusion-review": "Revisao de diversidade e inclusao",
+    "inclusive-language-review": "Revisao de linguagem inclusiva",
+    "legal-research-brief": "Briefing de pesquisa juridica",
+    "contract-clause-checklist": "Checklist de clausulas contratuais",
+    "spotify-style-playlist": "Playlist por estilo musical no Spotify",
+    "music-mood-playlist": "Playlist por clima e ocasiao",
 }
 
 
@@ -2071,7 +2230,7 @@ def root_readme_en() -> str:
 
         ## What Is Included
 
-        - {len(AGENTS)} specialized agents across technology, data, finance, psychology, marketing, creative work, education, lifestyle, and personal operations.
+        - {len(AGENTS)} specialized agents across technology, data, finance, psychology, marketing, creative work, education, lifestyle, legal, people and culture, and personal operations.
         - {len(SKILLS)} reusable skills with workflows, outputs, safeguards, and references.
         - Claude Code implementation in `.claude/agents`, `.claude/skills`, and `CLAUDE.md`.
         - Codex implementation in `AGENTS.md`, `.codex/agents`, `.codex/config.toml`, and `.agents/skills`.
@@ -2115,7 +2274,7 @@ def root_readme_pt() -> str:
 
         ## O Que Está Incluído
 
-        - {len(AGENTS)} agentes especializados em tecnologia, dados, finanças, psicologia, marketing, criação, educação, lifestyle e rotina pessoal.
+        - {len(AGENTS)} agentes especializados em tecnologia, dados, finanças, psicologia, marketing, criação, educação, lifestyle, jurídico, pessoas e cultura e rotina pessoal.
         - {len(SKILLS)} skills reutilizáveis com fluxo de trabalho, entregáveis, salvaguardas e referências.
         - Implementação Claude Code em `.claude/agents`, `.claude/skills` e `CLAUDE.md`.
         - Implementação Codex em `AGENTS.md`, `.codex/agents`, `.codex/config.toml` e `.agents/skills`.
@@ -2830,6 +2989,57 @@ def templates() -> None:
 
             | Day | Movement | Meals | Sleep | Mood/Energy | Self-care | Notes |
             |---|---|---|---|---|---|---|
+            """
+        ),
+    )
+    write(
+        "templates/people-culture/diversity-inclusion-review.md",
+        dedent(
+            """
+            # Diversity And Inclusion Review
+
+            Audience:
+            Context:
+            Region:
+            Artifact or process:
+
+            | Area | Finding | Impact | Suggested Alternative | Follow-up Question |
+            |---|---|---|---|---|
+            """
+        ),
+    )
+    write(
+        "templates/legal/legal-research-brief.md",
+        dedent(
+            """
+            # Legal Research Brief
+
+            This is legal research support, not legal advice.
+
+            Jurisdiction:
+            Question:
+            Date:
+            Sources:
+
+            | Source | Link | What It Says | Confidence | Questions For Counsel |
+            |---|---|---|---|---|
+            """
+        ),
+    )
+    write(
+        "templates/music/spotify-playlist-plan.md",
+        dedent(
+            """
+            # Spotify Playlist Plan
+
+            Style/genre:
+            Mood:
+            Occasion:
+            Explicit content:
+            Desired length:
+
+            | Phase | Track/Artist Idea | Why It Fits | Spotify Search Prompt |
+            |---|---|---|---|
             """
         ),
     )
