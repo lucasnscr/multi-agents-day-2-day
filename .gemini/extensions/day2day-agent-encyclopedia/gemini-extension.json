@@ -1,0 +1,7 @@
+{
+  "name": "day2day-agent-encyclopedia",
+  "version": "1.0.0",
+  "description": "Day-to-day agents and skills for family, technology, data, finance, psychology, marketing, and office work.",
+  "mcpServers": {},
+  "contextFileName": "GEMINI.md"
+}

@@ -1,0 +1,38 @@
+# Claude Agents
+
+- [full-stack-architect](full-stack-architect.md) - Designs end-to-end web and service architectures across frontend, backend, data, security, and deployment.
+- [backend-api-engineer](backend-api-engineer.md) - Builds REST, GraphQL, event-driven, and service APIs with validation, security, observability, and tests.
+- [frontend-ui-engineer](frontend-ui-engineer.md) - Builds React, Angular, Vue, Svelte, and vanilla web interfaces with accessibility and behavior tests.
+- [mobile-app-engineer](mobile-app-engineer.md) - Plans and implements iOS, Android, React Native, and Flutter apps with release and store-readiness discipline.
+- [data-engineer](data-engineer.md) - Builds ingestion, transformation, warehouse, lakehouse, dbt, orchestration, and data quality workflows.
+- [data-scientist](data-scientist.md) - Explores datasets, builds models, validates assumptions, and explains uncertainty for decisions.
+- [ml-ai-engineer](ml-ai-engineer.md) - Builds ML pipelines, evaluations, RAG systems, LLM apps, and agentic workflows.
+- [devops-platform-engineer](devops-platform-engineer.md) - Designs CI/CD, containers, Kubernetes, IaC, release flows, observability, and operational runbooks.
+- [security-privacy-engineer](security-privacy-engineer.md) - Finds application, infrastructure, data, privacy, and operational security risks.
+- [qa-test-automator](qa-test-automator.md) - Creates unit, integration, contract, end-to-end, accessibility, visual, and regression test strategies.
+- [database-architect](database-architect.md) - Designs relational, document, search, graph, analytical, and caching data layers.
+- [cloud-cost-optimizer](cloud-cost-optimizer.md) - Reviews cloud spend, sizing, storage, networking, CI minutes, observability volume, and scaling policies.
+- [documentation-writer](documentation-writer.md) - Writes READMEs, tutorials, runbooks, architecture notes, onboarding guides, and family-friendly explainers.
+- [code-reviewer](code-reviewer.md) - Reviews code for correctness, regressions, security, maintainability, performance, and missing tests.
+- [legacy-modernizer](legacy-modernizer.md) - Maps legacy systems, proposes incremental modernization, and creates migration plans that preserve behavior.
+- [prompt-agent-architect](prompt-agent-architect.md) - Designs prompts, skills, subagents, memory, MCP integrations, evaluations, and agent operating procedures.
+- [automation-scripts-engineer](automation-scripts-engineer.md) - Creates safe Bash, Python, PowerShell, Make, and task-runner automations for repetitive work.
+- [language-polyglot-engineer](language-polyglot-engineer.md) - Works across Python, TypeScript, Java, C#, Go, Rust, PHP, Ruby, Swift, Kotlin, Dart, R, SQL, and shell.
+- [spreadsheet-analyst](spreadsheet-analyst.md) - Audits Excel, Google Sheets, CSV, formulas, pivots, Power Query, and spreadsheet-based business workflows.
+- [pdf-research-analyst](pdf-research-analyst.md) - Extracts, compares, summarizes, and fact-checks PDFs, reports, contracts, invoices, and academic papers.
+- [presentation-designer](presentation-designer.md) - Creates storylines, slide outlines, speaker notes, PowerPoint structures, and executive narratives.
+- [figma-product-designer](figma-product-designer.md) - Creates product briefs, user flows, wireframes, component inventories, and design review prompts for Figma.
+- [market-finance-analyst](market-finance-analyst.md) - Builds market briefs, macro notes, company snapshots, valuation sensitivity, and risk checklists.
+- [personal-finance-coach](personal-finance-coach.md) - Helps organize budgets, debt payoff, goals, emergency funds, family finances, and financial habits.
+- [behavioral-psychology-researcher](behavioral-psychology-researcher.md) - Synthesizes behavior, decision-making, habits, communication, motivation, and learning research.
+- [learning-tutor](learning-tutor.md) - Builds study plans, explains concepts, creates exercises, and adapts explanations to family members.
+- [family-tech-support](family-tech-support.md) - Explains devices, accounts, security basics, backups, documents, and apps in accessible language.
+- [marketing-strategist](marketing-strategist.md) - Builds positioning, audience research, campaigns, funnels, content plans, and measurement frameworks.
+- [copywriting-advertising-specialist](copywriting-advertising-specialist.md) - Creates ad concepts, campaign copy, landing page copy, hooks, offers, scripts, and creative test matrices.
+- [seo-content-strategist](seo-content-strategist.md) - Builds content calendars, search intent maps, briefs, topic clusters, refresh plans, and editorial workflows.
+- [legal-admin-reader](legal-admin-reader.md) - Summarizes contracts, terms, policies, notices, invoices, and administrative forms with non-lawyer caution.
+- [health-wellness-researcher](health-wellness-researcher.md) - Summarizes general wellness, sleep, exercise, nutrition, and health information with safety boundaries.
+- [project-manager](project-manager.md) - Breaks goals into milestones, risks, owners, status updates, meeting cadences, and decision logs.
+- [career-resume-coach](career-resume-coach.md) - Improves resumes, LinkedIn profiles, interview prep, portfolio narratives, and job search plans.
+- [ecommerce-operator](ecommerce-operator.md) - Plans product pages, pricing checks, catalog hygiene, ads, inventory notes, and customer support workflows.
+- [travel-life-planner](travel-life-planner.md) - Creates itineraries, packing lists, family logistics, decision matrices, and household plans.

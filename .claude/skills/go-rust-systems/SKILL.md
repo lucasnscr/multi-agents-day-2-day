@@ -1,0 +1,52 @@
+---
+name: go-rust-systems
+description: Build Go and Rust services, CLIs, workers, network tools, and performance-sensitive components.
+license: MIT
+metadata:
+  version: "1.0.0"
+  domain: languages
+  triggers: Go, Rust, CLI, systems, performance, concurrency
+  output-format: structured artifact
+---
+
+# Go Rust Systems
+
+Build Go and Rust services, CLIs, workers, network tools, and performance-sensitive components.
+
+## Activation
+
+Use this skill when the user asks about: Go, Rust, CLI, systems, performance, concurrency.
+
+## Workflow
+
+1. Identify latency, safety, concurrency, deployment, and binary constraints.
+2. Use idiomatic error handling, simple module structure, and explicit resource lifetimes.
+3. Add benchmarks or profiling when performance claims matter.
+4. Document build, test, lint, and release commands.
+
+## Expected Outputs
+
+- Go or Rust implementation
+- tests
+- benchmark or profiling notes
+
+## Safety And Quality Boundaries
+
+- Do not add unsafe Rust or global mutable state unless there is a specific justified need.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta skill para go rust sistemas em tarefas de linguagens e stacks. Entregue: Go or Rust implementation, tests, benchmark or profiling notes. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- Go docs: https://go.dev/doc/; Rust book: https://doc.rust-lang.org/book/
+
+## Quick Prompt
+
+"Use the `go-rust-systems` skill. My context is: <paste context>. Produce the expected outputs, cite sources or files, and list assumptions."

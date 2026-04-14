@@ -1,0 +1,53 @@
+---
+name: presentation-powerpoint
+description: Create PowerPoint, Google Slides, keynote outlines, speaker notes, and executive deck structures.
+license: MIT
+metadata:
+  version: "1.0.0"
+  domain: creative
+  triggers: PowerPoint, presentation, slides, deck, speaker notes, pitch
+  output-format: structured artifact
+---
+
+# Presentation Powerpoint
+
+Create PowerPoint, Google Slides, keynote outlines, speaker notes, and executive deck structures.
+
+## Activation
+
+Use this skill when the user asks about: PowerPoint, presentation, slides, deck, speaker notes, pitch.
+
+## Workflow
+
+1. Define audience, decision, desired emotion, time limit, and evidence available.
+2. Create one message per slide with a story spine: context, tension, insight, choice, next step.
+3. Turn data into charts with captions that state the point.
+4. Provide slide titles, bullets, visual suggestions, speaker notes, and optional pptx automation plan.
+
+## Expected Outputs
+
+- deck outline
+- speaker notes
+- visual direction
+- PowerPoint automation checklist
+
+## Safety And Quality Boundaries
+
+- Do not overfill slides; move detail into appendix or notes.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta skill para apresentacao powerpoint em tarefas de criacao. Entregue: deck outline, speaker notes, visual direction, PowerPoint automation checklist. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- Microsoft PowerPoint help: https://support.microsoft.com/powerpoint
+
+## Quick Prompt
+
+"Use the `presentation-powerpoint` skill. My context is: <paste context>. Produce the expected outputs, cite sources or files, and list assumptions."

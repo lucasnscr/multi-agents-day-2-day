@@ -1,0 +1,98 @@
+# Gemini Commands
+
+## Agents
+
+- `/agents:full-stack-architect` - Designs end-to-end web and service architectures across frontend, backend, data, security, and deployment.
+- `/agents:backend-api-engineer` - Builds REST, GraphQL, event-driven, and service APIs with validation, security, observability, and tests.
+- `/agents:frontend-ui-engineer` - Builds React, Angular, Vue, Svelte, and vanilla web interfaces with accessibility and behavior tests.
+- `/agents:mobile-app-engineer` - Plans and implements iOS, Android, React Native, and Flutter apps with release and store-readiness discipline.
+- `/agents:data-engineer` - Builds ingestion, transformation, warehouse, lakehouse, dbt, orchestration, and data quality workflows.
+- `/agents:data-scientist` - Explores datasets, builds models, validates assumptions, and explains uncertainty for decisions.
+- `/agents:ml-ai-engineer` - Builds ML pipelines, evaluations, RAG systems, LLM apps, and agentic workflows.
+- `/agents:devops-platform-engineer` - Designs CI/CD, containers, Kubernetes, IaC, release flows, observability, and operational runbooks.
+- `/agents:security-privacy-engineer` - Finds application, infrastructure, data, privacy, and operational security risks.
+- `/agents:qa-test-automator` - Creates unit, integration, contract, end-to-end, accessibility, visual, and regression test strategies.
+- `/agents:database-architect` - Designs relational, document, search, graph, analytical, and caching data layers.
+- `/agents:cloud-cost-optimizer` - Reviews cloud spend, sizing, storage, networking, CI minutes, observability volume, and scaling policies.
+- `/agents:documentation-writer` - Writes READMEs, tutorials, runbooks, architecture notes, onboarding guides, and family-friendly explainers.
+- `/agents:code-reviewer` - Reviews code for correctness, regressions, security, maintainability, performance, and missing tests.
+- `/agents:legacy-modernizer` - Maps legacy systems, proposes incremental modernization, and creates migration plans that preserve behavior.
+- `/agents:prompt-agent-architect` - Designs prompts, skills, subagents, memory, MCP integrations, evaluations, and agent operating procedures.
+- `/agents:automation-scripts-engineer` - Creates safe Bash, Python, PowerShell, Make, and task-runner automations for repetitive work.
+- `/agents:language-polyglot-engineer` - Works across Python, TypeScript, Java, C#, Go, Rust, PHP, Ruby, Swift, Kotlin, Dart, R, SQL, and shell.
+- `/agents:spreadsheet-analyst` - Audits Excel, Google Sheets, CSV, formulas, pivots, Power Query, and spreadsheet-based business workflows.
+- `/agents:pdf-research-analyst` - Extracts, compares, summarizes, and fact-checks PDFs, reports, contracts, invoices, and academic papers.
+- `/agents:presentation-designer` - Creates storylines, slide outlines, speaker notes, PowerPoint structures, and executive narratives.
+- `/agents:figma-product-designer` - Creates product briefs, user flows, wireframes, component inventories, and design review prompts for Figma.
+- `/agents:market-finance-analyst` - Builds market briefs, macro notes, company snapshots, valuation sensitivity, and risk checklists.
+- `/agents:personal-finance-coach` - Helps organize budgets, debt payoff, goals, emergency funds, family finances, and financial habits.
+- `/agents:behavioral-psychology-researcher` - Synthesizes behavior, decision-making, habits, communication, motivation, and learning research.
+- `/agents:learning-tutor` - Builds study plans, explains concepts, creates exercises, and adapts explanations to family members.
+- `/agents:family-tech-support` - Explains devices, accounts, security basics, backups, documents, and apps in accessible language.
+- `/agents:marketing-strategist` - Builds positioning, audience research, campaigns, funnels, content plans, and measurement frameworks.
+- `/agents:copywriting-advertising-specialist` - Creates ad concepts, campaign copy, landing page copy, hooks, offers, scripts, and creative test matrices.
+- `/agents:seo-content-strategist` - Builds content calendars, search intent maps, briefs, topic clusters, refresh plans, and editorial workflows.
+- `/agents:legal-admin-reader` - Summarizes contracts, terms, policies, notices, invoices, and administrative forms with non-lawyer caution.
+- `/agents:health-wellness-researcher` - Summarizes general wellness, sleep, exercise, nutrition, and health information with safety boundaries.
+- `/agents:project-manager` - Breaks goals into milestones, risks, owners, status updates, meeting cadences, and decision logs.
+- `/agents:career-resume-coach` - Improves resumes, LinkedIn profiles, interview prep, portfolio narratives, and job search plans.
+- `/agents:ecommerce-operator` - Plans product pages, pricing checks, catalog hygiene, ads, inventory notes, and customer support workflows.
+- `/agents:travel-life-planner` - Creates itineraries, packing lists, family logistics, decision matrices, and household plans.
+
+## Skills
+
+- `/skills:api-contract-review` - Review API contracts for HTTP semantics, schema quality, versioning, compatibility, and error behavior.
+- `/skills:clean-code-refactor` - Simplify code while preserving behavior through small refactors and characterization tests.
+- `/skills:code-review` - Review changes for correctness, regressions, security, performance, and missing tests.
+- `/skills:debugging-root-cause` - Diagnose bugs using reproduction, hypotheses, traces, logs, and minimal fixes.
+- `/skills:test-strategy` - Design test coverage across unit, integration, contract, end-to-end, accessibility, and regression layers.
+- `/skills:observability-logging` - Design logs, metrics, traces, alerts, and dashboards around operational questions.
+- `/skills:security-threat-model` - Threat-model applications, automations, data flows, agents, and infrastructure.
+- `/skills:devops-ci-cd` - Create CI/CD pipelines, release gates, environment promotion, and rollback workflows.
+- `/skills:docker-kubernetes` - Build Dockerfiles, Compose setups, Kubernetes manifests, Helm values, and runtime checks.
+- `/skills:cloud-cost-review` - Analyze cloud and SaaS cost drivers and propose savings without reducing reliability.
+- `/skills:database-query-optimization` - Optimize schemas, indexes, SQL, migrations, and data access patterns.
+- `/skills:architecture-decision-record` - Write Architecture Decision Records and tradeoff notes for technical choices.
+- `/skills:python-data-stack` - Use Python for automation, APIs, data analysis, notebooks, and production services.
+- `/skills:typescript-react-next` - Build TypeScript, React, Next.js, Node.js, NestJS, Angular, Vue, and frontend/backend JS systems.
+- `/skills:java-spring-boot` - Build Java, Kotlin, Spring Boot, Maven/Gradle, JPA, WebFlux, and JVM services.
+- `/skills:dotnet-api` - Build C#, .NET, ASP.NET Core, EF Core, minimal APIs, workers, and Azure-friendly services.
+- `/skills:go-rust-systems` - Build Go and Rust services, CLIs, workers, network tools, and performance-sensitive components.
+- `/skills:mobile-app-delivery` - Plan and deliver Swift/iOS, Kotlin/Android, React Native, and Flutter features.
+- `/skills:llm-prompt-engineering` - Design prompts, system instructions, evaluations, examples, and output schemas for LLM workflows.
+- `/skills:agent-skill-authoring` - Create reusable agents, subagents, skills, slash commands, and memory playbooks.
+- `/skills:mcp-integration-design` - Design MCP server integrations and connector workflows for tools, data, docs, and business systems.
+- `/skills:spreadsheet-analysis` - Analyze Excel, Google Sheets, CSV files, formulas, pivots, anomalies, and tabular business data.
+- `/skills:data-analysis-report` - Produce reproducible data analysis reports with assumptions, methods, findings, and recommendations.
+- `/skills:dashboard-bi-storytelling` - Design dashboards, BI narratives, metric definitions, and executive data stories.
+- `/skills:pdf-extraction-synthesis` - Extract and synthesize PDFs, scanned docs, forms, reports, contracts, papers, and slide decks.
+- `/skills:research-brief` - Create research briefs from web, docs, papers, notes, or mixed source material.
+- `/skills:citation-fact-check` - Fact-check claims, citations, numbers, dates, quotes, and source quality.
+- `/skills:meeting-summary` - Summarize meetings, calls, notes, transcripts, and decisions into usable follow-up artifacts.
+- `/skills:presentation-powerpoint` - Create PowerPoint, Google Slides, keynote outlines, speaker notes, and executive deck structures.
+- `/skills:figma-product-brief` - Prepare Figma-ready product briefs, user flows, component inventories, and design handoff notes.
+- `/skills:visual-design-critique` - Review layouts, typography, accessibility, color, hierarchy, responsive behavior, and product polish.
+- `/skills:market-research` - Research markets, sectors, competitors, macro trends, and business context with sourced evidence.
+- `/skills:personal-finance-budget` - Organize budgets, spending, debt payoff, goals, emergency funds, and family financial routines.
+- `/skills:investment-due-diligence` - Create educational due-diligence checklists for companies, funds, ETFs, bonds, and assets.
+- `/skills:risk-scenario-analysis` - Build scenarios, sensitivities, stress tests, decision matrices, and risk registers.
+- `/skills:financial-modeling` - Create simple models for budgets, businesses, valuation sensitivity, pricing, and unit economics.
+- `/skills:tax-document-organizer` - Organize tax documents, receipts, statements, and accountant handoff packages without giving tax advice.
+- `/skills:psychology-literature-synthesis` - Summarize psychology research on behavior, decision-making, stress, habits, motivation, and communication.
+- `/skills:decision-journal` - Create decision journals, bias checks, pre-mortems, and post-mortems for personal or professional choices.
+- `/skills:habit-behavior-design` - Design practical habit systems, routines, prompts, rewards, and environment changes.
+- `/skills:difficult-conversation-prep` - Prepare for hard conversations, feedback, boundaries, negotiation, and conflict repair.
+- `/skills:family-learning-coach` - Create family-friendly explanations, practice plans, tutorials, and confidence-building learning paths.
+- `/skills:brand-positioning` - Define brand positioning, audience, category, differentiation, proof, and message pillars.
+- `/skills:copywriting-campaign` - Write ads, landing pages, email sequences, headlines, scripts, and creative testing matrices.
+- `/skills:seo-content-plan` - Plan SEO content, search intent maps, briefs, topic clusters, refreshes, and helpful articles.
+- `/skills:social-media-calendar` - Create social media calendars, content pillars, hooks, captions, and repurposing plans.
+- `/skills:ads-funnel-analysis` - Analyze paid media funnels, landing pages, creative tests, conversion tracking, and unit economics.
+- `/skills:customer-research` - Plan interviews, surveys, persona research, jobs-to-be-done analysis, and insight synthesis.
+- `/skills:email-drafting` - Draft clear emails, replies, follow-ups, escalations, requests, and family-friendly messages.
+- `/skills:resume-linkedin` - Improve resumes, LinkedIn profiles, portfolios, cover letters, and interview stories.
+- `/skills:travel-itinerary` - Plan travel itineraries, family logistics, budgets, packing, and decision comparisons.
+- `/skills:home-operations-planner` - Organize household tasks, maintenance, documents, accounts, routines, and family operations.
+- `/skills:legal-document-reader` - Read legal/admin documents for dates, obligations, risks, definitions, and questions for counsel.
+- `/skills:procurement-vendor-comparison` - Compare vendors, tools, SaaS plans, proposals, pricing, risks, and implementation effort.
+- `/skills:language-translation-localization` - Translate, localize, simplify, and adapt copy between Portuguese, English, Spanish, and other languages.

@@ -1,0 +1,57 @@
+# Codex Skills
+
+- [api-contract-review](api-contract-review/SKILL.md) - Review API contracts for HTTP semantics, schema quality, versioning, compatibility, and error behavior.
+- [clean-code-refactor](clean-code-refactor/SKILL.md) - Simplify code while preserving behavior through small refactors and characterization tests.
+- [code-review](code-review/SKILL.md) - Review changes for correctness, regressions, security, performance, and missing tests.
+- [debugging-root-cause](debugging-root-cause/SKILL.md) - Diagnose bugs using reproduction, hypotheses, traces, logs, and minimal fixes.
+- [test-strategy](test-strategy/SKILL.md) - Design test coverage across unit, integration, contract, end-to-end, accessibility, and regression layers.
+- [observability-logging](observability-logging/SKILL.md) - Design logs, metrics, traces, alerts, and dashboards around operational questions.
+- [security-threat-model](security-threat-model/SKILL.md) - Threat-model applications, automations, data flows, agents, and infrastructure.
+- [devops-ci-cd](devops-ci-cd/SKILL.md) - Create CI/CD pipelines, release gates, environment promotion, and rollback workflows.
+- [docker-kubernetes](docker-kubernetes/SKILL.md) - Build Dockerfiles, Compose setups, Kubernetes manifests, Helm values, and runtime checks.
+- [cloud-cost-review](cloud-cost-review/SKILL.md) - Analyze cloud and SaaS cost drivers and propose savings without reducing reliability.
+- [database-query-optimization](database-query-optimization/SKILL.md) - Optimize schemas, indexes, SQL, migrations, and data access patterns.
+- [architecture-decision-record](architecture-decision-record/SKILL.md) - Write Architecture Decision Records and tradeoff notes for technical choices.
+- [python-data-stack](python-data-stack/SKILL.md) - Use Python for automation, APIs, data analysis, notebooks, and production services.
+- [typescript-react-next](typescript-react-next/SKILL.md) - Build TypeScript, React, Next.js, Node.js, NestJS, Angular, Vue, and frontend/backend JS systems.
+- [java-spring-boot](java-spring-boot/SKILL.md) - Build Java, Kotlin, Spring Boot, Maven/Gradle, JPA, WebFlux, and JVM services.
+- [dotnet-api](dotnet-api/SKILL.md) - Build C#, .NET, ASP.NET Core, EF Core, minimal APIs, workers, and Azure-friendly services.
+- [go-rust-systems](go-rust-systems/SKILL.md) - Build Go and Rust services, CLIs, workers, network tools, and performance-sensitive components.
+- [mobile-app-delivery](mobile-app-delivery/SKILL.md) - Plan and deliver Swift/iOS, Kotlin/Android, React Native, and Flutter features.
+- [llm-prompt-engineering](llm-prompt-engineering/SKILL.md) - Design prompts, system instructions, evaluations, examples, and output schemas for LLM workflows.
+- [agent-skill-authoring](agent-skill-authoring/SKILL.md) - Create reusable agents, subagents, skills, slash commands, and memory playbooks.
+- [mcp-integration-design](mcp-integration-design/SKILL.md) - Design MCP server integrations and connector workflows for tools, data, docs, and business systems.
+- [spreadsheet-analysis](spreadsheet-analysis/SKILL.md) - Analyze Excel, Google Sheets, CSV files, formulas, pivots, anomalies, and tabular business data.
+- [data-analysis-report](data-analysis-report/SKILL.md) - Produce reproducible data analysis reports with assumptions, methods, findings, and recommendations.
+- [dashboard-bi-storytelling](dashboard-bi-storytelling/SKILL.md) - Design dashboards, BI narratives, metric definitions, and executive data stories.
+- [pdf-extraction-synthesis](pdf-extraction-synthesis/SKILL.md) - Extract and synthesize PDFs, scanned docs, forms, reports, contracts, papers, and slide decks.
+- [research-brief](research-brief/SKILL.md) - Create research briefs from web, docs, papers, notes, or mixed source material.
+- [citation-fact-check](citation-fact-check/SKILL.md) - Fact-check claims, citations, numbers, dates, quotes, and source quality.
+- [meeting-summary](meeting-summary/SKILL.md) - Summarize meetings, calls, notes, transcripts, and decisions into usable follow-up artifacts.
+- [presentation-powerpoint](presentation-powerpoint/SKILL.md) - Create PowerPoint, Google Slides, keynote outlines, speaker notes, and executive deck structures.
+- [figma-product-brief](figma-product-brief/SKILL.md) - Prepare Figma-ready product briefs, user flows, component inventories, and design handoff notes.
+- [visual-design-critique](visual-design-critique/SKILL.md) - Review layouts, typography, accessibility, color, hierarchy, responsive behavior, and product polish.
+- [market-research](market-research/SKILL.md) - Research markets, sectors, competitors, macro trends, and business context with sourced evidence.
+- [personal-finance-budget](personal-finance-budget/SKILL.md) - Organize budgets, spending, debt payoff, goals, emergency funds, and family financial routines.
+- [investment-due-diligence](investment-due-diligence/SKILL.md) - Create educational due-diligence checklists for companies, funds, ETFs, bonds, and assets.
+- [risk-scenario-analysis](risk-scenario-analysis/SKILL.md) - Build scenarios, sensitivities, stress tests, decision matrices, and risk registers.
+- [financial-modeling](financial-modeling/SKILL.md) - Create simple models for budgets, businesses, valuation sensitivity, pricing, and unit economics.
+- [tax-document-organizer](tax-document-organizer/SKILL.md) - Organize tax documents, receipts, statements, and accountant handoff packages without giving tax advice.
+- [psychology-literature-synthesis](psychology-literature-synthesis/SKILL.md) - Summarize psychology research on behavior, decision-making, stress, habits, motivation, and communication.
+- [decision-journal](decision-journal/SKILL.md) - Create decision journals, bias checks, pre-mortems, and post-mortems for personal or professional choices.
+- [habit-behavior-design](habit-behavior-design/SKILL.md) - Design practical habit systems, routines, prompts, rewards, and environment changes.
+- [difficult-conversation-prep](difficult-conversation-prep/SKILL.md) - Prepare for hard conversations, feedback, boundaries, negotiation, and conflict repair.
+- [family-learning-coach](family-learning-coach/SKILL.md) - Create family-friendly explanations, practice plans, tutorials, and confidence-building learning paths.
+- [brand-positioning](brand-positioning/SKILL.md) - Define brand positioning, audience, category, differentiation, proof, and message pillars.
+- [copywriting-campaign](copywriting-campaign/SKILL.md) - Write ads, landing pages, email sequences, headlines, scripts, and creative testing matrices.
+- [seo-content-plan](seo-content-plan/SKILL.md) - Plan SEO content, search intent maps, briefs, topic clusters, refreshes, and helpful articles.
+- [social-media-calendar](social-media-calendar/SKILL.md) - Create social media calendars, content pillars, hooks, captions, and repurposing plans.
+- [ads-funnel-analysis](ads-funnel-analysis/SKILL.md) - Analyze paid media funnels, landing pages, creative tests, conversion tracking, and unit economics.
+- [customer-research](customer-research/SKILL.md) - Plan interviews, surveys, persona research, jobs-to-be-done analysis, and insight synthesis.
+- [email-drafting](email-drafting/SKILL.md) - Draft clear emails, replies, follow-ups, escalations, requests, and family-friendly messages.
+- [resume-linkedin](resume-linkedin/SKILL.md) - Improve resumes, LinkedIn profiles, portfolios, cover letters, and interview stories.
+- [travel-itinerary](travel-itinerary/SKILL.md) - Plan travel itineraries, family logistics, budgets, packing, and decision comparisons.
+- [home-operations-planner](home-operations-planner/SKILL.md) - Organize household tasks, maintenance, documents, accounts, routines, and family operations.
+- [legal-document-reader](legal-document-reader/SKILL.md) - Read legal/admin documents for dates, obligations, risks, definitions, and questions for counsel.
+- [procurement-vendor-comparison](procurement-vendor-comparison/SKILL.md) - Compare vendors, tools, SaaS plans, proposals, pricing, risks, and implementation effort.
+- [language-translation-localization](language-translation-localization/SKILL.md) - Translate, localize, simplify, and adapt copy between Portuguese, English, Spanish, and other languages.

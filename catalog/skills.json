@@ -1,0 +1,1273 @@
+[
+  {
+    "slug": "api-contract-review",
+    "category": "technology",
+    "description": "Review API contracts for HTTP semantics, schema quality, versioning, compatibility, and error behavior.",
+    "triggers": "REST, GraphQL, OpenAPI, API review, contract, endpoint, schema",
+    "workflow": [
+      "Identify consumers, resources, methods, payloads, pagination, authentication, and backwards compatibility constraints.",
+      "Check status codes, idempotency, validation, error envelopes, field naming, nullability, and versioning.",
+      "Compare examples to schemas and call out breaking changes, ambiguity, and missing edge cases.",
+      "Return a prioritized list of contract fixes plus a minimal test matrix."
+    ],
+    "outputs": [
+      "contract findings",
+      "OpenAPI or schema patch notes",
+      "positive and negative API tests"
+    ],
+    "safeguards": [
+      "Do not invent undocumented guarantees; label assumptions and verify with source code or docs."
+    ],
+    "refs": [
+      "OpenAPI Specification: https://spec.openapis.org/oas/latest.html"
+    ]
+  },
+  {
+    "slug": "clean-code-refactor",
+    "category": "technology",
+    "description": "Simplify code while preserving behavior through small refactors and characterization tests.",
+    "triggers": "refactor, clean code, duplication, readability, maintainability",
+    "workflow": [
+      "Locate behavior boundaries, callers, tests, and risky side effects before changing code.",
+      "Name the smallest behavior-preserving refactor that improves clarity or reduces duplication.",
+      "Add or strengthen tests when behavior is not already protected.",
+      "Prefer local simplification over new abstractions unless repetition is real and stable."
+    ],
+    "outputs": [
+      "refactor plan",
+      "focused patch",
+      "test evidence"
+    ],
+    "safeguards": [
+      "Avoid broad style churn and unrelated formatting changes."
+    ],
+    "refs": [
+      "Martin Fowler Refactoring catalog: https://refactoring.com/catalog/"
+    ]
+  },
+  {
+    "slug": "code-review",
+    "category": "technology",
+    "description": "Review changes for correctness, regressions, security, performance, and missing tests.",
+    "triggers": "review, PR, diff, code quality, bug risk",
+    "workflow": [
+      "Read the diff and surrounding execution paths, not only changed lines.",
+      "Prioritize behavior-impacting defects over style preferences.",
+      "For each finding, cite file, line, scenario, consequence, and suggested fix.",
+      "State test gaps and residual risk even when no blocking issues are found."
+    ],
+    "outputs": [
+      "ordered findings",
+      "open questions",
+      "test gap summary"
+    ],
+    "safeguards": [
+      "Do not claim an issue without evidence; use uncertainty labels when needed."
+    ],
+    "refs": [
+      "Google Engineering Practices review guide: https://google.github.io/eng-practices/review/"
+    ]
+  },
+  {
+    "slug": "debugging-root-cause",
+    "category": "technology",
+    "description": "Diagnose bugs using reproduction, hypotheses, traces, logs, and minimal fixes.",
+    "triggers": "bug, failing test, error, exception, regression, incident",
+    "workflow": [
+      "Capture the observed behavior, expected behavior, scope, and reproduction path.",
+      "Inspect logs, stack traces, recent changes, dependency versions, and environment differences.",
+      "Form competing hypotheses and falsify them with the cheapest evidence.",
+      "Fix the root cause and add regression coverage that fails before the fix."
+    ],
+    "outputs": [
+      "root-cause note",
+      "fix patch",
+      "regression test",
+      "verification commands"
+    ],
+    "safeguards": [
+      "Do not mask symptoms with retries or broad catch blocks unless the root cause supports it."
+    ],
+    "refs": [
+      "SRE incident response concepts: https://sre.google/sre-book/managing-incidents/"
+    ]
+  },
+  {
+    "slug": "test-strategy",
+    "category": "technology",
+    "description": "Design test coverage across unit, integration, contract, end-to-end, accessibility, and regression layers.",
+    "triggers": "tests, coverage, pytest, jest, playwright, junit, CI",
+    "workflow": [
+      "Map critical behavior, failure modes, and external dependencies.",
+      "Choose the cheapest test layer that gives confidence for each behavior.",
+      "Include positive, negative, boundary, and regression cases.",
+      "Make tests deterministic, isolated, and useful in CI."
+    ],
+    "outputs": [
+      "test matrix",
+      "test implementation",
+      "CI command list"
+    ],
+    "safeguards": [
+      "Do not chase coverage percentage at the expense of meaningful assertions."
+    ],
+    "refs": [
+      "Testing Trophy concept: https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications"
+    ]
+  },
+  {
+    "slug": "observability-logging",
+    "category": "technology",
+    "description": "Design logs, metrics, traces, alerts, and dashboards around operational questions.",
+    "triggers": "logs, metrics, tracing, observability, alerting, dashboard",
+    "workflow": [
+      "Identify user-visible journeys, dependencies, SLIs, and failure modes.",
+      "Define structured logs with correlation IDs and safe redaction.",
+      "Add metrics and traces where they answer concrete operational questions.",
+      "Create alert thresholds tied to symptoms, not noisy internals."
+    ],
+    "outputs": [
+      "observability plan",
+      "instrumentation checklist",
+      "dashboard and alert notes"
+    ],
+    "safeguards": [
+      "Never log secrets, tokens, full PII, or sensitive financial/health data."
+    ],
+    "refs": [
+      "OpenTelemetry docs: https://opentelemetry.io/docs/"
+    ]
+  },
+  {
+    "slug": "security-threat-model",
+    "category": "technology",
+    "description": "Threat-model applications, automations, data flows, agents, and infrastructure.",
+    "triggers": "security, threat model, privacy, auth, OWASP, secrets",
+    "workflow": [
+      "Identify assets, actors, trust boundaries, data classifications, and abuse cases.",
+      "Review authentication, authorization, input handling, storage, logging, and dependency risks.",
+      "Rank risks by exploitability and impact, then propose controls with owners.",
+      "Include privacy and sensitive-data handling constraints."
+    ],
+    "outputs": [
+      "threat model",
+      "risk register",
+      "control backlog"
+    ],
+    "safeguards": [
+      "Do not provide offensive instructions. Keep guidance defensive and authorization-bound."
+    ],
+    "refs": [
+      "OWASP ASVS: https://owasp.org/www-project-application-security-verification-standard/"
+    ]
+  },
+  {
+    "slug": "devops-ci-cd",
+    "category": "technology",
+    "description": "Create CI/CD pipelines, release gates, environment promotion, and rollback workflows.",
+    "triggers": "CI, CD, GitHub Actions, CircleCI, pipeline, release, deployment",
+    "workflow": [
+      "List build, lint, test, scan, package, deploy, and rollback steps.",
+      "Cache dependencies safely and separate fast checks from slower gates.",
+      "Protect secrets, environment approvals, and production changes.",
+      "Document how a human verifies and rolls back a release."
+    ],
+    "outputs": [
+      "pipeline YAML",
+      "release checklist",
+      "rollback notes"
+    ],
+    "safeguards": [
+      "Do not weaken branch protection, secret handling, or production approvals for speed."
+    ],
+    "refs": [
+      "GitHub Actions docs: https://docs.github.com/actions"
+    ]
+  },
+  {
+    "slug": "docker-kubernetes",
+    "category": "technology",
+    "description": "Build Dockerfiles, Compose setups, Kubernetes manifests, Helm values, and runtime checks.",
+    "triggers": "Docker, Kubernetes, Helm, container, compose, deployment",
+    "workflow": [
+      "Identify runtime, ports, env vars, volumes, health checks, and least-privilege needs.",
+      "Use minimal images, deterministic builds, and non-root containers when possible.",
+      "Add readiness/liveness probes, resource requests, and rollout strategy.",
+      "Verify local and cluster commands separately."
+    ],
+    "outputs": [
+      "Dockerfile",
+      "Compose or Kubernetes manifests",
+      "verification commands"
+    ],
+    "safeguards": [
+      "Do not bake secrets into images or manifests."
+    ],
+    "refs": [
+      "Kubernetes docs: https://kubernetes.io/docs/home/"
+    ]
+  },
+  {
+    "slug": "cloud-cost-review",
+    "category": "technology",
+    "description": "Analyze cloud and SaaS cost drivers and propose savings without reducing reliability.",
+    "triggers": "cloud cost, FinOps, AWS bill, GCP bill, Azure cost, SaaS spend",
+    "workflow": [
+      "Collect cost period, services, tags, owners, usage metrics, and commitments.",
+      "Separate waste, right-sizing, architecture, procurement, and governance opportunities.",
+      "Estimate impact, risk, effort, and rollback for each action.",
+      "Create a monitoring plan so savings persist."
+    ],
+    "outputs": [
+      "cost-driver table",
+      "savings backlog",
+      "tracking dashboard outline"
+    ],
+    "safeguards": [
+      "Do not recommend deleting production resources without backup, owner, and rollback confirmation."
+    ],
+    "refs": [
+      "FinOps Foundation framework: https://www.finops.org/framework/"
+    ]
+  },
+  {
+    "slug": "database-query-optimization",
+    "category": "data",
+    "description": "Optimize schemas, indexes, SQL, migrations, and data access patterns.",
+    "triggers": "SQL, index, slow query, migration, Postgres, MySQL, database",
+    "workflow": [
+      "Capture workload, query plans, table sizes, indexes, cardinality, and latency targets.",
+      "Find unnecessary scans, joins, sorts, locks, and N+1 access.",
+      "Propose indexes or query rewrites with expected tradeoffs.",
+      "Add migration, rollback, and verification commands."
+    ],
+    "outputs": [
+      "query analysis",
+      "index or query patch",
+      "migration safety notes"
+    ],
+    "safeguards": [
+      "Do not add indexes without considering write cost and storage impact."
+    ],
+    "refs": [
+      "PostgreSQL EXPLAIN docs: https://www.postgresql.org/docs/current/using-explain.html"
+    ]
+  },
+  {
+    "slug": "architecture-decision-record",
+    "category": "technology",
+    "description": "Write Architecture Decision Records and tradeoff notes for technical choices.",
+    "triggers": "ADR, architecture decision, tradeoff, design doc, RFC",
+    "workflow": [
+      "State context, forces, constraints, options, decision, consequences, and review date.",
+      "Compare options on operational, security, cost, user, and delivery impact.",
+      "Document rejected alternatives without caricaturing them.",
+      "Link decision to follow-up tasks and measurable signals."
+    ],
+    "outputs": [
+      "ADR",
+      "option matrix",
+      "follow-up checklist"
+    ],
+    "safeguards": [
+      "Do not over-document obvious local changes; reserve ADRs for durable decisions."
+    ],
+    "refs": [
+      "ADR examples by Michael Nygard: https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions"
+    ]
+  },
+  {
+    "slug": "python-data-stack",
+    "category": "languages",
+    "description": "Use Python for automation, APIs, data analysis, notebooks, and production services.",
+    "triggers": "Python, pandas, polars, FastAPI, pytest, notebook, script",
+    "workflow": [
+      "Identify whether the task is a script, package, API, notebook, or pipeline.",
+      "Use typing, small functions, deterministic IO, and explicit environment management.",
+      "Prefer pandas, Polars, PyArrow, Pydantic, FastAPI, pytest, ruff, and mypy where appropriate.",
+      "Provide commands for setup, run, test, and formatting."
+    ],
+    "outputs": [
+      "Python implementation",
+      "dependency notes",
+      "tests or reproducible notebook"
+    ],
+    "safeguards": [
+      "Do not silently mutate original datasets; write outputs to a separate path."
+    ],
+    "refs": [
+      "Python packaging guide: https://packaging.python.org/en/latest/"
+    ]
+  },
+  {
+    "slug": "typescript-react-next",
+    "category": "languages",
+    "description": "Build TypeScript, React, Next.js, Node.js, NestJS, Angular, Vue, and frontend/backend JS systems.",
+    "triggers": "TypeScript, React, Next.js, Node, NestJS, Angular, Vue, frontend",
+    "workflow": [
+      "Identify framework, package manager, routing model, state ownership, and API contract.",
+      "Use strict TypeScript, typed props, controlled side effects, and accessible UI primitives.",
+      "Test behavior with unit/component/e2e tools already present.",
+      "Keep generated UI connected to real flows, not decorative placeholders."
+    ],
+    "outputs": [
+      "typed implementation",
+      "test cases",
+      "run commands"
+    ],
+    "safeguards": [
+      "Do not introduce a new framework or styling system unless the repo already uses it or the user asks."
+    ],
+    "refs": [
+      "TypeScript handbook: https://www.typescriptlang.org/docs/"
+    ]
+  },
+  {
+    "slug": "java-spring-boot",
+    "category": "languages",
+    "description": "Build Java, Kotlin, Spring Boot, Maven/Gradle, JPA, WebFlux, and JVM services.",
+    "triggers": "Java, Kotlin, Spring Boot, Maven, Gradle, JPA, JVM",
+    "workflow": [
+      "Inspect build files, package naming, Spring version, database, and existing architecture.",
+      "Use constructor injection, explicit DTOs, validation, transaction boundaries, and migrations.",
+      "Write JUnit or integration tests for success and failure paths.",
+      "Document configuration and operational behavior."
+    ],
+    "outputs": [
+      "Spring or JVM implementation",
+      "tests",
+      "configuration notes"
+    ],
+    "safeguards": [
+      "Do not use Lombok or hidden magic unless the repository already standardizes on it."
+    ],
+    "refs": [
+      "Spring Boot reference: https://docs.spring.io/spring-boot/index.html"
+    ]
+  },
+  {
+    "slug": "dotnet-api",
+    "category": "languages",
+    "description": "Build C#, .NET, ASP.NET Core, EF Core, minimal APIs, workers, and Azure-friendly services.",
+    "triggers": "C#, .NET, ASP.NET, EF Core, minimal API, Blazor",
+    "workflow": [
+      "Inspect solution structure, target framework, dependency injection, and persistence choices.",
+      "Use typed options, validation, logging scopes, cancellation tokens, and explicit DTOs.",
+      "Add xUnit/NUnit tests and integration coverage where meaningful.",
+      "Document dotnet restore/build/test commands."
+    ],
+    "outputs": [
+      ".NET implementation",
+      "tests",
+      "configuration notes"
+    ],
+    "safeguards": [
+      "Do not block async code or ignore cancellation in request paths."
+    ],
+    "refs": [
+      "ASP.NET Core docs: https://learn.microsoft.com/aspnet/core/"
+    ]
+  },
+  {
+    "slug": "go-rust-systems",
+    "category": "languages",
+    "description": "Build Go and Rust services, CLIs, workers, network tools, and performance-sensitive components.",
+    "triggers": "Go, Rust, CLI, systems, performance, concurrency",
+    "workflow": [
+      "Identify latency, safety, concurrency, deployment, and binary constraints.",
+      "Use idiomatic error handling, simple module structure, and explicit resource lifetimes.",
+      "Add benchmarks or profiling when performance claims matter.",
+      "Document build, test, lint, and release commands."
+    ],
+    "outputs": [
+      "Go or Rust implementation",
+      "tests",
+      "benchmark or profiling notes"
+    ],
+    "safeguards": [
+      "Do not add unsafe Rust or global mutable state unless there is a specific justified need."
+    ],
+    "refs": [
+      "Go docs: https://go.dev/doc/; Rust book: https://doc.rust-lang.org/book/"
+    ]
+  },
+  {
+    "slug": "mobile-app-delivery",
+    "category": "languages",
+    "description": "Plan and deliver Swift/iOS, Kotlin/Android, React Native, and Flutter features.",
+    "triggers": "iOS, Android, Swift, Kotlin, Flutter, React Native, mobile",
+    "workflow": [
+      "Identify platform, navigation, state, offline, permissions, analytics, and release target.",
+      "Follow platform UI conventions and accessibility requirements.",
+      "Write unit, widget, snapshot, or device tests according to stack.",
+      "Create store-readiness and release notes when shipping."
+    ],
+    "outputs": [
+      "mobile feature plan",
+      "implementation notes",
+      "test and release checklist"
+    ],
+    "safeguards": [
+      "Do not request broad device permissions without explaining user value and privacy impact."
+    ],
+    "refs": [
+      "Apple Human Interface Guidelines: https://developer.apple.com/design/human-interface-guidelines/"
+    ]
+  },
+  {
+    "slug": "llm-prompt-engineering",
+    "category": "ai-agents",
+    "description": "Design prompts, system instructions, evaluations, examples, and output schemas for LLM workflows.",
+    "triggers": "prompt, LLM, instructions, output schema, eval, RAG",
+    "workflow": [
+      "Define user goal, operating boundaries, input types, and success criteria.",
+      "Separate role, task, context, constraints, examples, and output format.",
+      "Add refusal, uncertainty, citation, and escalation rules for risky domains.",
+      "Create evaluation prompts or fixtures that catch common failures."
+    ],
+    "outputs": [
+      "prompt spec",
+      "example prompts",
+      "evaluation checklist"
+    ],
+    "safeguards": [
+      "Do not hide policies or instructions that users need to understand output limits."
+    ],
+    "refs": [
+      "OpenAI prompt engineering guide: https://platform.openai.com/docs/guides/prompt-engineering"
+    ]
+  },
+  {
+    "slug": "agent-skill-authoring",
+    "category": "ai-agents",
+    "description": "Create reusable agents, subagents, skills, slash commands, and memory playbooks.",
+    "triggers": "agent, subagent, skill, Claude, Codex, Gemini, command",
+    "workflow": [
+      "Define activation triggers, inputs, output contract, forbidden actions, and verification steps.",
+      "Keep the core instruction small and move detailed material into references or assets.",
+      "Create installable variants for Claude, Codex, and Gemini when needed.",
+      "Add a maintenance note explaining how to update the skill safely."
+    ],
+    "outputs": [
+      "agent file",
+      "skill file",
+      "command file",
+      "installation notes"
+    ],
+    "safeguards": [
+      "Do not create broad omnipotent agents; keep each role bounded and testable."
+    ],
+    "refs": [
+      "Claude Code skills: https://code.claude.com/docs/en/skills; Codex customization: https://developers.openai.com/codex/concepts/customization"
+    ]
+  },
+  {
+    "slug": "mcp-integration-design",
+    "category": "ai-agents",
+    "description": "Design MCP server integrations and connector workflows for tools, data, docs, and business systems.",
+    "triggers": "MCP, connector, tool integration, agent tools, docs server",
+    "workflow": [
+      "Identify the external system, auth model, actions, read scopes, and risk boundaries.",
+      "Define tool names, schemas, permissions, rate limits, and audit logging.",
+      "Write agent guidance for when to use the tool and when to ask for confirmation.",
+      "Test with harmless read-only calls before enabling write actions."
+    ],
+    "outputs": [
+      "MCP design",
+      "tool schema notes",
+      "agent usage rules"
+    ],
+    "safeguards": [
+      "Default to read-only scopes and least privilege until a concrete write workflow is proven."
+    ],
+    "refs": [
+      "Model Context Protocol docs: https://modelcontextprotocol.io/docs"
+    ]
+  },
+  {
+    "slug": "spreadsheet-analysis",
+    "category": "data",
+    "description": "Analyze Excel, Google Sheets, CSV files, formulas, pivots, anomalies, and tabular business data.",
+    "triggers": "Excel, Sheets, CSV, spreadsheet, pivot, formula, data cleaning",
+    "workflow": [
+      "Inventory sheets, columns, formulas, date ranges, hidden assumptions, and missing values.",
+      "Create a data dictionary and validate totals, duplicates, types, and outliers.",
+      "Answer the business question with tables, charts, and caveats.",
+      "When editing, preserve the source file and write a clearly named output copy."
+    ],
+    "outputs": [
+      "data dictionary",
+      "analysis summary",
+      "formula or pivot recommendations",
+      "chart plan"
+    ],
+    "safeguards": [
+      "Never overwrite the only copy of a spreadsheet; avoid exposing personal financial data."
+    ],
+    "refs": [
+      "Microsoft Excel help: https://support.microsoft.com/excel"
+    ]
+  },
+  {
+    "slug": "data-analysis-report",
+    "category": "data",
+    "description": "Produce reproducible data analysis reports with assumptions, methods, findings, and recommendations.",
+    "triggers": "analysis, dataset, report, statistics, notebook, insight",
+    "workflow": [
+      "Clarify decision question, grain, population, time period, and data quality limits.",
+      "Profile data, clean transformations, and document assumptions.",
+      "Use descriptive statistics first, then modeling only if the question needs it.",
+      "Separate findings, interpretation, recommendation, and uncertainty."
+    ],
+    "outputs": [
+      "analysis report",
+      "charts",
+      "reproducible notebook or script",
+      "assumption log"
+    ],
+    "safeguards": [
+      "Do not imply causality from correlations or incomplete observational data."
+    ],
+    "refs": [
+      "Pandas user guide: https://pandas.pydata.org/docs/user_guide/"
+    ]
+  },
+  {
+    "slug": "dashboard-bi-storytelling",
+    "category": "data",
+    "description": "Design dashboards, BI narratives, metric definitions, and executive data stories.",
+    "triggers": "dashboard, Power BI, Tableau, Looker, metrics, KPI",
+    "workflow": [
+      "Define audience, decisions, refresh cadence, metric owner, and alert thresholds.",
+      "Reduce dashboard scope to questions people repeatedly ask.",
+      "Use visual encodings that match comparison, trend, composition, and distribution tasks.",
+      "Include definitions, filters, caveats, and drill-down paths."
+    ],
+    "outputs": [
+      "metric dictionary",
+      "dashboard wireframe",
+      "executive narrative"
+    ],
+    "safeguards": [
+      "Do not create vanity metrics without an action tied to the metric movement."
+    ],
+    "refs": [
+      "Data visualization catalogue: https://datavizcatalogue.com/"
+    ]
+  },
+  {
+    "slug": "pdf-extraction-synthesis",
+    "category": "research",
+    "description": "Extract and synthesize PDFs, scanned docs, forms, reports, contracts, papers, and slide decks.",
+    "triggers": "PDF, document, extraction, OCR, summarize, compare reports",
+    "workflow": [
+      "Identify document type, pages, tables, images, signatures, dates, and required fidelity.",
+      "Extract key sections with page references and mark OCR uncertainty.",
+      "Build a summary, evidence table, open questions, and action list.",
+      "For multiple PDFs, compare claims, dates, numbers, definitions, and contradictions."
+    ],
+    "outputs": [
+      "executive summary",
+      "page-referenced evidence table",
+      "open questions"
+    ],
+    "safeguards": [
+      "Do not treat OCR from scans as definitive; flag low-confidence extraction."
+    ],
+    "refs": [
+      "Adobe PDF accessibility overview: https://www.adobe.com/accessibility/pdf.html"
+    ]
+  },
+  {
+    "slug": "research-brief",
+    "category": "research",
+    "description": "Create research briefs from web, docs, papers, notes, or mixed source material.",
+    "triggers": "research, brief, compare, summarize, sources, literature",
+    "workflow": [
+      "State the question, scope, source quality standard, and freshness requirement.",
+      "Gather primary or authoritative sources first, then secondary sources only for context.",
+      "Separate facts, interpretations, disagreements, and unknowns.",
+      "Return a concise brief with citations and next research steps."
+    ],
+    "outputs": [
+      "research brief",
+      "source table",
+      "confidence labels"
+    ],
+    "safeguards": [
+      "For current, niche, medical, legal, or financial topics, verify with up-to-date authoritative sources."
+    ],
+    "refs": [
+      "Google Search quality concepts: https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+    ]
+  },
+  {
+    "slug": "citation-fact-check",
+    "category": "research",
+    "description": "Fact-check claims, citations, numbers, dates, quotes, and source quality.",
+    "triggers": "fact check, citation, verify, source, claim, reference",
+    "workflow": [
+      "Break the material into atomic claims.",
+      "Find primary sources or authoritative references for each claim.",
+      "Mark each claim supported, contradicted, unclear, or outside scope.",
+      "Correct wording and include source links or precise document references."
+    ],
+    "outputs": [
+      "claim table",
+      "corrected text",
+      "source notes"
+    ],
+    "safeguards": [
+      "Do not fabricate citations or preserve claims whose source cannot be found."
+    ],
+    "refs": [
+      "Crossref metadata search: https://www.crossref.org/"
+    ]
+  },
+  {
+    "slug": "meeting-summary",
+    "category": "office",
+    "description": "Summarize meetings, calls, notes, transcripts, and decisions into usable follow-up artifacts.",
+    "triggers": "meeting, transcript, notes, action items, minutes",
+    "workflow": [
+      "Identify purpose, attendees, decisions, unresolved questions, owners, and due dates.",
+      "Condense discussion into outcomes rather than chronological chatter.",
+      "Separate action items from information items.",
+      "Write a follow-up message suitable for the audience."
+    ],
+    "outputs": [
+      "meeting summary",
+      "action register",
+      "follow-up email"
+    ],
+    "safeguards": [
+      "Do not attribute sensitive statements to a person unless the transcript clearly supports it."
+    ],
+    "refs": [
+      "Atlassian meeting notes guide: https://www.atlassian.com/team-playbook/plays/meeting-notes"
+    ]
+  },
+  {
+    "slug": "presentation-powerpoint",
+    "category": "creative",
+    "description": "Create PowerPoint, Google Slides, keynote outlines, speaker notes, and executive deck structures.",
+    "triggers": "PowerPoint, presentation, slides, deck, speaker notes, pitch",
+    "workflow": [
+      "Define audience, decision, desired emotion, time limit, and evidence available.",
+      "Create one message per slide with a story spine: context, tension, insight, choice, next step.",
+      "Turn data into charts with captions that state the point.",
+      "Provide slide titles, bullets, visual suggestions, speaker notes, and optional pptx automation plan."
+    ],
+    "outputs": [
+      "deck outline",
+      "speaker notes",
+      "visual direction",
+      "PowerPoint automation checklist"
+    ],
+    "safeguards": [
+      "Do not overfill slides; move detail into appendix or notes."
+    ],
+    "refs": [
+      "Microsoft PowerPoint help: https://support.microsoft.com/powerpoint"
+    ]
+  },
+  {
+    "slug": "figma-product-brief",
+    "category": "creative",
+    "description": "Prepare Figma-ready product briefs, user flows, component inventories, and design handoff notes.",
+    "triggers": "Figma, wireframe, UX, UI, product design, prototype",
+    "workflow": [
+      "Define user, job-to-be-done, platform, states, constraints, and success metric.",
+      "Map primary flow, secondary flows, empty/error/loading states, and accessibility requirements.",
+      "List components, content hierarchy, responsive rules, and handoff questions.",
+      "Create prompts or checklists a designer can use in Figma."
+    ],
+    "outputs": [
+      "product brief",
+      "flow map",
+      "component inventory",
+      "handoff checklist"
+    ],
+    "safeguards": [
+      "Do not promise pixel-perfect output without actual design review or Figma access."
+    ],
+    "refs": [
+      "Figma help center: https://help.figma.com/"
+    ]
+  },
+  {
+    "slug": "visual-design-critique",
+    "category": "creative",
+    "description": "Review layouts, typography, accessibility, color, hierarchy, responsive behavior, and product polish.",
+    "triggers": "design review, UI critique, accessibility, layout, visual polish",
+    "workflow": [
+      "Evaluate clarity, hierarchy, contrast, spacing, alignment, affordance, and responsive stability.",
+      "Check accessibility basics including readable text, keyboard paths, focus, and color contrast.",
+      "Prioritize changes by user impact and implementation effort.",
+      "Offer concrete revisions rather than vague taste notes."
+    ],
+    "outputs": [
+      "design findings",
+      "revision checklist",
+      "accessibility notes"
+    ],
+    "safeguards": [
+      "Do not critique aesthetics without tying recommendations to usability or brand goals."
+    ],
+    "refs": [
+      "WCAG overview: https://www.w3.org/WAI/standards-guidelines/wcag/"
+    ]
+  },
+  {
+    "slug": "market-research",
+    "category": "finance",
+    "description": "Research markets, sectors, competitors, macro trends, and business context with sourced evidence.",
+    "triggers": "market research, sector, competitor, macro, trend, TAM",
+    "workflow": [
+      "Define market, geography, period, segment, and decision the research supports.",
+      "Gather authoritative statistics, filings, reputable research, and company materials.",
+      "Separate market facts, analyst opinions, and your own inference.",
+      "Summarize opportunities, risks, uncertainties, and watchlist signals."
+    ],
+    "outputs": [
+      "market brief",
+      "source table",
+      "risk and opportunity map"
+    ],
+    "safeguards": [
+      "Do not present market commentary as personalized investment advice."
+    ],
+    "refs": [
+      "SEC EDGAR: https://www.sec.gov/edgar; Banco Central do Brasil SGS: https://www.bcb.gov.br/"
+    ]
+  },
+  {
+    "slug": "personal-finance-budget",
+    "category": "finance",
+    "description": "Organize budgets, spending, debt payoff, goals, emergency funds, and family financial routines.",
+    "triggers": "budget, personal finance, debt, emergency fund, family finances",
+    "workflow": [
+      "Collect income, fixed costs, variable costs, debts, goals, dates, and emotional constraints.",
+      "Create a simple cash-flow view and identify controllable levers.",
+      "Offer scenarios for debt payoff, savings goals, and emergency reserve building.",
+      "Create a weekly or monthly review checklist."
+    ],
+    "outputs": [
+      "budget template",
+      "scenario table",
+      "money routine checklist"
+    ],
+    "safeguards": [
+      "Give educational planning help only; recommend qualified advice for investment, tax, or legal decisions."
+    ],
+    "refs": [
+      "SEC Investor.gov: https://www.investor.gov/; CVM Portal do Investidor: https://www.gov.br/investidor/pt-br"
+    ]
+  },
+  {
+    "slug": "investment-due-diligence",
+    "category": "finance",
+    "description": "Create educational due-diligence checklists for companies, funds, ETFs, bonds, and assets.",
+    "triggers": "investment analysis, stock, ETF, fund, due diligence, valuation",
+    "workflow": [
+      "Clarify that the output is educational, not a recommendation.",
+      "Collect ticker/asset, region, currency, time horizon, filings, fees, liquidity, and risk profile.",
+      "Review business model, financials, valuation, governance, catalysts, risks, and scenario sensitivity.",
+      "Return questions to verify before any real decision."
+    ],
+    "outputs": [
+      "due-diligence memo",
+      "risk checklist",
+      "scenario table"
+    ],
+    "safeguards": [
+      "Do not tell the user to buy, sell, hold, or time the market."
+    ],
+    "refs": [
+      "FINRA investor education: https://www.finra.org/investors; SEC Investor.gov: https://www.investor.gov/"
+    ]
+  },
+  {
+    "slug": "risk-scenario-analysis",
+    "category": "finance",
+    "description": "Build scenarios, sensitivities, stress tests, decision matrices, and risk registers.",
+    "triggers": "scenario, risk, stress test, sensitivity, decision matrix",
+    "workflow": [
+      "Define decision, variables, base case, upside, downside, and extreme case.",
+      "Identify drivers, leading indicators, dependencies, and failure thresholds.",
+      "Quantify ranges where data supports it and use qualitative scoring where it does not.",
+      "Recommend monitoring and reversible next steps."
+    ],
+    "outputs": [
+      "scenario table",
+      "risk register",
+      "monitoring plan"
+    ],
+    "safeguards": [
+      "Do not overstate precision when inputs are estimates."
+    ],
+    "refs": [
+      "ISO 31000 overview: https://www.iso.org/iso-31000-risk-management.html"
+    ]
+  },
+  {
+    "slug": "financial-modeling",
+    "category": "finance",
+    "description": "Create simple models for budgets, businesses, valuation sensitivity, pricing, and unit economics.",
+    "triggers": "financial model, forecast, valuation, unit economics, pricing",
+    "workflow": [
+      "Define model purpose, time horizon, currency, unit of analysis, and output decision.",
+      "Separate inputs, calculations, outputs, and checks.",
+      "Include scenarios and sanity checks for totals, signs, and growth rates.",
+      "Document assumptions so a family member or stakeholder can inspect them."
+    ],
+    "outputs": [
+      "model structure",
+      "assumption table",
+      "sensitivity plan"
+    ],
+    "safeguards": [
+      "Do not hide hard-coded assumptions inside formulas."
+    ],
+    "refs": [
+      "Corporate Finance Institute modeling basics: https://corporatefinanceinstitute.com/resources/financial-modeling/"
+    ]
+  },
+  {
+    "slug": "tax-document-organizer",
+    "category": "finance",
+    "description": "Organize tax documents, receipts, statements, and accountant handoff packages without giving tax advice.",
+    "triggers": "tax, receipts, accountant, documents, imposto de renda, IRPF",
+    "workflow": [
+      "Inventory document types, years, owners, institutions, values, and missing items.",
+      "Group documents by income, expenses, investments, property, dependents, donations, and debts.",
+      "Create a checklist of questions for a qualified tax professional.",
+      "Summarize totals only when source documents support them."
+    ],
+    "outputs": [
+      "document checklist",
+      "accountant handoff summary",
+      "missing information list"
+    ],
+    "safeguards": [
+      "Do not provide legal or tax conclusions; advise professional review for filing decisions."
+    ],
+    "refs": [
+      "Receita Federal IRPF: https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda"
+    ]
+  },
+  {
+    "slug": "psychology-literature-synthesis",
+    "category": "psychology",
+    "description": "Summarize psychology research on behavior, decision-making, stress, habits, motivation, and communication.",
+    "triggers": "psychology, behavior, motivation, stress, decision-making, emotion",
+    "workflow": [
+      "Clarify whether the task is education, self-reflection, or workplace communication.",
+      "Use reputable sources and distinguish evidence, interpretation, and personal reflection prompts.",
+      "Translate concepts into practical exercises while avoiding diagnosis.",
+      "Escalate crisis, self-harm, abuse, or clinical concerns to qualified support."
+    ],
+    "outputs": [
+      "literature summary",
+      "reflection prompts",
+      "practical exercise plan"
+    ],
+    "safeguards": [
+      "Never diagnose, treat, or replace a licensed mental health professional."
+    ],
+    "refs": [
+      "APA Psychology Topics: https://www.apa.org/topics; WHO mental health: https://www.who.int/health-topics/mental-health"
+    ]
+  },
+  {
+    "slug": "decision-journal",
+    "category": "psychology",
+    "description": "Create decision journals, bias checks, pre-mortems, and post-mortems for personal or professional choices.",
+    "triggers": "decision, bias, journal, premortem, retrospective",
+    "workflow": [
+      "State the decision, options, stakes, reversibility, deadline, and current emotions.",
+      "Record assumptions, evidence, confidence, base rates, and disconfirming signals.",
+      "Run a premortem and define review criteria before the outcome is known.",
+      "Afterward, compare process quality to outcome quality."
+    ],
+    "outputs": [
+      "decision journal template",
+      "bias checklist",
+      "review plan"
+    ],
+    "safeguards": [
+      "Do not force decisions in high-stress moments; suggest time and professional input where stakes are high."
+    ],
+    "refs": [
+      "Behavioral insights resources: https://www.bi.team/"
+    ]
+  },
+  {
+    "slug": "habit-behavior-design",
+    "category": "psychology",
+    "description": "Design practical habit systems, routines, prompts, rewards, and environment changes.",
+    "triggers": "habit, routine, behavior change, motivation, consistency",
+    "workflow": [
+      "Identify desired behavior, current friction, context, identity, and smallest viable action.",
+      "Design cue, action, reward, environment, and fallback plan.",
+      "Create a tracking method that is lightweight and non-shaming.",
+      "Review after a short period and adjust friction rather than blaming willpower."
+    ],
+    "outputs": [
+      "habit plan",
+      "tracking sheet",
+      "fallback rules"
+    ],
+    "safeguards": [
+      "For eating, addiction, self-harm, or clinical issues, recommend qualified care and support."
+    ],
+    "refs": [
+      "CDC health behavior resources: https://www.cdc.gov/health-literacy/php/toolkit/"
+    ]
+  },
+  {
+    "slug": "difficult-conversation-prep",
+    "category": "psychology",
+    "description": "Prepare for hard conversations, feedback, boundaries, negotiation, and conflict repair.",
+    "triggers": "difficult conversation, conflict, feedback, boundary, negotiation",
+    "workflow": [
+      "Clarify goal, relationship, facts, feelings, boundaries, and likely reactions.",
+      "Draft a respectful opening, key points, listening questions, and fallback response.",
+      "Separate what you can control from what you cannot.",
+      "Plan timing, medium, and safety considerations."
+    ],
+    "outputs": [
+      "conversation script",
+      "listening questions",
+      "boundary plan"
+    ],
+    "safeguards": [
+      "For abuse, coercion, or safety risks, prioritize safety planning and professional/local support."
+    ],
+    "refs": [
+      "Nonviolent Communication overview: https://www.cnvc.org/"
+    ]
+  },
+  {
+    "slug": "family-learning-coach",
+    "category": "education",
+    "description": "Create family-friendly explanations, practice plans, tutorials, and confidence-building learning paths.",
+    "triggers": "teach, explain to family, lesson plan, tutorial, study",
+    "workflow": [
+      "Identify learner age, prior knowledge, language, goal, attention span, and available tools.",
+      "Explain with examples, analogies, and short exercises.",
+      "Check understanding with low-pressure questions.",
+      "Create a next-practice plan and a small win."
+    ],
+    "outputs": [
+      "lesson plan",
+      "explanation",
+      "practice exercises"
+    ],
+    "safeguards": [
+      "Do not shame confusion; adapt the explanation instead."
+    ],
+    "refs": [
+      "Learning science resources: https://www.learningscientists.org/"
+    ]
+  },
+  {
+    "slug": "brand-positioning",
+    "category": "marketing",
+    "description": "Define brand positioning, audience, category, differentiation, proof, and message pillars.",
+    "triggers": "brand, positioning, ICP, value proposition, messaging",
+    "workflow": [
+      "Identify audience, pain, alternatives, category, proof, personality, and purchase context.",
+      "Write positioning statements and message pillars.",
+      "Map objections, proof points, and use cases.",
+      "Create variants for family, executive, technical, and customer audiences."
+    ],
+    "outputs": [
+      "positioning statement",
+      "message pillars",
+      "objection map"
+    ],
+    "safeguards": [
+      "Do not exaggerate capabilities or create claims that cannot be supported."
+    ],
+    "refs": [
+      "Nielsen Norman Group content strategy: https://www.nngroup.com/topic/content-strategy/"
+    ]
+  },
+  {
+    "slug": "copywriting-campaign",
+    "category": "marketing",
+    "description": "Write ads, landing pages, email sequences, headlines, scripts, and creative testing matrices.",
+    "triggers": "copy, ad, landing page, campaign, headline, script",
+    "workflow": [
+      "Clarify audience, offer, channel, stage of awareness, objections, and proof.",
+      "Generate multiple concepts with distinct angles rather than tiny wording variations.",
+      "Write copy with truthful claims, specific benefits, and a clear call to action.",
+      "Create a test plan with hypothesis, metric, and decision rule."
+    ],
+    "outputs": [
+      "campaign concepts",
+      "copy variants",
+      "creative test matrix"
+    ],
+    "safeguards": [
+      "Do not write deceptive, discriminatory, or unsupported claims."
+    ],
+    "refs": [
+      "FTC advertising guidance: https://www.ftc.gov/business-guidance/advertising-marketing"
+    ]
+  },
+  {
+    "slug": "seo-content-plan",
+    "category": "marketing",
+    "description": "Plan SEO content, search intent maps, briefs, topic clusters, refreshes, and helpful articles.",
+    "triggers": "SEO, content plan, blog, keyword, search intent",
+    "workflow": [
+      "Define audience, intent, funnel stage, market, language, and conversion path.",
+      "Group topics by intent and create useful briefs rather than keyword stuffing.",
+      "Add expertise, examples, FAQs, and internal linking suggestions.",
+      "Set refresh cadence and measurement criteria."
+    ],
+    "outputs": [
+      "topic cluster",
+      "content brief",
+      "editorial calendar"
+    ],
+    "safeguards": [
+      "Do not create thin content optimized only for search engines."
+    ],
+    "refs": [
+      "Google helpful content guidance: https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+    ]
+  },
+  {
+    "slug": "social-media-calendar",
+    "category": "marketing",
+    "description": "Create social media calendars, content pillars, hooks, captions, and repurposing plans.",
+    "triggers": "social media, Instagram, LinkedIn, TikTok, content calendar",
+    "workflow": [
+      "Define platform, audience, tone, frequency, pillars, and available assets.",
+      "Map content to awareness, trust, proof, education, and offer goals.",
+      "Write hooks and captions with concrete value.",
+      "Plan repurposing from long-form to short-form content."
+    ],
+    "outputs": [
+      "calendar",
+      "post drafts",
+      "repurposing plan"
+    ],
+    "safeguards": [
+      "Do not manufacture fake testimonials, scarcity, or results."
+    ],
+    "refs": [
+      "Meta business help: https://www.facebook.com/business/help"
+    ]
+  },
+  {
+    "slug": "ads-funnel-analysis",
+    "category": "marketing",
+    "description": "Analyze paid media funnels, landing pages, creative tests, conversion tracking, and unit economics.",
+    "triggers": "ads, funnel, CAC, ROAS, conversion, landing page",
+    "workflow": [
+      "Map impression, click, landing, lead, sale, retention, and revenue stages.",
+      "Review tracking, attribution limits, creative fatigue, offer clarity, and unit economics.",
+      "Identify the highest-leverage bottleneck and propose tests.",
+      "Create a decision rule for scaling, pausing, or iterating."
+    ],
+    "outputs": [
+      "funnel diagnosis",
+      "experiment backlog",
+      "metric dashboard"
+    ],
+    "safeguards": [
+      "Do not optimize for vanity metrics when cash economics are negative."
+    ],
+    "refs": [
+      "Google Ads measurement help: https://support.google.com/google-ads/topic/3121936"
+    ]
+  },
+  {
+    "slug": "customer-research",
+    "category": "marketing",
+    "description": "Plan interviews, surveys, persona research, jobs-to-be-done analysis, and insight synthesis.",
+    "triggers": "customer research, interview, survey, persona, JTBD",
+    "workflow": [
+      "Define learning goal, target segment, recruitment criteria, and bias risks.",
+      "Write neutral interview questions and avoid leading the witness.",
+      "Synthesize patterns, quotes, objections, triggers, and desired outcomes.",
+      "Translate insights into product, messaging, or experiment recommendations."
+    ],
+    "outputs": [
+      "research plan",
+      "interview guide",
+      "insight synthesis"
+    ],
+    "safeguards": [
+      "Do not collect sensitive personal data without a clear need and consent."
+    ],
+    "refs": [
+      "Nielsen Norman Group user interviews: https://www.nngroup.com/articles/user-interviews/"
+    ]
+  },
+  {
+    "slug": "email-drafting",
+    "category": "office",
+    "description": "Draft clear emails, replies, follow-ups, escalations, requests, and family-friendly messages.",
+    "triggers": "email, reply, follow-up, message, communication",
+    "workflow": [
+      "Identify recipient, relationship, goal, tone, constraints, and required action.",
+      "Draft with a useful subject, context, ask, deadline, and next step.",
+      "Offer variants for concise, warm, formal, and assertive tone.",
+      "Check for ambiguity and unnecessary defensiveness."
+    ],
+    "outputs": [
+      "email draft",
+      "subject lines",
+      "tone variants"
+    ],
+    "safeguards": [
+      "Do not send or impersonate; provide drafts for the user to review."
+    ],
+    "refs": [
+      "Plain language guidelines: https://www.plainlanguage.gov/guidelines/"
+    ]
+  },
+  {
+    "slug": "resume-linkedin",
+    "category": "personal",
+    "description": "Improve resumes, LinkedIn profiles, portfolios, cover letters, and interview stories.",
+    "triggers": "resume, CV, LinkedIn, cover letter, interview",
+    "workflow": [
+      "Identify target role, seniority, market, proof, constraints, and existing materials.",
+      "Translate responsibilities into outcomes, metrics, scope, tools, and business impact.",
+      "Tighten profile summary, bullets, and role-specific keywords without exaggeration.",
+      "Prepare STAR stories and questions for interviews."
+    ],
+    "outputs": [
+      "resume bullets",
+      "LinkedIn summary",
+      "interview prep"
+    ],
+    "safeguards": [
+      "Do not fabricate credentials, employers, metrics, or experience."
+    ],
+    "refs": [
+      "O*NET career data: https://www.onetonline.org/"
+    ]
+  },
+  {
+    "slug": "travel-itinerary",
+    "category": "personal",
+    "description": "Plan travel itineraries, family logistics, budgets, packing, and decision comparisons.",
+    "triggers": "travel, itinerary, trip, vacation, packing, route",
+    "workflow": [
+      "Clarify travelers, dates, budget, mobility, interests, pace, and must-avoid constraints.",
+      "Create a day-by-day plan with travel time, reservations, rest, and backup options.",
+      "Include budget ranges, documents, packing, and local safety checks.",
+      "Flag items that require current verification such as opening hours, visas, and prices."
+    ],
+    "outputs": [
+      "itinerary",
+      "budget sketch",
+      "packing and document checklist"
+    ],
+    "safeguards": [
+      "Verify current travel rules, safety advisories, and booking details before acting."
+    ],
+    "refs": [
+      "US travel advisories: https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html"
+    ]
+  },
+  {
+    "slug": "home-operations-planner",
+    "category": "personal",
+    "description": "Organize household tasks, maintenance, documents, accounts, routines, and family operations.",
+    "triggers": "home, household, chores, documents, routine, family ops",
+    "workflow": [
+      "List areas: documents, bills, maintenance, devices, passwords, health contacts, school, and travel.",
+      "Create recurring routines with owner, cadence, deadline, and location of supporting documents.",
+      "Design checklists that are simple enough for the whole family.",
+      "Separate urgent tasks from nice-to-have cleanup."
+    ],
+    "outputs": [
+      "household checklist",
+      "document inventory",
+      "recurring routine plan"
+    ],
+    "safeguards": [
+      "Do not ask users to paste passwords, tokens, or sensitive full identifiers."
+    ],
+    "refs": [
+      "Ready.gov family emergency planning: https://www.ready.gov/plan"
+    ]
+  },
+  {
+    "slug": "legal-document-reader",
+    "category": "office",
+    "description": "Read legal/admin documents for dates, obligations, risks, definitions, and questions for counsel.",
+    "triggers": "contract, terms, policy, notice, legal document, admin form",
+    "workflow": [
+      "Identify parties, document type, effective dates, obligations, money, termination, and dispute clauses.",
+      "Extract plain-language summary and page/section references.",
+      "List risks, ambiguities, missing attachments, and questions for a professional.",
+      "Avoid giving legal conclusions or jurisdiction-specific advice."
+    ],
+    "outputs": [
+      "plain-language summary",
+      "obligation table",
+      "questions for lawyer or admin"
+    ],
+    "safeguards": [
+      "This is document organization, not legal advice. Recommend qualified counsel for decisions."
+    ],
+    "refs": [
+      "Legal Information Institute: https://www.law.cornell.edu/"
+    ]
+  },
+  {
+    "slug": "procurement-vendor-comparison",
+    "category": "business",
+    "description": "Compare vendors, tools, SaaS plans, proposals, pricing, risks, and implementation effort.",
+    "triggers": "vendor, procurement, compare tools, RFP, SaaS, pricing",
+    "workflow": [
+      "Define must-have requirements, nice-to-haves, budget, timeline, risk constraints, and stakeholders.",
+      "Build a weighted comparison table with evidence and unknowns.",
+      "Include total cost, lock-in, security, support, migration, and exit plan.",
+      "Recommend next questions, trials, and negotiation points."
+    ],
+    "outputs": [
+      "comparison matrix",
+      "risk notes",
+      "vendor questions"
+    ],
+    "safeguards": [
+      "Do not recommend a purchase when critical requirements are unknown."
+    ],
+    "refs": [
+      "NIST supply chain risk guidance: https://csrc.nist.gov/projects/cyber-supply-chain-risk-management"
+    ]
+  },
+  {
+    "slug": "language-translation-localization",
+    "category": "office",
+    "description": "Translate, localize, simplify, and adapt copy between Portuguese, English, Spanish, and other languages.",
+    "triggers": "translate, localization, Portuguese, English, Spanish, copy adaptation",
+    "workflow": [
+      "Identify source language, target language, audience, tone, region, and terminology constraints.",
+      "Translate meaning, not word order, while preserving names, numbers, and legal or technical terms.",
+      "Offer literal and natural versions when nuance matters.",
+      "Call out idioms, culturally sensitive phrasing, and uncertain terms."
+    ],
+    "outputs": [
+      "translation",
+      "localized version",
+      "terminology notes"
+    ],
+    "safeguards": [
+      "For legal, medical, immigration, or certified documents, recommend professional translation review."
+    ],
+    "refs": [
+      "European Commission translation resources: https://commission.europa.eu/resources-partners/translation-and-drafting-resources_en"
+    ]
+  }
+]

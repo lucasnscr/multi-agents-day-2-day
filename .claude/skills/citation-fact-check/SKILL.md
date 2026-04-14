@@ -1,0 +1,52 @@
+---
+name: citation-fact-check
+description: Fact-check claims, citations, numbers, dates, quotes, and source quality.
+license: MIT
+metadata:
+  version: "1.0.0"
+  domain: research
+  triggers: fact check, citation, verify, source, claim, reference
+  output-format: structured artifact
+---
+
+# Citation Fact Check
+
+Fact-check claims, citations, numbers, dates, quotes, and source quality.
+
+## Activation
+
+Use this skill when the user asks about: fact check, citation, verify, source, claim, reference.
+
+## Workflow
+
+1. Break the material into atomic claims.
+2. Find primary sources or authoritative references for each claim.
+3. Mark each claim supported, contradicted, unclear, or outside scope.
+4. Correct wording and include source links or precise document references.
+
+## Expected Outputs
+
+- claim table
+- corrected text
+- source notes
+
+## Safety And Quality Boundaries
+
+- Do not fabricate citations or preserve claims whose source cannot be found.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta skill para citacao fatos checagem em tarefas de pesquisa. Entregue: claim table, corrected text, source notes. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- Crossref metadata search: https://www.crossref.org/
+
+## Quick Prompt
+
+"Use the `citation-fact-check` skill. My context is: <paste context>. Produce the expected outputs, cite sources or files, and list assumptions."

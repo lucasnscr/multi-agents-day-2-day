@@ -1,0 +1,87 @@
+[
+  {
+    "slug": "python",
+    "name": "Python",
+    "coverage": "FastAPI, Django, Flask, pandas, Polars, PyArrow, notebooks, automation, ML"
+  },
+  {
+    "slug": "javascript-typescript",
+    "name": "JavaScript and TypeScript",
+    "coverage": "Node.js, NestJS, React, Next.js, Angular, Vue, Svelte, Vite"
+  },
+  {
+    "slug": "java-kotlin",
+    "name": "Java and Kotlin",
+    "coverage": "Spring Boot, Quarkus, Micronaut, Maven, Gradle, JVM services, Android Kotlin"
+  },
+  {
+    "slug": "csharp-dotnet",
+    "name": "C# and .NET",
+    "coverage": "ASP.NET Core, EF Core, workers, Blazor, Azure services"
+  },
+  {
+    "slug": "go",
+    "name": "Go",
+    "coverage": "CLIs, services, workers, concurrency, cloud-native tooling"
+  },
+  {
+    "slug": "rust",
+    "name": "Rust",
+    "coverage": "CLIs, systems, WebAssembly, services, performance-sensitive libraries"
+  },
+  {
+    "slug": "php",
+    "name": "PHP",
+    "coverage": "Laravel, Symfony, WordPress integrations, APIs"
+  },
+  {
+    "slug": "ruby",
+    "name": "Ruby",
+    "coverage": "Rails, Sidekiq, scripts, internal tools"
+  },
+  {
+    "slug": "swift",
+    "name": "Swift",
+    "coverage": "iOS, macOS, SwiftUI, UIKit"
+  },
+  {
+    "slug": "dart-flutter",
+    "name": "Dart and Flutter",
+    "coverage": "Cross-platform apps, widgets, state management"
+  },
+  {
+    "slug": "r",
+    "name": "R",
+    "coverage": "Statistics, reporting, Shiny, tidyverse"
+  },
+  {
+    "slug": "sql",
+    "name": "SQL",
+    "coverage": "Postgres, MySQL, SQL Server, BigQuery, Snowflake, dbt, BI"
+  },
+  {
+    "slug": "shell-powershell",
+    "name": "Shell and PowerShell",
+    "coverage": "automation, scripts, ops, local developer workflows"
+  },
+  {
+    "slug": "terraform-yaml-ci",
+    "name": "Terraform, YAML, and CI",
+    "coverage": "IaC, pipelines, Kubernetes manifests, GitHub Actions, CircleCI"
+  },
+  {
+    "slug": "html-css",
+    "name": "HTML and CSS",
+    "coverage": "semantic HTML, accessibility, responsive CSS, design systems"
+  },
+  {
+    "slug": "c-cpp",
+    "name": "C and C++",
+    "coverage": "systems, embedded, native extensions, performance-critical code"
+  },
+  {
+    "slug": "scala-elixir",
+    "name": "Scala and Elixir",
+    "coverage": "data systems, Phoenix, distributed applications"
+  }
+]

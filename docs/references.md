@@ -1,0 +1,24 @@
+# References
+
+This repository uses authoritative references for assistant configuration and high-stakes domains. Verify current details before acting on anything involving installation, prices, regulation, health, legal obligations, or financial decisions.
+
+- [Anthropic Claude Code setup](https://code.claude.com/docs/en/setup)
+- [Anthropic .claude directory](https://code.claude.com/docs/en/claude-directory)
+- [Anthropic Claude Code skills](https://code.claude.com/docs/en/skills)
+- [Anthropic Claude Code subagents](https://code.claude.com/docs/en/sub-agents)
+- [OpenAI Codex customization](https://developers.openai.com/codex/concepts/customization)
+- [OpenAI Codex AGENTS.md](https://developers.openai.com/codex/guides/agents-md)
+- [OpenAI Codex subagents](https://developers.openai.com/codex/subagents)
+- [OpenAI Codex GitHub repository](https://github.com/openai/codex)
+- [Gemini CLI get started](https://google-gemini.github.io/gemini-cli/docs/get-started/)
+- [Gemini CLI tools and memory](https://google-gemini.github.io/gemini-cli/docs/tools/)
+- [Gemini CLI commands](https://google-gemini.github.io/gemini-cli/docs/cli/commands.html)
+- [SEC Investor.gov](https://www.investor.gov/)
+- [CVM Portal do Investidor](https://www.gov.br/investidor/pt-br)
+- [Banco Central do Brasil](https://www.bcb.gov.br/)
+- [APA Psychology Topics](https://www.apa.org/topics)
+- [WHO Mental Health](https://www.who.int/health-topics/mental-health)
+- [OWASP ASVS](https://owasp.org/www-project-application-security-verification-standard/)
+- [W3C WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)
+- [Microsoft PowerPoint Help](https://support.microsoft.com/powerpoint)
+- [Figma Help Center](https://help.figma.com/)
