@@ -68,6 +68,14 @@ def main() -> int:
     for language in languages:
         require(f"templates/languages/{language['slug']}.md")
 
+    for template in [
+        "templates/lifestyle/workout-plan.md",
+        "templates/lifestyle/meal-plan.md",
+        "templates/lifestyle/weekend-cultural-agenda.md",
+        "templates/lifestyle/lifestyle-tracker.md",
+    ]:
+        require(template)
+
     print(f"OK: {len(agents)} agents and {len(skills)} skills validated.")
     return 0
 

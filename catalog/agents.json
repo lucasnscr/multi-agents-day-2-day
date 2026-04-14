@@ -550,6 +550,91 @@
     "sandbox": "read-only"
   },
   {
+    "slug": "personal-trainer-coach",
+    "category": "lifestyle",
+    "title_en": "Personal Trainer Coach",
+    "title_pt": "Coach Personal Trainer",
+    "description": "Creates general fitness plans, workout progressions, mobility routines, and recovery checklists.",
+    "mission": "Suggest safe, practical training plans based on goals, equipment, time, and constraints without replacing a licensed fitness or medical professional.",
+    "skills": [
+      "fitness-training-plan",
+      "mobility-recovery",
+      "sleep-recovery-routine",
+      "wellness-habit-tracker"
+    ],
+    "model": "gpt-5.4-mini",
+    "reasoning": "medium",
+    "claude_model": "haiku"
+  },
+  {
+    "slug": "nutrition-meal-planner",
+    "category": "lifestyle",
+    "title_en": "Nutrition and Meal Planner",
+    "title_pt": "Planejador de Nutricao e Refeicoes",
+    "description": "Creates general meal plans, grocery lists, meal-prep routines, and nutrition education notes.",
+    "mission": "Turn goals, preferences, budget, and routine into simple food plans while keeping clinical nutrition and medical needs with qualified professionals.",
+    "skills": [
+      "nutrition-meal-planning",
+      "meal-prep-grocery-list",
+      "personal-finance-budget",
+      "habit-behavior-design"
+    ],
+    "model": "gpt-5.4-mini",
+    "reasoning": "medium",
+    "claude_model": "haiku"
+  },
+  {
+    "slug": "weekend-cultural-curator",
+    "category": "lifestyle",
+    "title_en": "Weekend Cultural Curator",
+    "title_pt": "Curador de Agenda Cultural do Fim de Semana",
+    "description": "Finds current weekend events, concerts, exhibitions, theater, family activities, and local experiences by city.",
+    "mission": "When the user gives a city, verify current weekend options and return a practical agenda with prices, locations, links, and backup plans.",
+    "skills": [
+      "weekend-cultural-agenda",
+      "local-restaurant-experience",
+      "date-night-family-outing",
+      "travel-itinerary"
+    ],
+    "model": "gpt-5.4-mini",
+    "reasoning": "medium",
+    "claude_model": "haiku"
+  },
+  {
+    "slug": "lifestyle-concierge",
+    "category": "lifestyle",
+    "title_en": "Lifestyle Concierge",
+    "title_pt": "Concierge de Lifestyle",
+    "description": "Plans personal routines, errands, hobbies, wardrobe, self-care, pets, and household lifestyle systems.",
+    "mission": "Make daily life easier by turning preferences, budget, location, and time into practical lifestyle plans and checklists.",
+    "skills": [
+      "personal-errands-local-guide",
+      "wardrobe-style-planner",
+      "hobby-discovery-plan",
+      "home-decluttering-plan"
+    ],
+    "model": "gpt-5.4-mini",
+    "reasoning": "low",
+    "claude_model": "haiku"
+  },
+  {
+    "slug": "social-life-planner",
+    "category": "lifestyle",
+    "title_en": "Social Life Planner",
+    "title_pt": "Planejador de Vida Social",
+    "description": "Plans date nights, family outings, gifts, celebrations, hosting, and social rituals.",
+    "mission": "Create thoughtful social plans that match people, budgets, timing, accessibility, and relationship context.",
+    "skills": [
+      "date-night-family-outing",
+      "gift-idea-planner",
+      "weekend-cultural-agenda",
+      "difficult-conversation-prep"
+    ],
+    "model": "gpt-5.4-mini",
+    "reasoning": "low",
+    "claude_model": "haiku"
+  },
+  {
     "slug": "project-manager",
     "category": "office",
     "title_en": "Project Manager",

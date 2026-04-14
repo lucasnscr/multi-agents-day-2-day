@@ -38,6 +38,11 @@ This catalog is designed for personal and family use, with engineering disciplin
 | `seo-content-strategist` | SEO and Content Strategist | marketing | Builds content calendars, search intent maps, briefs, topic clusters, refresh plans, and editorial workflows. | `seo-content-plan`, `research-brief`, `social-media-calendar`, `citation-fact-check` |
 | `legal-admin-reader` | Legal and Admin Document Reader | office | Summarizes contracts, terms, policies, notices, invoices, and administrative forms with non-lawyer caution. | `legal-document-reader`, `pdf-extraction-synthesis`, `tax-document-organizer`, `meeting-summary` |
 | `health-wellness-researcher` | Health and Wellness Researcher | personal | Summarizes general wellness, sleep, exercise, nutrition, and health information with safety boundaries. | `research-brief`, `habit-behavior-design`, `citation-fact-check`, `family-learning-coach` |
+| `personal-trainer-coach` | Personal Trainer Coach | lifestyle | Creates general fitness plans, workout progressions, mobility routines, and recovery checklists. | `fitness-training-plan`, `mobility-recovery`, `sleep-recovery-routine`, `wellness-habit-tracker` |
+| `nutrition-meal-planner` | Nutrition and Meal Planner | lifestyle | Creates general meal plans, grocery lists, meal-prep routines, and nutrition education notes. | `nutrition-meal-planning`, `meal-prep-grocery-list`, `personal-finance-budget`, `habit-behavior-design` |
+| `weekend-cultural-curator` | Weekend Cultural Curator | lifestyle | Finds current weekend events, concerts, exhibitions, theater, family activities, and local experiences by city. | `weekend-cultural-agenda`, `local-restaurant-experience`, `date-night-family-outing`, `travel-itinerary` |
+| `lifestyle-concierge` | Lifestyle Concierge | lifestyle | Plans personal routines, errands, hobbies, wardrobe, self-care, pets, and household lifestyle systems. | `personal-errands-local-guide`, `wardrobe-style-planner`, `hobby-discovery-plan`, `home-decluttering-plan` |
+| `social-life-planner` | Social Life Planner | lifestyle | Plans date nights, family outings, gifts, celebrations, hosting, and social rituals. | `date-night-family-outing`, `gift-idea-planner`, `weekend-cultural-agenda`, `difficult-conversation-prep` |
 | `project-manager` | Project Manager | office | Breaks goals into milestones, risks, owners, status updates, meeting cadences, and decision logs. | `meeting-summary`, `architecture-decision-record`, `email-drafting`, `presentation-powerpoint` |
 | `career-resume-coach` | Career and Resume Coach | personal | Improves resumes, LinkedIn profiles, interview prep, portfolio narratives, and job search plans. | `resume-linkedin`, `difficult-conversation-prep`, `email-drafting`, `presentation-powerpoint` |
 | `ecommerce-operator` | E-commerce Operator | business | Plans product pages, pricing checks, catalog hygiene, ads, inventory notes, and customer support workflows. | `ads-funnel-analysis`, `copywriting-campaign`, `spreadsheet-analysis`, `customer-research` |
@@ -99,6 +104,22 @@ This catalog is designed for personal and family use, with engineering disciplin
 | `resume-linkedin` | personal | Improve resumes, LinkedIn profiles, portfolios, cover letters, and interview stories. |
 | `travel-itinerary` | personal | Plan travel itineraries, family logistics, budgets, packing, and decision comparisons. |
 | `home-operations-planner` | personal | Organize household tasks, maintenance, documents, accounts, routines, and family operations. |
+| `fitness-training-plan` | lifestyle | Create general workout plans, exercise progressions, warmups, and safety checklists. |
+| `nutrition-meal-planning` | lifestyle | Create general meal plans, food habit suggestions, hydration prompts, and nutrition education notes. |
+| `meal-prep-grocery-list` | lifestyle | Plan meal prep, grocery lists, batch cooking, storage, and budget-friendly food routines. |
+| `sleep-recovery-routine` | lifestyle | Design sleep hygiene, recovery, rest-day, wind-down, and energy-management routines. |
+| `mobility-recovery` | lifestyle | Create stretching, mobility, posture breaks, warmup, cooldown, and recovery routines. |
+| `wellness-habit-tracker` | lifestyle | Create simple trackers for training, food, sleep, mood, hydration, sunlight, and self-care routines. |
+| `weekend-cultural-agenda` | lifestyle | Find current weekend cultural events for a city with dates, prices, links, accessibility, and backup plans. |
+| `local-restaurant-experience` | lifestyle | Suggest current restaurants, cafes, bars, bakeries, and food experiences by city, budget, and occasion. |
+| `date-night-family-outing` | lifestyle | Plan date nights, family outings, friend hangouts, celebrations, and low-budget social experiences. |
+| `wardrobe-style-planner` | lifestyle | Plan wardrobes, outfits, packing looks, capsule closets, and personal style experiments. |
+| `hobby-discovery-plan` | lifestyle | Help users discover hobbies, creative projects, classes, communities, and low-pressure experiments. |
+| `personal-errands-local-guide` | lifestyle | Organize errands, appointments, local services, documents, and city-specific chores. |
+| `gift-idea-planner` | lifestyle | Suggest thoughtful gifts, celebration gestures, cards, experiences, and low-budget alternatives. |
+| `pet-care-routine` | lifestyle | Organize pet routines, supplies, enrichment, vet questions, travel prep, and household checklists. |
+| `home-decluttering-plan` | lifestyle | Plan decluttering, room resets, storage, donation, selling, and maintenance routines. |
+| `beauty-self-care-routine` | lifestyle | Create simple grooming, skincare organization, salon prep, and self-care routines. |
 | `legal-document-reader` | office | Read legal/admin documents for dates, obligations, risks, definitions, and questions for counsel. |
 | `procurement-vendor-comparison` | business | Compare vendors, tools, SaaS plans, proposals, pricing, risks, and implementation effort. |
 | `language-translation-localization` | office | Translate, localize, simplify, and adapt copy between Portuguese, English, Spanish, and other languages. |

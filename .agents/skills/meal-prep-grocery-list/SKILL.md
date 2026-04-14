@@ -1,0 +1,54 @@
+---
+name: meal-prep-grocery-list
+description: Plan meal prep, grocery lists, batch cooking, storage, and budget-friendly food routines.
+license: MIT
+metadata:
+  version: "1.0.0"
+  domain: lifestyle
+  triggers: meal prep, grocery list, feira, mercado, batch cooking, marmita
+  output-format: structured artifact
+---
+
+# Meal Prep Grocery List
+
+Plan meal prep, grocery lists, batch cooking, storage, and budget-friendly food routines.
+
+## Activation
+
+Use this skill when the user asks about: meal prep, grocery list, feira, mercado, batch cooking, marmita.
+
+## Workflow
+
+1. Collect household size, meals, budget, kitchen tools, storage, cooking time, and dietary preferences.
+2. Plan a small menu with shared ingredients and low waste.
+3. Create a grocery list grouped by market section and a prep schedule.
+4. Include storage, reheating, and food-safety reminders.
+
+## Expected Outputs
+
+- weekly menu
+- grocery list
+- prep schedule
+- leftover plan
+
+## Safety And Quality Boundaries
+
+- Account for allergies and food-safety basics; do not override medical dietary instructions.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta skill para meal prep e lista de mercado em tarefas de lifestyle. Entregue: weekly menu, grocery list, prep schedule, leftover plan. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- USDA FoodSafety.gov: https://www.foodsafety.gov/
+- Guia Alimentar para a Populacao Brasileira: https://www.gov.br/saude/pt-br/assuntos/saude-brasil/publicacoes-para-promocao-a-saude/guia_alimentar_populacao_brasileira_2ed.pdf
+
+## Quick Prompt
+
+"Use the `meal-prep-grocery-list` skill. My context is: <paste context>. Produce the expected outputs, cite sources or files, and list assumptions."

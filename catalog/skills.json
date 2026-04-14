@@ -1202,6 +1202,391 @@
     ]
   },
   {
+    "slug": "fitness-training-plan",
+    "category": "lifestyle",
+    "description": "Create general workout plans, exercise progressions, warmups, and safety checklists.",
+    "triggers": "personal trainer, workout, gym, running, strength, hypertrophy, weight loss, fitness plan",
+    "workflow": [
+      "Collect goal, age range, current level, injuries, medical constraints, equipment, schedule, and preferred activities.",
+      "Build a plan with warmup, main work, cooldown, intensity cues, rest days, and progression rules.",
+      "Include alternatives for home, gym, travel, low-impact, and beginner scenarios.",
+      "Define signs to stop, when to seek professional help, and how to track progress safely."
+    ],
+    "outputs": [
+      "weekly workout plan",
+      "exercise progression",
+      "safety notes",
+      "tracking checklist"
+    ],
+    "safeguards": [
+      "Provide general fitness education only; recommend physician or qualified trainer review for injuries, pregnancy, chronic conditions, pain, or high-risk goals."
+    ],
+    "refs": [
+      "WHO physical activity: https://www.who.int/news-room/fact-sheets/detail/physical-activity",
+      "CDC physical activity basics: https://www.cdc.gov/physical-activity-basics/"
+    ]
+  },
+  {
+    "slug": "nutrition-meal-planning",
+    "category": "lifestyle",
+    "description": "Create general meal plans, food habit suggestions, hydration prompts, and nutrition education notes.",
+    "triggers": "nutritionist, diet, meal plan, healthy eating, weight loss, muscle gain, food routine",
+    "workflow": [
+      "Collect goals, meals per day, cooking skill, budget, preferences, restrictions, allergies, health constraints, and schedule.",
+      "Create a general meal structure using whole foods, practical portions, hydration, and flexible swaps.",
+      "Adapt to family meals, Brazilian staples, eating out, travel, and meal-prep constraints.",
+      "Separate education from medical nutrition therapy and list questions for a registered dietitian when needed."
+    ],
+    "outputs": [
+      "general meal plan",
+      "swap list",
+      "hydration and habit notes",
+      "professional review questions"
+    ],
+    "safeguards": [
+      "Do not prescribe clinical diets, calorie targets for vulnerable users, supplement protocols, or treatment for medical conditions; recommend a registered dietitian or physician for clinical needs."
+    ],
+    "refs": [
+      "Dietary Guidelines for Americans: https://www.dietaryguidelines.gov/",
+      "Guia Alimentar para a Populacao Brasileira: https://www.gov.br/saude/pt-br/assuntos/saude-brasil/publicacoes-para-promocao-a-saude/guia_alimentar_populacao_brasileira_2ed.pdf"
+    ]
+  },
+  {
+    "slug": "meal-prep-grocery-list",
+    "category": "lifestyle",
+    "description": "Plan meal prep, grocery lists, batch cooking, storage, and budget-friendly food routines.",
+    "triggers": "meal prep, grocery list, feira, mercado, batch cooking, marmita",
+    "workflow": [
+      "Collect household size, meals, budget, kitchen tools, storage, cooking time, and dietary preferences.",
+      "Plan a small menu with shared ingredients and low waste.",
+      "Create a grocery list grouped by market section and a prep schedule.",
+      "Include storage, reheating, and food-safety reminders."
+    ],
+    "outputs": [
+      "weekly menu",
+      "grocery list",
+      "prep schedule",
+      "leftover plan"
+    ],
+    "safeguards": [
+      "Account for allergies and food-safety basics; do not override medical dietary instructions."
+    ],
+    "refs": [
+      "USDA FoodSafety.gov: https://www.foodsafety.gov/",
+      "Guia Alimentar para a Populacao Brasileira: https://www.gov.br/saude/pt-br/assuntos/saude-brasil/publicacoes-para-promocao-a-saude/guia_alimentar_populacao_brasileira_2ed.pdf"
+    ]
+  },
+  {
+    "slug": "sleep-recovery-routine",
+    "category": "lifestyle",
+    "description": "Design sleep hygiene, recovery, rest-day, wind-down, and energy-management routines.",
+    "triggers": "sleep, recovery, rest, insomnia, energy, bedtime routine, burnout prevention",
+    "workflow": [
+      "Collect current sleep window, schedule constraints, caffeine/alcohol timing, screens, stress, training load, and wake-up needs.",
+      "Create a wind-down routine, morning anchor, light exposure plan, and recovery checklist.",
+      "Suggest experiment windows and tracking metrics such as bedtime consistency and energy.",
+      "Flag when persistent sleep problems need medical evaluation."
+    ],
+    "outputs": [
+      "sleep routine",
+      "recovery checklist",
+      "tracking plan",
+      "red flags for professional care"
+    ],
+    "safeguards": [
+      "Do not diagnose sleep disorders or recommend medication; persistent insomnia, apnea symptoms, severe fatigue, or safety risks require qualified care."
+    ],
+    "refs": [
+      "CDC sleep basics: https://www.cdc.gov/sleep/",
+      "NHLBI sleep deprivation: https://www.nhlbi.nih.gov/health/sleep-deprivation"
+    ]
+  },
+  {
+    "slug": "mobility-recovery",
+    "category": "lifestyle",
+    "description": "Create stretching, mobility, posture breaks, warmup, cooldown, and recovery routines.",
+    "triggers": "mobility, stretching, recovery, posture, warmup, cooldown, desk pain",
+    "workflow": [
+      "Identify activity, tight areas, pain status, available time, equipment, and training context.",
+      "Build a short routine with gentle range-of-motion, activation, and cooldown elements.",
+      "Offer versions for desk work, runners, lifters, travel, and beginners.",
+      "Flag pain, numbness, weakness, or injury signs that require professional assessment."
+    ],
+    "outputs": [
+      "mobility routine",
+      "warmup or cooldown plan",
+      "desk-break checklist"
+    ],
+    "safeguards": [
+      "Do not treat pain or injuries; stop movements that cause sharp pain and seek qualified evaluation."
+    ],
+    "refs": [
+      "WHO physical activity: https://www.who.int/news-room/fact-sheets/detail/physical-activity"
+    ]
+  },
+  {
+    "slug": "wellness-habit-tracker",
+    "category": "lifestyle",
+    "description": "Create simple trackers for training, food, sleep, mood, hydration, sunlight, and self-care routines.",
+    "triggers": "habit tracker, wellness tracker, health routine, consistency, lifestyle dashboard",
+    "workflow": [
+      "Choose a small number of behaviors tied to the user's goal.",
+      "Define binary, count, or scale tracking that takes less than two minutes per day.",
+      "Create weekly review prompts that adjust friction rather than blame motivation.",
+      "Protect privacy and avoid obsessive tracking patterns."
+    ],
+    "outputs": [
+      "tracker template",
+      "weekly review prompts",
+      "adjustment rules"
+    ],
+    "safeguards": [
+      "Avoid tracking that encourages shame, disordered eating, overtraining, or compulsive behavior."
+    ],
+    "refs": [
+      "CDC health literacy toolkit: https://www.cdc.gov/health-literacy/php/toolkit/"
+    ]
+  },
+  {
+    "slug": "weekend-cultural-agenda",
+    "category": "lifestyle",
+    "description": "Find current weekend cultural events for a city with dates, prices, links, accessibility, and backup plans.",
+    "triggers": "agenda cultural, weekend, city events, shows, museums, theater, exhibitions, what to do this weekend",
+    "workflow": [
+      "Ask only for missing essentials if needed; when the user gives a city, infer the next weekend and search current sources.",
+      "Check official city, venue, museum, theater, tourism, ticketing, and local guide sources for current dates and prices.",
+      "Return options grouped by vibe: free, family, date, music, exhibition, food, outdoors, rainy-day backup.",
+      "Include address/neighborhood, time, price, booking link, accessibility notes, and what to verify before leaving."
+    ],
+    "outputs": [
+      "weekend agenda",
+      "source links",
+      "map-friendly itinerary",
+      "backup options"
+    ],
+    "safeguards": [
+      "Always verify current dates, prices, availability, age restrictions, transport, and safety before recommending attendance."
+    ],
+    "refs": [
+      "Ministerio do Turismo: https://www.gov.br/turismo/pt-br",
+      "Prefeitura de Sao Paulo Cultura: https://capital.sp.gov.br/web/cultura",
+      "Visit Brasil: https://visitbrasil.com/"
+    ]
+  },
+  {
+    "slug": "local-restaurant-experience",
+    "category": "lifestyle",
+    "description": "Suggest current restaurants, cafes, bars, bakeries, and food experiences by city, budget, and occasion.",
+    "triggers": "restaurant, cafe, bar, date night, where to eat, food experience, city",
+    "workflow": [
+      "Collect city/neighborhood, date, budget, cuisine, dietary needs, vibe, transport, and reservation needs.",
+      "Search current sources such as official listings, restaurant pages, maps, reviews, and reservation platforms.",
+      "Return a short list with why each option fits, estimated price, address, booking link, and caveats.",
+      "Add fallback options for sold-out venues, rain, accessibility, and family constraints."
+    ],
+    "outputs": [
+      "restaurant shortlist",
+      "reservation checklist",
+      "backup plan"
+    ],
+    "safeguards": [
+      "Verify opening hours, menu, prices, reservation availability, allergies, and safety before going."
+    ],
+    "refs": [
+      "Google Business Profile help: https://support.google.com/business/",
+      "Tripadvisor restaurants: https://www.tripadvisor.com/Restaurants"
+    ]
+  },
+  {
+    "slug": "date-night-family-outing",
+    "category": "lifestyle",
+    "description": "Plan date nights, family outings, friend hangouts, celebrations, and low-budget social experiences.",
+    "triggers": "date night, family outing, friends, celebration, anniversary, weekend plan",
+    "workflow": [
+      "Collect relationship context, group size, city, budget, mobility, interests, energy level, and timing.",
+      "Choose a theme and sequence: start, main activity, food, optional dessert or walk, backup.",
+      "Include scripts for invitation, logistics, and thoughtful touches.",
+      "Verify any current venue or event details when the plan depends on public information."
+    ],
+    "outputs": [
+      "outing plan",
+      "budget estimate",
+      "message draft",
+      "backup plan"
+    ],
+    "safeguards": [
+      "Respect consent, accessibility, safety, and the other person's preferences."
+    ],
+    "refs": [
+      "Visit Brasil: https://visitbrasil.com/"
+    ]
+  },
+  {
+    "slug": "wardrobe-style-planner",
+    "category": "lifestyle",
+    "description": "Plan wardrobes, outfits, packing looks, capsule closets, and personal style experiments.",
+    "triggers": "style, outfit, wardrobe, capsule closet, what to wear, personal style",
+    "workflow": [
+      "Collect occasion, weather, dress code, comfort, body preferences, colors, existing pieces, and budget.",
+      "Create outfit formulas using what the user owns before suggesting purchases.",
+      "Build capsule combinations, packing lists, or shopping gaps.",
+      "Include confidence, practicality, care, and reuse notes."
+    ],
+    "outputs": [
+      "outfit formulas",
+      "capsule wardrobe plan",
+      "shopping gap list"
+    ],
+    "safeguards": [
+      "Avoid body shaming, stereotypes, and unnecessary purchasing pressure."
+    ],
+    "refs": [
+      "Textile care symbols: https://www.ftc.gov/business-guidance/resources/threading-your-way-through-labeling-requirements-under-textile-wool-acts"
+    ]
+  },
+  {
+    "slug": "hobby-discovery-plan",
+    "category": "lifestyle",
+    "description": "Help users discover hobbies, creative projects, classes, communities, and low-pressure experiments.",
+    "triggers": "hobby, free time, creative project, class, community, learn something new",
+    "workflow": [
+      "Collect interests, budget, time, social preference, indoor/outdoor preference, and desired feeling.",
+      "Suggest a portfolio of low-commitment experiments across creative, physical, social, learning, and restorative categories.",
+      "Create a 30-day trial plan with supplies, local search prompts, and reflection questions.",
+      "Recommend community discovery using current city-specific sources when location matters."
+    ],
+    "outputs": [
+      "hobby shortlist",
+      "30-day experiment plan",
+      "supply list",
+      "reflection prompts"
+    ],
+    "safeguards": [
+      "Avoid turning rest into productivity pressure; hobbies can be pointless in the best possible way."
+    ],
+    "refs": [
+      "National Endowment for the Arts research: https://www.arts.gov/impact/research"
+    ]
+  },
+  {
+    "slug": "personal-errands-local-guide",
+    "category": "lifestyle",
+    "description": "Organize errands, appointments, local services, documents, and city-specific chores.",
+    "triggers": "errands, appointments, local services, documents, city chores, resolver coisas",
+    "workflow": [
+      "List errands, deadlines, documents, addresses, opening hours, dependencies, and transport constraints.",
+      "Group tasks by geography, urgency, required documents, and energy level.",
+      "Search current official sources for public services, opening hours, and appointment requirements when location matters.",
+      "Create a route, checklist, phone/email script, and fallback plan."
+    ],
+    "outputs": [
+      "errand route",
+      "document checklist",
+      "contact scripts",
+      "fallback plan"
+    ],
+    "safeguards": [
+      "Do not store full document numbers or passwords; verify official public-service requirements before acting."
+    ],
+    "refs": [
+      "gov.br services: https://www.gov.br/pt-br/servicos"
+    ]
+  },
+  {
+    "slug": "gift-idea-planner",
+    "category": "lifestyle",
+    "description": "Suggest thoughtful gifts, celebration gestures, cards, experiences, and low-budget alternatives.",
+    "triggers": "gift, birthday, anniversary, present, celebration, card message",
+    "workflow": [
+      "Collect recipient, relationship, occasion, budget, location, timing, interests, dislikes, and delivery constraints.",
+      "Suggest categories: practical, sentimental, experience, consumable, handmade, family-friendly, and last-minute.",
+      "Write optional card messages in the desired tone.",
+      "If recommending specific products or events, verify current price, availability, and delivery."
+    ],
+    "outputs": [
+      "gift shortlist",
+      "card message",
+      "purchase or preparation checklist"
+    ],
+    "safeguards": [
+      "Avoid manipulative gifts, unsafe products, and assumptions based on stereotypes."
+    ],
+    "refs": [
+      "Consumer product safety recalls: https://www.cpsc.gov/Recalls"
+    ]
+  },
+  {
+    "slug": "pet-care-routine",
+    "category": "lifestyle",
+    "description": "Organize pet routines, supplies, enrichment, vet questions, travel prep, and household checklists.",
+    "triggers": "pet, dog, cat, rotina pet, vet, enrichment, pet travel",
+    "workflow": [
+      "Collect species, age, routine, feeding schedule, medications from vet, behavior concerns, and travel constraints.",
+      "Create routine checklists for food, water, walks, litter, enrichment, grooming, and vet follow-up.",
+      "Prepare questions for a veterinarian when symptoms, diet, medicine, or behavior risks appear.",
+      "Add travel, sitter, and emergency-contact notes."
+    ],
+    "outputs": [
+      "pet routine",
+      "supply checklist",
+      "vet question list",
+      "travel or sitter notes"
+    ],
+    "safeguards": [
+      "Do not diagnose pets or prescribe treatment; urgent symptoms require a veterinarian."
+    ],
+    "refs": [
+      "American Veterinary Medical Association pet care: https://www.avma.org/resources-tools/pet-owners"
+    ]
+  },
+  {
+    "slug": "home-decluttering-plan",
+    "category": "lifestyle",
+    "description": "Plan decluttering, room resets, storage, donation, selling, and maintenance routines.",
+    "triggers": "declutter, organize home, storage, room reset, donation, minimalism",
+    "workflow": [
+      "Choose one space, timebox, emotional difficulty, categories, and disposal options.",
+      "Sort into keep, relocate, donate, sell, recycle, trash, and decide-later boxes.",
+      "Create simple storage rules and a maintenance routine.",
+      "Include donation/selling prompts and safety reminders for documents or electronics."
+    ],
+    "outputs": [
+      "decluttering sprint plan",
+      "sorting rules",
+      "donation or selling checklist"
+    ],
+    "safeguards": [
+      "Do not pressure users to discard sentimental or necessary items; protect documents and data-bearing devices."
+    ],
+    "refs": [
+      "EPA recycling basics: https://www.epa.gov/recycle"
+    ]
+  },
+  {
+    "slug": "beauty-self-care-routine",
+    "category": "lifestyle",
+    "description": "Create simple grooming, skincare organization, salon prep, and self-care routines.",
+    "triggers": "self-care, skincare, grooming, beauty routine, salon, cabelo",
+    "workflow": [
+      "Collect goal, time, budget, sensitivities, products already owned, and event date.",
+      "Create a simple routine with patch-test reminders and minimal product changes.",
+      "Plan grooming or salon prep with questions, references, and maintenance cadence.",
+      "Flag irritation, allergies, or medical skin concerns for professional care."
+    ],
+    "outputs": [
+      "self-care routine",
+      "product inventory",
+      "salon prep questions",
+      "event countdown"
+    ],
+    "safeguards": [
+      "Do not diagnose skin or hair conditions; stop products that irritate and seek qualified care for reactions or persistent issues."
+    ],
+    "refs": [
+      "American Academy of Dermatology public resources: https://www.aad.org/public"
+    ]
+  },
+  {
     "slug": "legal-document-reader",
     "category": "office",
     "description": "Read legal/admin documents for dates, obligations, risks, definitions, and questions for counsel.",

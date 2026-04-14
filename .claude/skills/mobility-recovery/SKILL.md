@@ -1,0 +1,52 @@
+---
+name: mobility-recovery
+description: Create stretching, mobility, posture breaks, warmup, cooldown, and recovery routines.
+license: MIT
+metadata:
+  version: "1.0.0"
+  domain: lifestyle
+  triggers: mobility, stretching, recovery, posture, warmup, cooldown, desk pain
+  output-format: structured artifact
+---
+
+# Mobility Recovery
+
+Create stretching, mobility, posture breaks, warmup, cooldown, and recovery routines.
+
+## Activation
+
+Use this skill when the user asks about: mobility, stretching, recovery, posture, warmup, cooldown, desk pain.
+
+## Workflow
+
+1. Identify activity, tight areas, pain status, available time, equipment, and training context.
+2. Build a short routine with gentle range-of-motion, activation, and cooldown elements.
+3. Offer versions for desk work, runners, lifters, travel, and beginners.
+4. Flag pain, numbness, weakness, or injury signs that require professional assessment.
+
+## Expected Outputs
+
+- mobility routine
+- warmup or cooldown plan
+- desk-break checklist
+
+## Safety And Quality Boundaries
+
+- Do not treat pain or injuries; stop movements that cause sharp pain and seek qualified evaluation.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta skill para mobilidade e recuperacao em tarefas de lifestyle. Entregue: mobility routine, warmup or cooldown plan, desk-break checklist. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- WHO physical activity: https://www.who.int/news-room/fact-sheets/detail/physical-activity
+
+## Quick Prompt
+
+"Use the `mobility-recovery` skill. My context is: <paste context>. Produce the expected outputs, cite sources or files, and list assumptions."

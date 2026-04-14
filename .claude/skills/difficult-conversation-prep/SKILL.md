@@ -41,7 +41,7 @@ Use this skill when the user asks about: difficult conversation, conflict, feedb
 
 ## Nota Em Portugues
 
-Use esta skill para conversas dificeis conversa preparacao em tarefas de psicologia. Entregue: conversation script, listening questions, boundary plan. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+Use esta skill para conversas dificeis conversa preparo em tarefas de psicologia. Entregue: conversation script, listening questions, boundary plan. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
 
 ## References
 

@@ -34,6 +34,11 @@
 - `/agents:seo-content-strategist` - Builds content calendars, search intent maps, briefs, topic clusters, refresh plans, and editorial workflows.
 - `/agents:legal-admin-reader` - Summarizes contracts, terms, policies, notices, invoices, and administrative forms with non-lawyer caution.
 - `/agents:health-wellness-researcher` - Summarizes general wellness, sleep, exercise, nutrition, and health information with safety boundaries.
+- `/agents:personal-trainer-coach` - Creates general fitness plans, workout progressions, mobility routines, and recovery checklists.
+- `/agents:nutrition-meal-planner` - Creates general meal plans, grocery lists, meal-prep routines, and nutrition education notes.
+- `/agents:weekend-cultural-curator` - Finds current weekend events, concerts, exhibitions, theater, family activities, and local experiences by city.
+- `/agents:lifestyle-concierge` - Plans personal routines, errands, hobbies, wardrobe, self-care, pets, and household lifestyle systems.
+- `/agents:social-life-planner` - Plans date nights, family outings, gifts, celebrations, hosting, and social rituals.
 - `/agents:project-manager` - Breaks goals into milestones, risks, owners, status updates, meeting cadences, and decision logs.
 - `/agents:career-resume-coach` - Improves resumes, LinkedIn profiles, interview prep, portfolio narratives, and job search plans.
 - `/agents:ecommerce-operator` - Plans product pages, pricing checks, catalog hygiene, ads, inventory notes, and customer support workflows.
@@ -93,6 +98,22 @@
 - `/skills:resume-linkedin` - Improve resumes, LinkedIn profiles, portfolios, cover letters, and interview stories.
 - `/skills:travel-itinerary` - Plan travel itineraries, family logistics, budgets, packing, and decision comparisons.
 - `/skills:home-operations-planner` - Organize household tasks, maintenance, documents, accounts, routines, and family operations.
+- `/skills:fitness-training-plan` - Create general workout plans, exercise progressions, warmups, and safety checklists.
+- `/skills:nutrition-meal-planning` - Create general meal plans, food habit suggestions, hydration prompts, and nutrition education notes.
+- `/skills:meal-prep-grocery-list` - Plan meal prep, grocery lists, batch cooking, storage, and budget-friendly food routines.
+- `/skills:sleep-recovery-routine` - Design sleep hygiene, recovery, rest-day, wind-down, and energy-management routines.
+- `/skills:mobility-recovery` - Create stretching, mobility, posture breaks, warmup, cooldown, and recovery routines.
+- `/skills:wellness-habit-tracker` - Create simple trackers for training, food, sleep, mood, hydration, sunlight, and self-care routines.
+- `/skills:weekend-cultural-agenda` - Find current weekend cultural events for a city with dates, prices, links, accessibility, and backup plans.
+- `/skills:local-restaurant-experience` - Suggest current restaurants, cafes, bars, bakeries, and food experiences by city, budget, and occasion.
+- `/skills:date-night-family-outing` - Plan date nights, family outings, friend hangouts, celebrations, and low-budget social experiences.
+- `/skills:wardrobe-style-planner` - Plan wardrobes, outfits, packing looks, capsule closets, and personal style experiments.
+- `/skills:hobby-discovery-plan` - Help users discover hobbies, creative projects, classes, communities, and low-pressure experiments.
+- `/skills:personal-errands-local-guide` - Organize errands, appointments, local services, documents, and city-specific chores.
+- `/skills:gift-idea-planner` - Suggest thoughtful gifts, celebration gestures, cards, experiences, and low-budget alternatives.
+- `/skills:pet-care-routine` - Organize pet routines, supplies, enrichment, vet questions, travel prep, and household checklists.
+- `/skills:home-decluttering-plan` - Plan decluttering, room resets, storage, donation, selling, and maintenance routines.
+- `/skills:beauty-self-care-routine` - Create simple grooming, skincare organization, salon prep, and self-care routines.
 - `/skills:legal-document-reader` - Read legal/admin documents for dates, obligations, risks, definitions, and questions for counsel.
 - `/skills:procurement-vendor-comparison` - Compare vendors, tools, SaaS plans, proposals, pricing, risks, and implementation effort.
 - `/skills:language-translation-localization` - Translate, localize, simplify, and adapt copy between Portuguese, English, Spanish, and other languages.

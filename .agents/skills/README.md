@@ -52,6 +52,22 @@
 - [resume-linkedin](resume-linkedin/SKILL.md) - Improve resumes, LinkedIn profiles, portfolios, cover letters, and interview stories.
 - [travel-itinerary](travel-itinerary/SKILL.md) - Plan travel itineraries, family logistics, budgets, packing, and decision comparisons.
 - [home-operations-planner](home-operations-planner/SKILL.md) - Organize household tasks, maintenance, documents, accounts, routines, and family operations.
+- [fitness-training-plan](fitness-training-plan/SKILL.md) - Create general workout plans, exercise progressions, warmups, and safety checklists.
+- [nutrition-meal-planning](nutrition-meal-planning/SKILL.md) - Create general meal plans, food habit suggestions, hydration prompts, and nutrition education notes.
+- [meal-prep-grocery-list](meal-prep-grocery-list/SKILL.md) - Plan meal prep, grocery lists, batch cooking, storage, and budget-friendly food routines.
+- [sleep-recovery-routine](sleep-recovery-routine/SKILL.md) - Design sleep hygiene, recovery, rest-day, wind-down, and energy-management routines.
+- [mobility-recovery](mobility-recovery/SKILL.md) - Create stretching, mobility, posture breaks, warmup, cooldown, and recovery routines.
+- [wellness-habit-tracker](wellness-habit-tracker/SKILL.md) - Create simple trackers for training, food, sleep, mood, hydration, sunlight, and self-care routines.
+- [weekend-cultural-agenda](weekend-cultural-agenda/SKILL.md) - Find current weekend cultural events for a city with dates, prices, links, accessibility, and backup plans.
+- [local-restaurant-experience](local-restaurant-experience/SKILL.md) - Suggest current restaurants, cafes, bars, bakeries, and food experiences by city, budget, and occasion.
+- [date-night-family-outing](date-night-family-outing/SKILL.md) - Plan date nights, family outings, friend hangouts, celebrations, and low-budget social experiences.
+- [wardrobe-style-planner](wardrobe-style-planner/SKILL.md) - Plan wardrobes, outfits, packing looks, capsule closets, and personal style experiments.
+- [hobby-discovery-plan](hobby-discovery-plan/SKILL.md) - Help users discover hobbies, creative projects, classes, communities, and low-pressure experiments.
+- [personal-errands-local-guide](personal-errands-local-guide/SKILL.md) - Organize errands, appointments, local services, documents, and city-specific chores.
+- [gift-idea-planner](gift-idea-planner/SKILL.md) - Suggest thoughtful gifts, celebration gestures, cards, experiences, and low-budget alternatives.
+- [pet-care-routine](pet-care-routine/SKILL.md) - Organize pet routines, supplies, enrichment, vet questions, travel prep, and household checklists.
+- [home-decluttering-plan](home-decluttering-plan/SKILL.md) - Plan decluttering, room resets, storage, donation, selling, and maintenance routines.
+- [beauty-self-care-routine](beauty-self-care-routine/SKILL.md) - Create simple grooming, skincare organization, salon prep, and self-care routines.
 - [legal-document-reader](legal-document-reader/SKILL.md) - Read legal/admin documents for dates, obligations, risks, definitions, and questions for counsel.
 - [procurement-vendor-comparison](procurement-vendor-comparison/SKILL.md) - Compare vendors, tools, SaaS plans, proposals, pricing, risks, and implementation effort.
 - [language-translation-localization](language-translation-localization/SKILL.md) - Translate, localize, simplify, and adapt copy between Portuguese, English, Spanish, and other languages.
