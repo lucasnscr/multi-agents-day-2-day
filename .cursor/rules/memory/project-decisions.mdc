@@ -1,0 +1,8 @@
+---
+description: Memory template for Project Decisions.
+alwaysApply: false
+---
+
+# Project Decisions
+
+Use this optional project rule to keep durable decisions, context, consequences, and review dates when they should guide future Cursor sessions.

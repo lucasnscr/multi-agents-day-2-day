@@ -1,0 +1,38 @@
+---
+description: Create decision journals, bias checks, pre-mortems, and post-mortems for personal or professional choices.
+alwaysApply: false
+---
+
+# Decision Journal
+
+Use this Cursor rule when the user asks about: decision, bias, journal, premortem, retrospective.
+
+## Workflow
+
+1. State the decision, options, stakes, reversibility, deadline, and current emotions.
+2. Record assumptions, evidence, confidence, base rates, and disconfirming signals.
+3. Run a premortem and define review criteria before the outcome is known.
+4. Afterward, compare process quality to outcome quality.
+
+## Expected Outputs
+
+- decision journal template
+- bias checklist
+- review plan
+
+## Safety And Quality Boundaries
+
+- Do not force decisions in high-stress moments; suggest time and professional input where stakes are high.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para decisao diario em tarefas de psicologia. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- Behavioral insights resources: https://www.bi.team/

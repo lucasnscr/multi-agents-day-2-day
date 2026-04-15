@@ -1,0 +1,41 @@
+---
+description: Create non-advisory legal research briefs with jurisdiction, source table, law links, jurisprudence notes, and counsel questions.
+alwaysApply: false
+---
+
+# Legal Research Brief
+
+Use this Cursor rule when the user asks about: juridico, legal research, legislation, jurisprudence, law lookup, legal question, rights.
+
+## Workflow
+
+1. Clarify jurisdiction, date, parties, legal area, source language, and whether the user needs education, document organization, or lawyer-prep.
+2. Search official or authoritative sources first, including legislation portals, courts, regulators, and government agencies.
+3. Separate black-letter source text, case interpretation, secondary commentary, and your own uncertainty.
+4. Return a research brief with citations, timeline, open questions, and recommended questions for a qualified lawyer.
+
+## Expected Outputs
+
+- legal research brief
+- source table
+- timeline
+- questions for counsel
+
+## Safety And Quality Boundaries
+
+- Do not give legal advice, predict outcomes, draft filings as a lawyer, or tell the user what legal action to take; recommend qualified counsel for decisions.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para briefing de pesquisa juridica em tarefas de juridico e compliance. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- Planalto Legislacao: https://www4.planalto.gov.br/legislacao
+- STF Jurisprudencia: https://portal.stf.jus.br/jurisprudencia/
+- Legal Information Institute: https://www.law.cornell.edu/

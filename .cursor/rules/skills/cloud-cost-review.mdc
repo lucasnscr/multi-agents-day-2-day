@@ -1,0 +1,38 @@
+---
+description: Analyze cloud and SaaS cost drivers and propose savings without reducing reliability.
+alwaysApply: false
+---
+
+# Cloud Cost Review
+
+Use this Cursor rule when the user asks about: cloud cost, FinOps, AWS bill, GCP bill, Azure cost, SaaS spend.
+
+## Workflow
+
+1. Collect cost period, services, tags, owners, usage metrics, and commitments.
+2. Separate waste, right-sizing, architecture, procurement, and governance opportunities.
+3. Estimate impact, risk, effort, and rollback for each action.
+4. Create a monitoring plan so savings persist.
+
+## Expected Outputs
+
+- cost-driver table
+- savings backlog
+- tracking dashboard outline
+
+## Safety And Quality Boundaries
+
+- Do not recommend deleting production resources without backup, owner, and rollback confirmation.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para cloud custos revisao em tarefas de tecnologia. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- FinOps Foundation framework: https://www.finops.org/framework/

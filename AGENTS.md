@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This repository is a day-to-day multi-agent encyclopedia for OpenAI Codex, Claude Code, Codex, and Gemini CLI.
+This repository is a day-to-day multi-agent encyclopedia for OpenAI Codex, Claude Code, Codex, Gemini CLI, and Cursor.
 
 ## Operating Principles
 

@@ -1,0 +1,38 @@
+---
+description: Organize budgets, spending, debt payoff, goals, emergency funds, and family financial routines.
+alwaysApply: false
+---
+
+# Personal Finance Budget
+
+Use this Cursor rule when the user asks about: budget, personal finance, debt, emergency fund, family finances.
+
+## Workflow
+
+1. Collect income, fixed costs, variable costs, debts, goals, dates, and emotional constraints.
+2. Create a simple cash-flow view and identify controllable levers.
+3. Offer scenarios for debt payoff, savings goals, and emergency reserve building.
+4. Create a weekly or monthly review checklist.
+
+## Expected Outputs
+
+- budget template
+- scenario table
+- money routine checklist
+
+## Safety And Quality Boundaries
+
+- Give educational planning help only; recommend qualified advice for investment, tax, or legal decisions.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para pessoal financeiro orcamento em tarefas de financas. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- SEC Investor.gov: https://www.investor.gov/; CVM Portal do Investidor: https://www.gov.br/investidor/pt-br

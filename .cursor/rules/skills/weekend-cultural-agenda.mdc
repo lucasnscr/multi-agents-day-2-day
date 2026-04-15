@@ -1,0 +1,41 @@
+---
+description: Find current weekend cultural events for a city with dates, prices, links, accessibility, and backup plans.
+alwaysApply: false
+---
+
+# Weekend Cultural Agenda
+
+Use this Cursor rule when the user asks about: agenda cultural, weekend, city events, shows, museums, theater, exhibitions, what to do this weekend.
+
+## Workflow
+
+1. Ask only for missing essentials if needed; when the user gives a city, infer the next weekend and search current sources.
+2. Check official city, venue, museum, theater, tourism, ticketing, and local guide sources for current dates and prices.
+3. Return options grouped by vibe: free, family, date, music, exhibition, food, outdoors, rainy-day backup.
+4. Include address/neighborhood, time, price, booking link, accessibility notes, and what to verify before leaving.
+
+## Expected Outputs
+
+- weekend agenda
+- source links
+- map-friendly itinerary
+- backup options
+
+## Safety And Quality Boundaries
+
+- Always verify current dates, prices, availability, age restrictions, transport, and safety before recommending attendance.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para agenda cultural do fim de semana em tarefas de lifestyle. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- Ministerio do Turismo: https://www.gov.br/turismo/pt-br
+- Prefeitura de Sao Paulo Cultura: https://capital.sp.gov.br/web/cultura
+- Visit Brasil: https://visitbrasil.com/

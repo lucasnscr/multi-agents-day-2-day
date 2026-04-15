@@ -1,0 +1,40 @@
+---
+description: Review contracts and terms for clause inventory, obligations, deadlines, risks, missing exhibits, and lawyer questions.
+alwaysApply: false
+---
+
+# Contract Clause Checklist
+
+Use this Cursor rule when the user asks about: contract, clause, terms, NDA, service agreement, aluguel, contrato, legal checklist.
+
+## Workflow
+
+1. Identify contract type, parties, jurisdiction, dates, money, deliverables, termination, renewal, liability, confidentiality, and dispute clauses.
+2. Build a clause table with plain-language summary, obligations, deadlines, owner, risk level, and page/section reference.
+3. List missing attachments, ambiguous terms, unusual obligations, and operational tasks.
+4. Prepare negotiation or lawyer-review questions without giving legal conclusions.
+
+## Expected Outputs
+
+- clause table
+- obligation tracker
+- risk checklist
+- questions for counsel
+
+## Safety And Quality Boundaries
+
+- This is document analysis, not legal advice; do not sign, terminate, or rely on a contract without qualified review.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para checklist de clausulas contratuais em tarefas de juridico e compliance. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- Legal Information Institute contracts overview: https://www.law.cornell.edu/wex/contract
+- CNJ: https://www.cnj.jus.br/

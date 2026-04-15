@@ -1,0 +1,38 @@
+---
+description: Build scenarios, sensitivities, stress tests, decision matrices, and risk registers.
+alwaysApply: false
+---
+
+# Risk Scenario Analysis
+
+Use this Cursor rule when the user asks about: scenario, risk, stress test, sensitivity, decision matrix.
+
+## Workflow
+
+1. Define decision, variables, base case, upside, downside, and extreme case.
+2. Identify drivers, leading indicators, dependencies, and failure thresholds.
+3. Quantify ranges where data supports it and use qualitative scoring where it does not.
+4. Recommend monitoring and reversible next steps.
+
+## Expected Outputs
+
+- scenario table
+- risk register
+- monitoring plan
+
+## Safety And Quality Boundaries
+
+- Do not overstate precision when inputs are estimates.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para risco cenario analise em tarefas de financas. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- ISO 31000 overview: https://www.iso.org/iso-31000-risk-management.html

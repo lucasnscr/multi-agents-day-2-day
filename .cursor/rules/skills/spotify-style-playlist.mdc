@@ -1,0 +1,40 @@
+---
+description: Suggest Spotify-ready songs, artists, playlist sequencing, and search prompts by musical style, genre, decade, or scene.
+alwaysApply: false
+---
+
+# Spotify Style Playlist
+
+Use this Cursor rule when the user asks about: Spotify, playlist, music style, genre, songs, artists, samba, rock, funk, jazz, electronic.
+
+## Workflow
+
+1. Collect style or genre, country/language, decade, mood, occasion, explicit-content preference, familiarity level, and desired playlist length.
+2. Create a sequenced playlist plan with anchor tracks, discovery tracks, artists to explore, and Spotify search prompts.
+3. Include alternates by subgenre and energy level, plus a short explanation of why each cluster fits.
+4. For current releases or availability, search Spotify or current music sources before finalizing.
+
+## Expected Outputs
+
+- Spotify playlist plan
+- track and artist shortlist
+- search prompts
+- sequencing notes
+
+## Safety And Quality Boundaries
+
+- Do not claim a track is available on Spotify without current verification; respect explicit-content, age, and cultural-context preferences.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para playlist por estilo musical no spotify em tarefas de lifestyle. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- Spotify Web API: https://developer.spotify.com/documentation/web-api
+- Spotify recommendations endpoint: https://developer.spotify.com/documentation/web-api/reference/get-recommendations

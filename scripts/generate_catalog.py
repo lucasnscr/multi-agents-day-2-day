@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the day-to-day multi-agent encyclopedia for Claude, Codex, and Gemini.
+"""Generate the day-to-day multi-agent encyclopedia for Claude, Codex, Gemini, and Cursor.
 
 The catalog below is intentionally explicit. The generated files are the
 installable surface for each assistant, while this script remains the compact
@@ -1745,6 +1745,8 @@ REFERENCES = [
     ("OpenAI Codex AGENTS.md", "https://developers.openai.com/codex/guides/agents-md"),
     ("OpenAI Codex subagents", "https://developers.openai.com/codex/subagents"),
     ("OpenAI Codex GitHub repository", "https://github.com/openai/codex"),
+    ("Cursor Rules", "https://docs.cursor.com/context/rules"),
+    ("Cursor Agent", "https://docs.cursor.com/chat/agent"),
     ("Gemini CLI get started", "https://google-gemini.github.io/gemini-cli/docs/get-started/"),
     ("Gemini CLI tools and memory", "https://google-gemini.github.io/gemini-cli/docs/tools/"),
     ("Gemini CLI commands", "https://google-gemini.github.io/gemini-cli/docs/cli/commands.html"),
@@ -2219,12 +2221,145 @@ def gemini_command_for_skill(skill: dict) -> str:
     )
 
 
+def cursor_agent_rule(agent: dict) -> str:
+    return dedent(
+        f"""
+        ---
+        description: {agent["description"]}
+        alwaysApply: false
+        ---
+
+        # {agent["title_en"]} / {agent["title_pt"]}
+
+        Adopt this role when the user asks for `{agent["slug"]}` or a task that matches this description:
+
+        {agent["description"]}
+
+        ## Mission
+
+        {agent["mission"]}
+
+        ## Core Skills
+
+        {chr(10).join(f"- `{skill}`" for skill in agent["skills"])}
+
+        ## Cursor Usage
+
+        - Treat this file as a project rule/persona, not as a separate native subagent thread.
+        - Read the relevant skill rules in `.cursor/rules/skills/` before producing the final artifact.
+        - Inspect repository files or user-provided material before making claims.
+        - Return actionable output with assumptions, caveats, and verification steps.
+        - When the user writes in Portuguese, answer in Portuguese and explain jargon in plain language.
+
+        ## Boundaries
+
+        - Keep finance, legal, medical, tax, psychology, privacy, safety, and travel guidance educational and source-aware.
+        - Ask for professional review when the task crosses licensed, regulated, or high-risk territory.
+        - Do not request or store passwords, tokens, private keys, or unnecessary personal identifiers.
+        """
+    )
+
+
+def cursor_skill_rule(skill: dict) -> str:
+    workflow = "\n".join(f"{idx}. {item}" for idx, item in enumerate(skill["workflow"], 1))
+    outputs = "\n".join(f"- {item}" for item in skill["outputs"])
+    safeguards = "\n".join(f"- {item}" for item in skill["safeguards"])
+    refs = "\n".join(f"- {ref}" for ref in skill["refs"])
+    return dedent(
+        f"""
+        ---
+        description: {skill["description"]}
+        alwaysApply: false
+        ---
+
+        # {skill["slug"].replace("-", " ").title()}
+
+        Use this Cursor rule when the user asks about: {skill["triggers"]}.
+
+        ## Workflow
+
+        {workflow}
+
+        ## Expected Outputs
+
+        {outputs}
+
+        ## Safety And Quality Boundaries
+
+        {safeguards}
+
+        - Label assumptions and uncertainty.
+        - Protect private data and secrets.
+        - Prefer current authoritative references for changing, regulated, or high-stakes topics.
+        - When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+        ## Nota Em Portugues
+
+        Use esta rule para {human_pt(skill["slug"]).lower()} em tarefas de {CATEGORY_PT.get(skill["category"], skill["category"])}. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+        ## References
+
+        {refs}
+        """
+    )
+
+
+def cursor_global_rule() -> str:
+    return dedent(
+        f"""
+        ---
+        description: Always-on operating rules for the Day2Day multi-agent encyclopedia in Cursor.
+        alwaysApply: true
+        ---
+
+        # Day2Day Cursor Operating Rule
+
+        This project exposes {len(AGENTS)} agent personas and {len(SKILLS)} reusable skills as Cursor Project Rules.
+
+        ## How To Use
+
+        - Agent personas live in `.cursor/rules/agents/*.mdc`.
+        - Reusable skills live in `.cursor/rules/skills/*.mdc`.
+        - Memory templates live in `.cursor/rules/memory/*.mdc` and `memory/templates/`.
+        - Use `AGENTS.md` for the broad operating contract and these rules for focused workflows.
+
+        ## Routing
+
+        - When the user names an agent or skill, apply the matching rule.
+        - When the user describes a task, choose the closest agent and the smallest relevant skill set.
+        - Keep outputs practical: artifact, assumptions, validation, sources, and next steps.
+
+        ## Language And Safety
+
+        - Use Portuguese when the user writes in Portuguese; use English when the user writes in English.
+        - For family-facing outputs, explain jargon in plain language.
+        - For finance, legal, medical, tax, psychology, safety, travel, and current-market topics, verify with current authoritative sources and keep professional-advice boundaries explicit.
+        - Never request or store passwords, tokens, private keys, full bank credentials, or unnecessary personal identifiers.
+        """
+    )
+
+
+def cursor_memory_rule(name: str, title: str, body: str) -> str:
+    return dedent(
+        f"""
+        ---
+        description: Memory template for {title}.
+        alwaysApply: false
+        ---
+
+        # {title}
+
+        {body}
+        """
+    )
+
+
 def root_readme_en() -> str:
     return dedent(
         f"""
         # Multi-Agents Day 2 Day
 
-        A personal and family-friendly encyclopedia of agents, subagents, skills, memory patterns, and installation guides for Claude Code, OpenAI Codex, and Gemini CLI.
+        A personal and family-friendly encyclopedia of agents, subagents, skills, memory patterns, and installation guides for Claude Code, OpenAI Codex, Gemini CLI, and Cursor.
 
         This repository expands the Claude-only pattern into a multi-assistant operating system for daily work: software engineering, data analysis, spreadsheets, PDFs, PowerPoint, Figma, finance education, psychology research, marketing, household operations, and learning support.
 
@@ -2235,6 +2370,7 @@ def root_readme_en() -> str:
         - Claude Code implementation in `.claude/agents`, `.claude/skills`, and `CLAUDE.md`.
         - Codex implementation in `AGENTS.md`, `.codex/agents`, `.codex/config.toml`, and `.agents/skills`.
         - Gemini CLI implementation in `GEMINI.md`, `.gemini/commands`, and `.gemini/extensions/day2day-agent-encyclopedia`.
+        - Cursor implementation in `AGENTS.md` and `.cursor/rules`.
         - Bilingual documentation in `docs/en` and `docs/pt-BR`.
         - Installation scripts in `scripts/`.
 
@@ -2268,7 +2404,7 @@ def root_readme_pt() -> str:
         f"""
         # Multi-Agents Dia a Dia
 
-        Uma enciclopédia pessoal e familiar de agentes, subagentes, skills, memória e guias de instalação para Claude Code, OpenAI Codex e Gemini CLI.
+        Uma enciclopédia pessoal e familiar de agentes, subagentes, skills, memória e guias de instalação para Claude Code, OpenAI Codex, Gemini CLI e Cursor.
 
         Este repositório expande o padrão focado apenas em Claude para um sistema multi-assistente de uso diário: engenharia de software, análise de dados, planilhas, PDFs, PowerPoint, Figma, educação financeira, psicologia, marketing, organização doméstica e apoio ao aprendizado.
 
@@ -2279,6 +2415,7 @@ def root_readme_pt() -> str:
         - Implementação Claude Code em `.claude/agents`, `.claude/skills` e `CLAUDE.md`.
         - Implementação Codex em `AGENTS.md`, `.codex/agents`, `.codex/config.toml` e `.agents/skills`.
         - Implementação Gemini CLI em `GEMINI.md`, `.gemini/commands` e `.gemini/extensions/day2day-agent-encyclopedia`.
+        - Implementação Cursor em `AGENTS.md` e `.cursor/rules`.
         - Documentação bilíngue em `docs/en` e `docs/pt-BR`.
         - Scripts de instalação em `scripts/`.
 
@@ -2310,17 +2447,17 @@ def platform_doc_en() -> str:
         """
         # Platform Mapping
 
-        This repository intentionally uses one catalog and three assistant-specific packaging formats.
+        This repository intentionally uses one catalog and four assistant-specific packaging formats.
 
-        | Concept | Claude Code | Codex | Gemini CLI |
-        |---|---|---|---|
-        | Persistent project instructions | `CLAUDE.md` | `AGENTS.md` | `GEMINI.md` |
-        | Project agents/subagents | `.claude/agents/*.md` | `.codex/agents/*.toml` | `.gemini/commands/agents/*.toml` personas |
-        | Reusable skills | `.claude/skills/<name>/SKILL.md` | `.agents/skills/<name>/SKILL.md` | `.gemini/commands/skills/*.toml` commands |
-        | Local memory | `CLAUDE.md`, `.claude/agent-memory/`, Claude memory features | `AGENTS.md`, global `~/.codex/AGENTS.md` | `GEMINI.md`, Gemini memory tools |
-        | Install style | repo-scoped files or copy to `~/.claude` | repo-scoped files or copy to `~/.codex` | repo files or extension folder |
+        | Concept | Claude Code | Codex | Gemini CLI | Cursor |
+        |---|---|---|---|---|
+        | Persistent project instructions | `CLAUDE.md` | `AGENTS.md` | `GEMINI.md` | `AGENTS.md` plus `.cursor/rules/00-day2day-overview.mdc` |
+        | Project agents/subagents | `.claude/agents/*.md` | `.codex/agents/*.toml` | `.gemini/commands/agents/*.toml` personas | `.cursor/rules/agents/*.mdc` project rules |
+        | Reusable skills | `.claude/skills/<name>/SKILL.md` | `.agents/skills/<name>/SKILL.md` | `.gemini/commands/skills/*.toml` commands | `.cursor/rules/skills/*.mdc` project rules |
+        | Local memory | `CLAUDE.md`, `.claude/agent-memory/`, Claude memory features | `AGENTS.md`, global `~/.codex/AGENTS.md` | `GEMINI.md`, Gemini memory tools | `.cursor/rules/memory/*.mdc`, `AGENTS.md`, and Cursor Memories |
+        | Install style | repo-scoped files or copy to `~/.claude` | repo-scoped files or copy to `~/.codex` | repo files or extension folder | repo-scoped rules or copy `.cursor/rules` into another project |
 
-        Claude and Codex have first-class custom subagent concepts. Gemini CLI is represented through custom commands and extensions, which work as reusable personas and workflows rather than native parallel subagent threads.
+        Claude and Codex have first-class custom subagent concepts. Gemini CLI and Cursor are represented through reusable personas and workflow rules rather than native parallel subagent threads.
         """
     )
 
@@ -2330,17 +2467,17 @@ def platform_doc_pt() -> str:
         """
         # Mapeamento Por Plataforma
 
-        Este repositório usa um catálogo único e três formatos específicos para cada assistente.
+        Este repositório usa um catálogo único e quatro formatos específicos para cada assistente.
 
-        | Conceito | Claude Code | Codex | Gemini CLI |
-        |---|---|---|---|
-        | Instruções persistentes | `CLAUDE.md` | `AGENTS.md` | `GEMINI.md` |
-        | Agentes/subagentes do projeto | `.claude/agents/*.md` | `.codex/agents/*.toml` | personas em `.gemini/commands/agents/*.toml` |
-        | Skills reutilizáveis | `.claude/skills/<name>/SKILL.md` | `.agents/skills/<name>/SKILL.md` | comandos em `.gemini/commands/skills/*.toml` |
-        | Memória local | `CLAUDE.md`, `.claude/agent-memory/`, recursos de memória do Claude | `AGENTS.md`, global `~/.codex/AGENTS.md` | `GEMINI.md`, ferramentas de memória do Gemini |
-        | Instalação | arquivos no repo ou cópia para `~/.claude` | arquivos no repo ou cópia para `~/.codex` | arquivos no repo ou pasta de extensão |
+        | Conceito | Claude Code | Codex | Gemini CLI | Cursor |
+        |---|---|---|---|---|
+        | Instruções persistentes | `CLAUDE.md` | `AGENTS.md` | `GEMINI.md` | `AGENTS.md` mais `.cursor/rules/00-day2day-overview.mdc` |
+        | Agentes/subagentes do projeto | `.claude/agents/*.md` | `.codex/agents/*.toml` | personas em `.gemini/commands/agents/*.toml` | rules em `.cursor/rules/agents/*.mdc` |
+        | Skills reutilizáveis | `.claude/skills/<name>/SKILL.md` | `.agents/skills/<name>/SKILL.md` | comandos em `.gemini/commands/skills/*.toml` | rules em `.cursor/rules/skills/*.mdc` |
+        | Memória local | `CLAUDE.md`, `.claude/agent-memory/`, recursos de memória do Claude | `AGENTS.md`, global `~/.codex/AGENTS.md` | `GEMINI.md`, ferramentas de memória do Gemini | `.cursor/rules/memory/*.mdc`, `AGENTS.md` e Cursor Memories |
+        | Instalação | arquivos no repo ou cópia para `~/.claude` | arquivos no repo ou cópia para `~/.codex` | arquivos no repo ou pasta de extensão | rules no repo ou cópia de `.cursor/rules` para outro projeto |
 
-        Claude e Codex possuem conceitos nativos de subagentes customizados. No Gemini CLI, a implementação usa comandos e extensões como personas e workflows reutilizáveis, não como threads paralelas nativas de subagentes.
+        Claude e Codex possuem conceitos nativos de subagentes customizados. Gemini CLI e Cursor usam personas e workflows reutilizáveis, não threads paralelas nativas de subagentes.
         """
     )
 
@@ -2404,6 +2541,18 @@ def installation_en() -> str:
         ```text
         /agents:spreadsheet-analyst
         /skills:presentation-powerpoint
+        ```
+
+        ## Cursor
+
+        Cursor can use this repository through `AGENTS.md` and Project Rules in `.cursor/rules`.
+
+        Project-scoped use needs no copy step: open this repository in Cursor and the rules are versioned with the project.
+
+        To copy the Cursor rules into another project:
+
+        ```bash
+        scripts/install-cursor.sh /path/to/target-project
         ```
         """
     )
@@ -2469,6 +2618,18 @@ def installation_pt() -> str:
         /agents:spreadsheet-analyst
         /skills:presentation-powerpoint
         ```
+
+        ## Cursor
+
+        O Cursor pode usar este repositório por meio do `AGENTS.md` e das Project Rules em `.cursor/rules`.
+
+        Para uso dentro deste projeto, não é preciso copiar nada: abra este repositório no Cursor e as rules já estarão versionadas.
+
+        Para copiar as rules do Cursor para outro projeto:
+
+        ```bash
+        scripts/install-cursor.sh /caminho/do/projeto-destino
+        ```
         """
     )
 
@@ -2504,6 +2665,10 @@ def memory_en() -> str:
         ## Gemini
 
         Use `GEMINI.md` for project memory and Gemini's memory tool for facts that should persist across sessions. Keep command-specific behavior in `.gemini/commands`.
+
+        ## Cursor
+
+        Use `AGENTS.md` for broad project instructions, `.cursor/rules/00-day2day-overview.mdc` for always-on project behavior, `.cursor/rules/agents/*.mdc` for personas, and `.cursor/rules/skills/*.mdc` for focused workflows. Keep private personal context outside git or in ignored local files.
 
         ## Maintenance Loop
 
@@ -2543,6 +2708,10 @@ def memory_pt() -> str:
         ## Gemini
 
         Use `GEMINI.md` para memória do projeto e a ferramenta de memória do Gemini para fatos persistentes entre sessões. Comportamentos específicos ficam em `.gemini/commands`.
+
+        ## Cursor
+
+        Use `AGENTS.md` para instruções amplas do projeto, `.cursor/rules/00-day2day-overview.mdc` para comportamento sempre ativo, `.cursor/rules/agents/*.mdc` para personas e `.cursor/rules/skills/*.mdc` para workflows específicos. Mantenha contexto pessoal privado fora do git ou em arquivos locais ignorados.
 
         ## Loop de Manutenção
 
@@ -2693,15 +2862,15 @@ def references_doc() -> str:
 
 
 def global_instructions(kind: str) -> str:
-    heading = {"claude": "CLAUDE.md", "codex": "AGENTS.md", "gemini": "GEMINI.md"}[kind]
-    platform = {"claude": "Claude Code", "codex": "OpenAI Codex", "gemini": "Gemini CLI"}[kind]
-    agent_path = {"claude": ".claude/agents", "codex": ".codex/agents", "gemini": ".gemini/commands/agents"}[kind]
-    skill_path = {"claude": ".claude/skills", "codex": ".agents/skills", "gemini": ".gemini/commands/skills"}[kind]
+    heading = {"claude": "CLAUDE.md", "codex": "AGENTS.md", "gemini": "GEMINI.md", "cursor": "AGENTS.md"}[kind]
+    platform = {"claude": "Claude Code", "codex": "OpenAI Codex", "gemini": "Gemini CLI", "cursor": "Cursor"}[kind]
+    agent_path = {"claude": ".claude/agents", "codex": ".codex/agents", "gemini": ".gemini/commands/agents", "cursor": ".cursor/rules/agents"}[kind]
+    skill_path = {"claude": ".claude/skills", "codex": ".agents/skills", "gemini": ".gemini/commands/skills", "cursor": ".cursor/rules/skills"}[kind]
     return dedent(
         f"""
         # {heading}
 
-        This repository is a day-to-day multi-agent encyclopedia for {platform}, Claude Code, Codex, and Gemini CLI.
+        This repository is a day-to-day multi-agent encyclopedia for {platform}, Claude Code, Codex, Gemini CLI, and Cursor.
 
         ## Operating Principles
 
@@ -2765,6 +2934,40 @@ def install_script(platform: str) -> str:
     )
 
 
+def cursor_install_script() -> str:
+    return dedent(
+        """
+        #!/usr/bin/env bash
+        set -euo pipefail
+
+        if [[ "${1:-}" == "" || "${1:-}" == "--help" || "${1:-}" == "-h" ]]; then
+          echo "Usage: $0 /path/to/target-project"
+          echo "Copies Cursor Project Rules into another project."
+          exit 1
+        fi
+
+        REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+        TARGET_PROJECT="$1"
+
+        if [[ ! -d "${TARGET_PROJECT}" ]]; then
+          echo "Target project does not exist: ${TARGET_PROJECT}" >&2
+          exit 1
+        fi
+
+        mkdir -p "${TARGET_PROJECT}/.cursor"
+        cp -R "${REPO_ROOT}/.cursor/rules" "${TARGET_PROJECT}/.cursor/"
+
+        if [[ ! -f "${TARGET_PROJECT}/AGENTS.md" ]]; then
+          cp "${REPO_ROOT}/AGENTS.md" "${TARGET_PROJECT}/AGENTS.md"
+        else
+          echo "Skipped AGENTS.md because target already has one."
+        fi
+
+        echo "Installed Cursor Project Rules into ${TARGET_PROJECT}/.cursor/rules"
+        """
+    )
+
+
 def settings_files() -> None:
     write(
         ".claude/settings.json",
@@ -2820,8 +3023,10 @@ def settings_files() -> None:
 
 def indexes() -> None:
     agent_rows = "\n".join(f"- [{a['slug']}]({a['slug']}.md) - {a['description']}" for a in AGENTS)
+    cursor_agent_rows = "\n".join(f"- [{a['slug']}](rules/agents/{a['slug']}.mdc) - {a['description']}" for a in AGENTS)
     skill_rows_claude = "\n".join(f"- [{s['slug']}]({s['slug']}/SKILL.md) - {s['description']}" for s in SKILLS)
     skill_rows_codex = skill_rows_claude
+    cursor_skill_rows = "\n".join(f"- [{s['slug']}](rules/skills/{s['slug']}.mdc) - {s['description']}" for s in SKILLS)
     gem_agent_rows = "\n".join(f"- `/agents:{a['slug']}` - {a['description']}" for a in AGENTS)
     gem_skill_rows = "\n".join(f"- `/skills:{s['slug']}` - {s['description']}" for s in SKILLS)
     write(".claude/agents/README.md", "# Claude Agents\n\n" + agent_rows)
@@ -2830,6 +3035,7 @@ def indexes() -> None:
     write(".codex/README.md", "# Codex Assets\n\nCustom agents live in `.codex/agents`. Skills live in `.agents/skills` so they can also be shared with other agent runtimes.")
     write(".gemini/commands/README.md", "# Gemini Commands\n\n## Agents\n\n" + gem_agent_rows + "\n\n## Skills\n\n" + gem_skill_rows)
     write(".gemini/README.md", "# Gemini Assets\n\nProject commands live in `.gemini/commands`. The installable extension lives in `.gemini/extensions/day2day-agent-encyclopedia`.")
+    write(".cursor/README.md", "# Cursor Assets\n\nCursor Project Rules live in `.cursor/rules`.\n\n## Agents\n\n" + cursor_agent_rows + "\n\n## Skills\n\n" + cursor_skill_rows)
 
 
 def templates() -> None:
@@ -3147,6 +3353,31 @@ def docs() -> None:
     write("CLAUDE.md", global_instructions("claude"))
     write("AGENTS.md", global_instructions("codex"))
     write("GEMINI.md", global_instructions("gemini"))
+    write(".cursor/rules/00-day2day-overview.mdc", cursor_global_rule())
+    write(
+        ".cursor/rules/memory/personal-preferences.mdc",
+        cursor_memory_rule(
+            "personal-preferences",
+            "Personal Preferences",
+            "Use this optional project rule as a private template for stable language, tone, tools, and recurring workflow preferences. Do not store secrets or sensitive personal data.",
+        ),
+    )
+    write(
+        ".cursor/rules/memory/family-context.mdc",
+        cursor_memory_rule(
+            "family-context",
+            "Family Context",
+            "Use this optional project rule as a private template for family-friendly explanation style, accessibility needs, preferred examples, and topics to avoid.",
+        ),
+    )
+    write(
+        ".cursor/rules/memory/project-decisions.mdc",
+        cursor_memory_rule(
+            "project-decisions",
+            "Project Decisions",
+            "Use this optional project rule to keep durable decisions, context, consequences, and review dates when they should guide future Cursor sessions.",
+        ),
+    )
 
 
 def generate() -> None:
@@ -3154,6 +3385,7 @@ def generate() -> None:
         write(f".claude/agents/{agent['slug']}.md", frontmatter_agent(agent))
         write(f".codex/agents/{agent['slug']}.toml", codex_agent(agent))
         write(f".gemini/commands/agents/{agent['slug']}.toml", gemini_command_for_agent(agent))
+        write(f".cursor/rules/agents/{agent['slug']}.mdc", cursor_agent_rule(agent))
         write(
             f".gemini/extensions/day2day-agent-encyclopedia/commands/agents/{agent['slug']}.toml",
             gemini_command_for_agent(agent),
@@ -3163,6 +3395,7 @@ def generate() -> None:
         write(f".claude/skills/{skill['slug']}/SKILL.md", body)
         write(f".agents/skills/{skill['slug']}/SKILL.md", body)
         write(f".gemini/commands/skills/{skill['slug']}.toml", gemini_command_for_skill(skill))
+        write(f".cursor/rules/skills/{skill['slug']}.mdc", cursor_skill_rule(skill))
         write(
             f".gemini/extensions/day2day-agent-encyclopedia/commands/skills/{skill['slug']}.toml",
             gemini_command_for_skill(skill),
@@ -3200,6 +3433,7 @@ def generate() -> None:
     write("scripts/install-claude.sh", install_script("claude"))
     write("scripts/install-codex.sh", install_script("codex"))
     write("scripts/install-gemini.sh", install_script("gemini"))
+    write("scripts/install-cursor.sh", cursor_install_script())
     write(
         ".gitignore",
         dedent(
@@ -3220,4 +3454,4 @@ def generate() -> None:
 
 if __name__ == "__main__":
     generate()
-    print(f"Generated {len(AGENTS)} agents and {len(SKILLS)} skills for Claude, Codex, and Gemini.")
+    print(f"Generated {len(AGENTS)} agents and {len(SKILLS)} skills for Claude, Codex, Gemini, and Cursor.")

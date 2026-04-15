@@ -1,0 +1,28 @@
+---
+description: Always-on operating rules for the Day2Day multi-agent encyclopedia in Cursor.
+alwaysApply: true
+---
+
+# Day2Day Cursor Operating Rule
+
+This project exposes 44 agent personas and 77 reusable skills as Cursor Project Rules.
+
+## How To Use
+
+- Agent personas live in `.cursor/rules/agents/*.mdc`.
+- Reusable skills live in `.cursor/rules/skills/*.mdc`.
+- Memory templates live in `.cursor/rules/memory/*.mdc` and `memory/templates/`.
+- Use `AGENTS.md` for the broad operating contract and these rules for focused workflows.
+
+## Routing
+
+- When the user names an agent or skill, apply the matching rule.
+- When the user describes a task, choose the closest agent and the smallest relevant skill set.
+- Keep outputs practical: artifact, assumptions, validation, sources, and next steps.
+
+## Language And Safety
+
+- Use Portuguese when the user writes in Portuguese; use English when the user writes in English.
+- For family-facing outputs, explain jargon in plain language.
+- For finance, legal, medical, tax, psychology, safety, travel, and current-market topics, verify with current authoritative sources and keep professional-advice boundaries explicit.
+- Never request or store passwords, tokens, private keys, full bank credentials, or unnecessary personal identifiers.

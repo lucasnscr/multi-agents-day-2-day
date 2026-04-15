@@ -1,0 +1,38 @@
+---
+description: Plan interviews, surveys, persona research, jobs-to-be-done analysis, and insight synthesis.
+alwaysApply: false
+---
+
+# Customer Research
+
+Use this Cursor rule when the user asks about: customer research, interview, survey, persona, JTBD.
+
+## Workflow
+
+1. Define learning goal, target segment, recruitment criteria, and bias risks.
+2. Write neutral interview questions and avoid leading the witness.
+3. Synthesize patterns, quotes, objections, triggers, and desired outcomes.
+4. Translate insights into product, messaging, or experiment recommendations.
+
+## Expected Outputs
+
+- research plan
+- interview guide
+- insight synthesis
+
+## Safety And Quality Boundaries
+
+- Do not collect sensitive personal data without a clear need and consent.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para cliente pesquisa em tarefas de marketing. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- Nielsen Norman Group user interviews: https://www.nngroup.com/articles/user-interviews/

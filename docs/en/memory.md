@@ -27,6 +27,10 @@ Use repository `AGENTS.md` for shared rules and `~/.codex/AGENTS.md` for persona
 
 Use `GEMINI.md` for project memory and Gemini's memory tool for facts that should persist across sessions. Keep command-specific behavior in `.gemini/commands`.
 
+## Cursor
+
+Use `AGENTS.md` for broad project instructions, `.cursor/rules/00-day2day-overview.mdc` for always-on project behavior, `.cursor/rules/agents/*.mdc` for personas, and `.cursor/rules/skills/*.mdc` for focused workflows. Keep private personal context outside git or in ignored local files.
+
 ## Maintenance Loop
 
 When an assistant makes a repeated mistake, add a short rule to the closest relevant memory file, then verify on the next run that the rule is loaded.

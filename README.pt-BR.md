@@ -1,6 +1,6 @@
 # Multi-Agents Dia a Dia
 
-Uma enciclopédia pessoal e familiar de agentes, subagentes, skills, memória e guias de instalação para Claude Code, OpenAI Codex e Gemini CLI.
+Uma enciclopédia pessoal e familiar de agentes, subagentes, skills, memória e guias de instalação para Claude Code, OpenAI Codex, Gemini CLI e Cursor.
 
 Este repositório expande o padrão focado apenas em Claude para um sistema multi-assistente de uso diário: engenharia de software, análise de dados, planilhas, PDFs, PowerPoint, Figma, educação financeira, psicologia, marketing, organização doméstica e apoio ao aprendizado.
 
@@ -11,6 +11,7 @@ Este repositório expande o padrão focado apenas em Claude para um sistema mult
 - Implementação Claude Code em `.claude/agents`, `.claude/skills` e `CLAUDE.md`.
 - Implementação Codex em `AGENTS.md`, `.codex/agents`, `.codex/config.toml` e `.agents/skills`.
 - Implementação Gemini CLI em `GEMINI.md`, `.gemini/commands` e `.gemini/extensions/day2day-agent-encyclopedia`.
+- Implementação Cursor em `AGENTS.md` e `.cursor/rules`.
 - Documentação bilíngue em `docs/en` e `docs/pt-BR`.
 - Scripts de instalação em `scripts/`.
 

@@ -1,0 +1,38 @@
+---
+description: Suggest thoughtful gifts, celebration gestures, cards, experiences, and low-budget alternatives.
+alwaysApply: false
+---
+
+# Gift Idea Planner
+
+Use this Cursor rule when the user asks about: gift, birthday, anniversary, present, celebration, card message.
+
+## Workflow
+
+1. Collect recipient, relationship, occasion, budget, location, timing, interests, dislikes, and delivery constraints.
+2. Suggest categories: practical, sentimental, experience, consumable, handmade, family-friendly, and last-minute.
+3. Write optional card messages in the desired tone.
+4. If recommending specific products or events, verify current price, availability, and delivery.
+
+## Expected Outputs
+
+- gift shortlist
+- card message
+- purchase or preparation checklist
+
+## Safety And Quality Boundaries
+
+- Avoid manipulative gifts, unsafe products, and assumptions based on stereotypes.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para planejamento de presentes em tarefas de lifestyle. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- Consumer product safety recalls: https://www.cpsc.gov/Recalls

@@ -1,0 +1,38 @@
+---
+description: Define brand positioning, audience, category, differentiation, proof, and message pillars.
+alwaysApply: false
+---
+
+# Brand Positioning
+
+Use this Cursor rule when the user asks about: brand, positioning, ICP, value proposition, messaging.
+
+## Workflow
+
+1. Identify audience, pain, alternatives, category, proof, personality, and purchase context.
+2. Write positioning statements and message pillars.
+3. Map objections, proof points, and use cases.
+4. Create variants for family, executive, technical, and customer audiences.
+
+## Expected Outputs
+
+- positioning statement
+- message pillars
+- objection map
+
+## Safety And Quality Boundaries
+
+- Do not exaggerate capabilities or create claims that cannot be supported.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para marca posicionamento em tarefas de marketing. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- Nielsen Norman Group content strategy: https://www.nngroup.com/topic/content-strategy/

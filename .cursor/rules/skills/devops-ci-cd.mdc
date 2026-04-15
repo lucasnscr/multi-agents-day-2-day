@@ -1,0 +1,38 @@
+---
+description: Create CI/CD pipelines, release gates, environment promotion, and rollback workflows.
+alwaysApply: false
+---
+
+# Devops Ci Cd
+
+Use this Cursor rule when the user asks about: CI, CD, GitHub Actions, CircleCI, pipeline, release, deployment.
+
+## Workflow
+
+1. List build, lint, test, scan, package, deploy, and rollback steps.
+2. Cache dependencies safely and separate fast checks from slower gates.
+3. Protect secrets, environment approvals, and production changes.
+4. Document how a human verifies and rolls back a release.
+
+## Expected Outputs
+
+- pipeline YAML
+- release checklist
+- rollback notes
+
+## Safety And Quality Boundaries
+
+- Do not weaken branch protection, secret handling, or production approvals for speed.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para devops ci cd em tarefas de tecnologia. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- GitHub Actions docs: https://docs.github.com/actions

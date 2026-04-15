@@ -1,0 +1,8 @@
+---
+description: Memory template for Personal Preferences.
+alwaysApply: false
+---
+
+# Personal Preferences
+
+Use this optional project rule as a private template for stable language, tone, tools, and recurring workflow preferences. Do not store secrets or sensitive personal data.

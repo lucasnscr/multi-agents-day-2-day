@@ -55,3 +55,15 @@ Depois use comandos como:
 /agents:spreadsheet-analyst
 /skills:presentation-powerpoint
 ```
+
+## Cursor
+
+O Cursor pode usar este repositório por meio do `AGENTS.md` e das Project Rules em `.cursor/rules`.
+
+Para uso dentro deste projeto, não é preciso copiar nada: abra este repositório no Cursor e as rules já estarão versionadas.
+
+Para copiar as rules do Cursor para outro projeto:
+
+```bash
+scripts/install-cursor.sh /caminho/do/projeto-destino
+```

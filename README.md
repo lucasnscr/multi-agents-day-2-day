@@ -1,6 +1,6 @@
 # Multi-Agents Day 2 Day
 
-A personal and family-friendly encyclopedia of agents, subagents, skills, memory patterns, and installation guides for Claude Code, OpenAI Codex, and Gemini CLI.
+A personal and family-friendly encyclopedia of agents, subagents, skills, memory patterns, and installation guides for Claude Code, OpenAI Codex, Gemini CLI, and Cursor.
 
 This repository expands the Claude-only pattern into a multi-assistant operating system for daily work: software engineering, data analysis, spreadsheets, PDFs, PowerPoint, Figma, finance education, psychology research, marketing, household operations, and learning support.
 
@@ -11,6 +11,7 @@ This repository expands the Claude-only pattern into a multi-assistant operating
 - Claude Code implementation in `.claude/agents`, `.claude/skills`, and `CLAUDE.md`.
 - Codex implementation in `AGENTS.md`, `.codex/agents`, `.codex/config.toml`, and `.agents/skills`.
 - Gemini CLI implementation in `GEMINI.md`, `.gemini/commands`, and `.gemini/extensions/day2day-agent-encyclopedia`.
+- Cursor implementation in `AGENTS.md` and `.cursor/rules`.
 - Bilingual documentation in `docs/en` and `docs/pt-BR`.
 - Installation scripts in `scripts/`.
 

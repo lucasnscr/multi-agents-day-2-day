@@ -39,6 +39,7 @@ def main() -> int:
         require(root_file)
 
     validate_toml(".codex/config.toml")
+    require(".cursor/rules/00-day2day-overview.mdc")
 
     for agent in agents:
         slug = agent["slug"]
@@ -46,6 +47,7 @@ def main() -> int:
         validate_toml(f".codex/agents/{slug}.toml")
         validate_toml(f".gemini/commands/agents/{slug}.toml")
         validate_toml(f".gemini/extensions/day2day-agent-encyclopedia/commands/agents/{slug}.toml")
+        require(f".cursor/rules/agents/{slug}.mdc")
 
     for skill in skills:
         slug = skill["slug"]
@@ -53,6 +55,7 @@ def main() -> int:
         require(f".agents/skills/{slug}/SKILL.md")
         validate_toml(f".gemini/commands/skills/{slug}.toml")
         validate_toml(f".gemini/extensions/day2day-agent-encyclopedia/commands/skills/{slug}.toml")
+        require(f".cursor/rules/skills/{slug}.mdc")
 
     for doc in [
         "docs/en/encyclopedia.md",
@@ -78,6 +81,13 @@ def main() -> int:
         "templates/music/spotify-playlist-plan.md",
     ]:
         require(template)
+
+    for cursor_memory in [
+        ".cursor/rules/memory/personal-preferences.mdc",
+        ".cursor/rules/memory/family-context.mdc",
+        ".cursor/rules/memory/project-decisions.mdc",
+    ]:
+        require(cursor_memory)
 
     print(f"OK: {len(agents)} agents and {len(skills)} skills validated.")
     return 0

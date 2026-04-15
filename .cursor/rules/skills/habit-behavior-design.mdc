@@ -1,0 +1,38 @@
+---
+description: Design practical habit systems, routines, prompts, rewards, and environment changes.
+alwaysApply: false
+---
+
+# Habit Behavior Design
+
+Use this Cursor rule when the user asks about: habit, routine, behavior change, motivation, consistency.
+
+## Workflow
+
+1. Identify desired behavior, current friction, context, identity, and smallest viable action.
+2. Design cue, action, reward, environment, and fallback plan.
+3. Create a tracking method that is lightweight and non-shaming.
+4. Review after a short period and adjust friction rather than blaming willpower.
+
+## Expected Outputs
+
+- habit plan
+- tracking sheet
+- fallback rules
+
+## Safety And Quality Boundaries
+
+- For eating, addiction, self-harm, or clinical issues, recommend qualified care and support.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para habitos comportamento design em tarefas de psicologia. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- CDC health behavior resources: https://www.cdc.gov/health-literacy/php/toolkit/

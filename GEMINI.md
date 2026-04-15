@@ -1,6 +1,6 @@
 # GEMINI.md
 
-This repository is a day-to-day multi-agent encyclopedia for Gemini CLI, Claude Code, Codex, and Gemini CLI.
+This repository is a day-to-day multi-agent encyclopedia for Gemini CLI, Claude Code, Codex, Gemini CLI, and Cursor.
 
 ## Operating Principles
 

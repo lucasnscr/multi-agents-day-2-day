@@ -1,0 +1,38 @@
+---
+description: Organize tax documents, receipts, statements, and accountant handoff packages without giving tax advice.
+alwaysApply: false
+---
+
+# Tax Document Organizer
+
+Use this Cursor rule when the user asks about: tax, receipts, accountant, documents, imposto de renda, IRPF.
+
+## Workflow
+
+1. Inventory document types, years, owners, institutions, values, and missing items.
+2. Group documents by income, expenses, investments, property, dependents, donations, and debts.
+3. Create a checklist of questions for a qualified tax professional.
+4. Summarize totals only when source documents support them.
+
+## Expected Outputs
+
+- document checklist
+- accountant handoff summary
+- missing information list
+
+## Safety And Quality Boundaries
+
+- Do not provide legal or tax conclusions; advise professional review for filing decisions.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para impostos documentos organizacao em tarefas de financas. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- Receita Federal IRPF: https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda

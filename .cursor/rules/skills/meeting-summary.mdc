@@ -1,0 +1,38 @@
+---
+description: Summarize meetings, calls, notes, transcripts, and decisions into usable follow-up artifacts.
+alwaysApply: false
+---
+
+# Meeting Summary
+
+Use this Cursor rule when the user asks about: meeting, transcript, notes, action items, minutes.
+
+## Workflow
+
+1. Identify purpose, attendees, decisions, unresolved questions, owners, and due dates.
+2. Condense discussion into outcomes rather than chronological chatter.
+3. Separate action items from information items.
+4. Write a follow-up message suitable for the audience.
+
+## Expected Outputs
+
+- meeting summary
+- action register
+- follow-up email
+
+## Safety And Quality Boundaries
+
+- Do not attribute sensitive statements to a person unless the transcript clearly supports it.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para reuniao resumo em tarefas de escritorio e produtividade. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- Atlassian meeting notes guide: https://www.atlassian.com/team-playbook/plays/meeting-notes

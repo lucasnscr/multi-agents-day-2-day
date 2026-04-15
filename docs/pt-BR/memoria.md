@@ -27,6 +27,10 @@ Use `AGENTS.md` no repositório para regras compartilhadas e `~/.codex/AGENTS.md
 
 Use `GEMINI.md` para memória do projeto e a ferramenta de memória do Gemini para fatos persistentes entre sessões. Comportamentos específicos ficam em `.gemini/commands`.
 
+## Cursor
+
+Use `AGENTS.md` para instruções amplas do projeto, `.cursor/rules/00-day2day-overview.mdc` para comportamento sempre ativo, `.cursor/rules/agents/*.mdc` para personas e `.cursor/rules/skills/*.mdc` para workflows específicos. Mantenha contexto pessoal privado fora do git ou em arquivos locais ignorados.
+
 ## Loop de Manutenção
 
 Quando um assistente cometer o mesmo erro mais de uma vez, adicione uma regra curta no arquivo de memória mais próximo e confirme na próxima execução que a regra foi carregada.

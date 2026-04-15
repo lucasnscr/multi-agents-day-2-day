@@ -1,0 +1,130 @@
+# Cursor Assets
+
+Cursor Project Rules live in `.cursor/rules`.
+
+## Agents
+
+- [full-stack-architect](rules/agents/full-stack-architect.mdc) - Designs end-to-end web and service architectures across frontend, backend, data, security, and deployment.
+- [backend-api-engineer](rules/agents/backend-api-engineer.mdc) - Builds REST, GraphQL, event-driven, and service APIs with validation, security, observability, and tests.
+- [frontend-ui-engineer](rules/agents/frontend-ui-engineer.mdc) - Builds React, Angular, Vue, Svelte, and vanilla web interfaces with accessibility and behavior tests.
+- [mobile-app-engineer](rules/agents/mobile-app-engineer.mdc) - Plans and implements iOS, Android, React Native, and Flutter apps with release and store-readiness discipline.
+- [data-engineer](rules/agents/data-engineer.mdc) - Builds ingestion, transformation, warehouse, lakehouse, dbt, orchestration, and data quality workflows.
+- [data-scientist](rules/agents/data-scientist.mdc) - Explores datasets, builds models, validates assumptions, and explains uncertainty for decisions.
+- [ml-ai-engineer](rules/agents/ml-ai-engineer.mdc) - Builds ML pipelines, evaluations, RAG systems, LLM apps, and agentic workflows.
+- [devops-platform-engineer](rules/agents/devops-platform-engineer.mdc) - Designs CI/CD, containers, Kubernetes, IaC, release flows, observability, and operational runbooks.
+- [security-privacy-engineer](rules/agents/security-privacy-engineer.mdc) - Finds application, infrastructure, data, privacy, and operational security risks.
+- [qa-test-automator](rules/agents/qa-test-automator.mdc) - Creates unit, integration, contract, end-to-end, accessibility, visual, and regression test strategies.
+- [database-architect](rules/agents/database-architect.mdc) - Designs relational, document, search, graph, analytical, and caching data layers.
+- [cloud-cost-optimizer](rules/agents/cloud-cost-optimizer.mdc) - Reviews cloud spend, sizing, storage, networking, CI minutes, observability volume, and scaling policies.
+- [documentation-writer](rules/agents/documentation-writer.mdc) - Writes READMEs, tutorials, runbooks, architecture notes, onboarding guides, and family-friendly explainers.
+- [code-reviewer](rules/agents/code-reviewer.mdc) - Reviews code for correctness, regressions, security, maintainability, performance, and missing tests.
+- [legacy-modernizer](rules/agents/legacy-modernizer.mdc) - Maps legacy systems, proposes incremental modernization, and creates migration plans that preserve behavior.
+- [prompt-agent-architect](rules/agents/prompt-agent-architect.mdc) - Designs prompts, skills, subagents, memory, MCP integrations, evaluations, and agent operating procedures.
+- [automation-scripts-engineer](rules/agents/automation-scripts-engineer.mdc) - Creates safe Bash, Python, PowerShell, Make, and task-runner automations for repetitive work.
+- [language-polyglot-engineer](rules/agents/language-polyglot-engineer.mdc) - Works across Python, TypeScript, Java, C#, Go, Rust, PHP, Ruby, Swift, Kotlin, Dart, R, SQL, and shell.
+- [spreadsheet-analyst](rules/agents/spreadsheet-analyst.mdc) - Audits Excel, Google Sheets, CSV, formulas, pivots, Power Query, and spreadsheet-based business workflows.
+- [pdf-research-analyst](rules/agents/pdf-research-analyst.mdc) - Extracts, compares, summarizes, and fact-checks PDFs, reports, contracts, invoices, and academic papers.
+- [presentation-designer](rules/agents/presentation-designer.mdc) - Creates storylines, slide outlines, speaker notes, PowerPoint structures, and executive narratives.
+- [figma-product-designer](rules/agents/figma-product-designer.mdc) - Creates product briefs, user flows, wireframes, component inventories, and design review prompts for Figma.
+- [market-finance-analyst](rules/agents/market-finance-analyst.mdc) - Builds market briefs, macro notes, company snapshots, valuation sensitivity, and risk checklists.
+- [personal-finance-coach](rules/agents/personal-finance-coach.mdc) - Helps organize budgets, debt payoff, goals, emergency funds, family finances, and financial habits.
+- [behavioral-psychology-researcher](rules/agents/behavioral-psychology-researcher.mdc) - Synthesizes behavior, decision-making, habits, communication, motivation, and learning research.
+- [learning-tutor](rules/agents/learning-tutor.mdc) - Builds study plans, explains concepts, creates exercises, and adapts explanations to family members.
+- [family-tech-support](rules/agents/family-tech-support.mdc) - Explains devices, accounts, security basics, backups, documents, and apps in accessible language.
+- [marketing-strategist](rules/agents/marketing-strategist.mdc) - Builds positioning, audience research, campaigns, funnels, content plans, and measurement frameworks.
+- [copywriting-advertising-specialist](rules/agents/copywriting-advertising-specialist.mdc) - Creates ad concepts, campaign copy, landing page copy, hooks, offers, scripts, and creative test matrices.
+- [seo-content-strategist](rules/agents/seo-content-strategist.mdc) - Builds content calendars, search intent maps, briefs, topic clusters, refresh plans, and editorial workflows.
+- [diversity-inclusion-advisor](rules/agents/diversity-inclusion-advisor.mdc) - Reviews communications, hiring flows, events, products, and policies for inclusion, accessibility, bias, and representation.
+- [legal-admin-reader](rules/agents/legal-admin-reader.mdc) - Summarizes contracts, terms, policies, notices, invoices, and administrative forms with non-lawyer caution.
+- [legal-research-assistant](rules/agents/legal-research-assistant.mdc) - Organizes legal research, source tables, legislation lookups, jurisprudence notes, and questions for counsel.
+- [health-wellness-researcher](rules/agents/health-wellness-researcher.mdc) - Summarizes general wellness, sleep, exercise, nutrition, and health information with safety boundaries.
+- [personal-trainer-coach](rules/agents/personal-trainer-coach.mdc) - Creates general fitness plans, workout progressions, mobility routines, and recovery checklists.
+- [nutrition-meal-planner](rules/agents/nutrition-meal-planner.mdc) - Creates general meal plans, grocery lists, meal-prep routines, and nutrition education notes.
+- [weekend-cultural-curator](rules/agents/weekend-cultural-curator.mdc) - Finds current weekend events, concerts, exhibitions, theater, family activities, and local experiences by city.
+- [lifestyle-concierge](rules/agents/lifestyle-concierge.mdc) - Plans personal routines, errands, hobbies, wardrobe, self-care, pets, and household lifestyle systems.
+- [social-life-planner](rules/agents/social-life-planner.mdc) - Plans date nights, family outings, gifts, celebrations, hosting, and social rituals.
+- [spotify-music-curator](rules/agents/spotify-music-curator.mdc) - Suggests songs, artists, playlist structures, and Spotify search prompts by genre, mood, decade, activity, or occasion.
+- [project-manager](rules/agents/project-manager.mdc) - Breaks goals into milestones, risks, owners, status updates, meeting cadences, and decision logs.
+- [career-resume-coach](rules/agents/career-resume-coach.mdc) - Improves resumes, LinkedIn profiles, interview prep, portfolio narratives, and job search plans.
+- [ecommerce-operator](rules/agents/ecommerce-operator.mdc) - Plans product pages, pricing checks, catalog hygiene, ads, inventory notes, and customer support workflows.
+- [travel-life-planner](rules/agents/travel-life-planner.mdc) - Creates itineraries, packing lists, family logistics, decision matrices, and household plans.
+
+## Skills
+
+- [api-contract-review](rules/skills/api-contract-review.mdc) - Review API contracts for HTTP semantics, schema quality, versioning, compatibility, and error behavior.
+- [clean-code-refactor](rules/skills/clean-code-refactor.mdc) - Simplify code while preserving behavior through small refactors and characterization tests.
+- [code-review](rules/skills/code-review.mdc) - Review changes for correctness, regressions, security, performance, and missing tests.
+- [debugging-root-cause](rules/skills/debugging-root-cause.mdc) - Diagnose bugs using reproduction, hypotheses, traces, logs, and minimal fixes.
+- [test-strategy](rules/skills/test-strategy.mdc) - Design test coverage across unit, integration, contract, end-to-end, accessibility, and regression layers.
+- [observability-logging](rules/skills/observability-logging.mdc) - Design logs, metrics, traces, alerts, and dashboards around operational questions.
+- [security-threat-model](rules/skills/security-threat-model.mdc) - Threat-model applications, automations, data flows, agents, and infrastructure.
+- [devops-ci-cd](rules/skills/devops-ci-cd.mdc) - Create CI/CD pipelines, release gates, environment promotion, and rollback workflows.
+- [docker-kubernetes](rules/skills/docker-kubernetes.mdc) - Build Dockerfiles, Compose setups, Kubernetes manifests, Helm values, and runtime checks.
+- [cloud-cost-review](rules/skills/cloud-cost-review.mdc) - Analyze cloud and SaaS cost drivers and propose savings without reducing reliability.
+- [database-query-optimization](rules/skills/database-query-optimization.mdc) - Optimize schemas, indexes, SQL, migrations, and data access patterns.
+- [architecture-decision-record](rules/skills/architecture-decision-record.mdc) - Write Architecture Decision Records and tradeoff notes for technical choices.
+- [python-data-stack](rules/skills/python-data-stack.mdc) - Use Python for automation, APIs, data analysis, notebooks, and production services.
+- [typescript-react-next](rules/skills/typescript-react-next.mdc) - Build TypeScript, React, Next.js, Node.js, NestJS, Angular, Vue, and frontend/backend JS systems.
+- [java-spring-boot](rules/skills/java-spring-boot.mdc) - Build Java, Kotlin, Spring Boot, Maven/Gradle, JPA, WebFlux, and JVM services.
+- [dotnet-api](rules/skills/dotnet-api.mdc) - Build C#, .NET, ASP.NET Core, EF Core, minimal APIs, workers, and Azure-friendly services.
+- [go-rust-systems](rules/skills/go-rust-systems.mdc) - Build Go and Rust services, CLIs, workers, network tools, and performance-sensitive components.
+- [mobile-app-delivery](rules/skills/mobile-app-delivery.mdc) - Plan and deliver Swift/iOS, Kotlin/Android, React Native, and Flutter features.
+- [llm-prompt-engineering](rules/skills/llm-prompt-engineering.mdc) - Design prompts, system instructions, evaluations, examples, and output schemas for LLM workflows.
+- [agent-skill-authoring](rules/skills/agent-skill-authoring.mdc) - Create reusable agents, subagents, skills, slash commands, and memory playbooks.
+- [mcp-integration-design](rules/skills/mcp-integration-design.mdc) - Design MCP server integrations and connector workflows for tools, data, docs, and business systems.
+- [spreadsheet-analysis](rules/skills/spreadsheet-analysis.mdc) - Analyze Excel, Google Sheets, CSV files, formulas, pivots, anomalies, and tabular business data.
+- [data-analysis-report](rules/skills/data-analysis-report.mdc) - Produce reproducible data analysis reports with assumptions, methods, findings, and recommendations.
+- [dashboard-bi-storytelling](rules/skills/dashboard-bi-storytelling.mdc) - Design dashboards, BI narratives, metric definitions, and executive data stories.
+- [pdf-extraction-synthesis](rules/skills/pdf-extraction-synthesis.mdc) - Extract and synthesize PDFs, scanned docs, forms, reports, contracts, papers, and slide decks.
+- [research-brief](rules/skills/research-brief.mdc) - Create research briefs from web, docs, papers, notes, or mixed source material.
+- [citation-fact-check](rules/skills/citation-fact-check.mdc) - Fact-check claims, citations, numbers, dates, quotes, and source quality.
+- [meeting-summary](rules/skills/meeting-summary.mdc) - Summarize meetings, calls, notes, transcripts, and decisions into usable follow-up artifacts.
+- [presentation-powerpoint](rules/skills/presentation-powerpoint.mdc) - Create PowerPoint, Google Slides, keynote outlines, speaker notes, and executive deck structures.
+- [figma-product-brief](rules/skills/figma-product-brief.mdc) - Prepare Figma-ready product briefs, user flows, component inventories, and design handoff notes.
+- [visual-design-critique](rules/skills/visual-design-critique.mdc) - Review layouts, typography, accessibility, color, hierarchy, responsive behavior, and product polish.
+- [market-research](rules/skills/market-research.mdc) - Research markets, sectors, competitors, macro trends, and business context with sourced evidence.
+- [personal-finance-budget](rules/skills/personal-finance-budget.mdc) - Organize budgets, spending, debt payoff, goals, emergency funds, and family financial routines.
+- [investment-due-diligence](rules/skills/investment-due-diligence.mdc) - Create educational due-diligence checklists for companies, funds, ETFs, bonds, and assets.
+- [risk-scenario-analysis](rules/skills/risk-scenario-analysis.mdc) - Build scenarios, sensitivities, stress tests, decision matrices, and risk registers.
+- [financial-modeling](rules/skills/financial-modeling.mdc) - Create simple models for budgets, businesses, valuation sensitivity, pricing, and unit economics.
+- [tax-document-organizer](rules/skills/tax-document-organizer.mdc) - Organize tax documents, receipts, statements, and accountant handoff packages without giving tax advice.
+- [psychology-literature-synthesis](rules/skills/psychology-literature-synthesis.mdc) - Summarize psychology research on behavior, decision-making, stress, habits, motivation, and communication.
+- [decision-journal](rules/skills/decision-journal.mdc) - Create decision journals, bias checks, pre-mortems, and post-mortems for personal or professional choices.
+- [habit-behavior-design](rules/skills/habit-behavior-design.mdc) - Design practical habit systems, routines, prompts, rewards, and environment changes.
+- [difficult-conversation-prep](rules/skills/difficult-conversation-prep.mdc) - Prepare for hard conversations, feedback, boundaries, negotiation, and conflict repair.
+- [family-learning-coach](rules/skills/family-learning-coach.mdc) - Create family-friendly explanations, practice plans, tutorials, and confidence-building learning paths.
+- [brand-positioning](rules/skills/brand-positioning.mdc) - Define brand positioning, audience, category, differentiation, proof, and message pillars.
+- [copywriting-campaign](rules/skills/copywriting-campaign.mdc) - Write ads, landing pages, email sequences, headlines, scripts, and creative testing matrices.
+- [seo-content-plan](rules/skills/seo-content-plan.mdc) - Plan SEO content, search intent maps, briefs, topic clusters, refreshes, and helpful articles.
+- [social-media-calendar](rules/skills/social-media-calendar.mdc) - Create social media calendars, content pillars, hooks, captions, and repurposing plans.
+- [ads-funnel-analysis](rules/skills/ads-funnel-analysis.mdc) - Analyze paid media funnels, landing pages, creative tests, conversion tracking, and unit economics.
+- [customer-research](rules/skills/customer-research.mdc) - Plan interviews, surveys, persona research, jobs-to-be-done analysis, and insight synthesis.
+- [email-drafting](rules/skills/email-drafting.mdc) - Draft clear emails, replies, follow-ups, escalations, requests, and family-friendly messages.
+- [resume-linkedin](rules/skills/resume-linkedin.mdc) - Improve resumes, LinkedIn profiles, portfolios, cover letters, and interview stories.
+- [travel-itinerary](rules/skills/travel-itinerary.mdc) - Plan travel itineraries, family logistics, budgets, packing, and decision comparisons.
+- [home-operations-planner](rules/skills/home-operations-planner.mdc) - Organize household tasks, maintenance, documents, accounts, routines, and family operations.
+- [fitness-training-plan](rules/skills/fitness-training-plan.mdc) - Create general workout plans, exercise progressions, warmups, and safety checklists.
+- [nutrition-meal-planning](rules/skills/nutrition-meal-planning.mdc) - Create general meal plans, food habit suggestions, hydration prompts, and nutrition education notes.
+- [meal-prep-grocery-list](rules/skills/meal-prep-grocery-list.mdc) - Plan meal prep, grocery lists, batch cooking, storage, and budget-friendly food routines.
+- [sleep-recovery-routine](rules/skills/sleep-recovery-routine.mdc) - Design sleep hygiene, recovery, rest-day, wind-down, and energy-management routines.
+- [mobility-recovery](rules/skills/mobility-recovery.mdc) - Create stretching, mobility, posture breaks, warmup, cooldown, and recovery routines.
+- [wellness-habit-tracker](rules/skills/wellness-habit-tracker.mdc) - Create simple trackers for training, food, sleep, mood, hydration, sunlight, and self-care routines.
+- [weekend-cultural-agenda](rules/skills/weekend-cultural-agenda.mdc) - Find current weekend cultural events for a city with dates, prices, links, accessibility, and backup plans.
+- [local-restaurant-experience](rules/skills/local-restaurant-experience.mdc) - Suggest current restaurants, cafes, bars, bakeries, and food experiences by city, budget, and occasion.
+- [date-night-family-outing](rules/skills/date-night-family-outing.mdc) - Plan date nights, family outings, friend hangouts, celebrations, and low-budget social experiences.
+- [wardrobe-style-planner](rules/skills/wardrobe-style-planner.mdc) - Plan wardrobes, outfits, packing looks, capsule closets, and personal style experiments.
+- [hobby-discovery-plan](rules/skills/hobby-discovery-plan.mdc) - Help users discover hobbies, creative projects, classes, communities, and low-pressure experiments.
+- [personal-errands-local-guide](rules/skills/personal-errands-local-guide.mdc) - Organize errands, appointments, local services, documents, and city-specific chores.
+- [gift-idea-planner](rules/skills/gift-idea-planner.mdc) - Suggest thoughtful gifts, celebration gestures, cards, experiences, and low-budget alternatives.
+- [pet-care-routine](rules/skills/pet-care-routine.mdc) - Organize pet routines, supplies, enrichment, vet questions, travel prep, and household checklists.
+- [home-decluttering-plan](rules/skills/home-decluttering-plan.mdc) - Plan decluttering, room resets, storage, donation, selling, and maintenance routines.
+- [beauty-self-care-routine](rules/skills/beauty-self-care-routine.mdc) - Create simple grooming, skincare organization, salon prep, and self-care routines.
+- [diversity-inclusion-review](rules/skills/diversity-inclusion-review.mdc) - Review materials, processes, events, and products for diversity, equity, inclusion, accessibility, and bias risks.
+- [inclusive-language-review](rules/skills/inclusive-language-review.mdc) - Improve copy, job posts, presentations, policies, and product text for inclusive, respectful, plain language.
+- [legal-research-brief](rules/skills/legal-research-brief.mdc) - Create non-advisory legal research briefs with jurisdiction, source table, law links, jurisprudence notes, and counsel questions.
+- [contract-clause-checklist](rules/skills/contract-clause-checklist.mdc) - Review contracts and terms for clause inventory, obligations, deadlines, risks, missing exhibits, and lawyer questions.
+- [spotify-style-playlist](rules/skills/spotify-style-playlist.mdc) - Suggest Spotify-ready songs, artists, playlist sequencing, and search prompts by musical style, genre, decade, or scene.
+- [music-mood-playlist](rules/skills/music-mood-playlist.mdc) - Create music suggestions for mood, activity, party flow, focus, workouts, road trips, dinners, and family events.
+- [legal-document-reader](rules/skills/legal-document-reader.mdc) - Read legal/admin documents for dates, obligations, risks, definitions, and questions for counsel.
+- [procurement-vendor-comparison](rules/skills/procurement-vendor-comparison.mdc) - Compare vendors, tools, SaaS plans, proposals, pricing, risks, and implementation effort.
+- [language-translation-localization](rules/skills/language-translation-localization.mdc) - Translate, localize, simplify, and adapt copy between Portuguese, English, Spanish, and other languages.

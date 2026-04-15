@@ -1,0 +1,38 @@
+---
+description: Create simple trackers for training, food, sleep, mood, hydration, sunlight, and self-care routines.
+alwaysApply: false
+---
+
+# Wellness Habit Tracker
+
+Use this Cursor rule when the user asks about: habit tracker, wellness tracker, health routine, consistency, lifestyle dashboard.
+
+## Workflow
+
+1. Choose a small number of behaviors tied to the user's goal.
+2. Define binary, count, or scale tracking that takes less than two minutes per day.
+3. Create weekly review prompts that adjust friction rather than blame motivation.
+4. Protect privacy and avoid obsessive tracking patterns.
+
+## Expected Outputs
+
+- tracker template
+- weekly review prompts
+- adjustment rules
+
+## Safety And Quality Boundaries
+
+- Avoid tracking that encourages shame, disordered eating, overtraining, or compulsive behavior.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para rastreador de bem-estar em tarefas de lifestyle. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- CDC health literacy toolkit: https://www.cdc.gov/health-literacy/php/toolkit/

@@ -1,0 +1,38 @@
+---
+description: Compare vendors, tools, SaaS plans, proposals, pricing, risks, and implementation effort.
+alwaysApply: false
+---
+
+# Procurement Vendor Comparison
+
+Use this Cursor rule when the user asks about: vendor, procurement, compare tools, RFP, SaaS, pricing.
+
+## Workflow
+
+1. Define must-have requirements, nice-to-haves, budget, timeline, risk constraints, and stakeholders.
+2. Build a weighted comparison table with evidence and unknowns.
+3. Include total cost, lock-in, security, support, migration, and exit plan.
+4. Recommend next questions, trials, and negotiation points.
+
+## Expected Outputs
+
+- comparison matrix
+- risk notes
+- vendor questions
+
+## Safety And Quality Boundaries
+
+- Do not recommend a purchase when critical requirements are unknown.
+
+- Label assumptions and uncertainty.
+- Protect private data and secrets.
+- Prefer current authoritative references for changing, regulated, or high-stakes topics.
+- When the user writes in Portuguese, produce the artifact in Portuguese unless they request another language.
+
+## Nota Em Portugues
+
+Use esta rule para compras fornecedor comparacao em tarefas de negocios. Explique premissas, limites, fontes usadas e proximos passos em linguagem simples.
+
+## References
+
+- NIST supply chain risk guidance: https://csrc.nist.gov/projects/cyber-supply-chain-risk-management

@@ -10,6 +10,8 @@ This repository uses authoritative references for assistant configuration and hi
 - [OpenAI Codex AGENTS.md](https://developers.openai.com/codex/guides/agents-md)
 - [OpenAI Codex subagents](https://developers.openai.com/codex/subagents)
 - [OpenAI Codex GitHub repository](https://github.com/openai/codex)
+- [Cursor Rules](https://docs.cursor.com/context/rules)
+- [Cursor Agent](https://docs.cursor.com/chat/agent)
 - [Gemini CLI get started](https://google-gemini.github.io/gemini-cli/docs/get-started/)
 - [Gemini CLI tools and memory](https://google-gemini.github.io/gemini-cli/docs/tools/)
 - [Gemini CLI commands](https://google-gemini.github.io/gemini-cli/docs/cli/commands.html)
